@@ -1,428 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="Home_TextOnly_Animate">
-        <animation effect="slide" start="0" end="0,106" time="500" tween="back" reversible="false" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
-        <animation effect="slide" end="0" start="0,106" time="150" reversible="false" condition="![Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
-    </include>
-    <include name="Home_Icons_Animate">
-        <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
-        <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="![Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
-    </include>
-    <include name="Home_Dialogs_TextOnly_Animate">
-        <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,106" start="0" reversible="false" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),2)">Conditional</animation>
-        <animation effect="slide" start="0" end="0,106" time="500" tween="back" reversible="false" easing="out" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),1)">Conditional</animation>
-        <animation effect="slide" end="0" start="0,106" time="150" reversible="false" condition="String.IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
-    </include>
-    <include name="Home_Dialogs_Icons_Animate">
-        <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),2)">Conditional</animation>
-        <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),1)">Conditional</animation>
-        <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="String.IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
-    </include>
-    <include name="Home_Menu_BG_Small">
-        <control type="image">
-            <bottom>64</bottom>
-            <height>202</height>
-            <aspectratio>scale</aspectratio>
-            <texture colordiffuse="HomeBarBG">common/white.png</texture>
-            <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
-        </control>
-        <control type="group">
-            <bottom>-266</bottom>
-            <height>64</height>
-            <visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
-            <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-            <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
-            <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-            <control type="image">
-                <top>0</top>
-                <width>1920</width>
-                <height>64</height>
-                <texture colordiffuse="HomeBarBG">common/white.png</texture>
-                <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
-            </control>
-            <control type="image">
-                <left>16</left>
-                <top>16</top>
-                <width>32</width>
-                <height>32</height>
-                <texture colordiffuse="LineLabel">common/rss.png</texture>
-            </control>
-            <control type="group">
-                <visible>!Window.IsActive(DialogNotification.xml)</visible>
-                <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-                <visible>!Player.HasMedia</visible>
-
-                <control type="image">
-                    <left>16</left>
-                    <posy>16</posy>
-                    <width>32</width>
-                    <height>32</height>
-                    <texture colordiffuse="LineLabel">common/rss.png</texture>
-                </control>
-                <control type="rss">
-                    <posx>48</posx>
-                    <posy>16</posy>
-                    <width>1870</width>
-                    <font>Font-RSS</font>
-                    <textcolor>SideArrow</textcolor>
-                    <headlinecolor>SideArrow</headlinecolor>
-                    <titlecolor>LineLabel</titlecolor>
-                </control>
-            </control>
-        </control>
-    </include>
-    <include name="Home_Menu_BG_Big">
-        <control type="image">
-            <animation effect="slide" end="0,160" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-            <bottom>-64</bottom>
-            <height>330</height>
-            <aspectratio>scale</aspectratio>
-            <texture colordiffuse="HomeBarBG">common/white.png</texture>
-            <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
-        </control>
-    </include>
-    <!-- Home Bar -->
+    <!-- ======== -->
+    <!-- HOME BAR -->
+    <!-- ======== -->
     <include name="Home_Menu">
-        <control type="group">
-            <!-- Backing Bar -->
-            <include condition="!String.IsEqual(Skin.String(home.style),$LOCALIZE[31181])">Home_Menu_BG_Big</include>
-            <include condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31181])">Home_Menu_BG_Small</include>
-
-            <!-- Main list -->
-            <control type="panel" id="9000">
-                <animation effect="slide" end="0,160" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,0)">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,1)">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,2)">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,3)">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,4)">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,5)">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,6)">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,7)">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,8)">Conditional</animation>
-                <animation effect="slide" end="94" condition="!Integer.IsGreater(Container(9000).NumItems,9)">Conditional</animation>
-                <left>16</left>
-                <right>0</right>
-                <bottom>0</bottom>
-                <height>266</height>
-                <onup condition="!Player.HasMedia + !Window.IsVisible(PlayerControls.xml)">SetProperty(FO9001,1,home)</onup>
-                <onup condition="!Player.HasMedia + !Window.IsVisible(PlayerControls.xml) + [[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]]">9001</onup>
-                <onup condition="Player.HasMedia + !Window.IsVisible(PlayerControls.xml)">9005</onup>
-                <ondown condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</ondown>
-                <animation type="Visible">
-                    <effect type="slide" start="0,266" end="0" time="150" />
-                </animation>
-                <orientation>horizontal</orientation>
-                <scrolltime tween="sine" easing="out">240</scrolltime>
-                <!-- Default Home -->
-                <itemlayout width="188" height="266" condition="!String.IsEqual(Skin.String(home.style),$LOCALIZE[31181]) + !String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">
-
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="HomeBarTile">common/tile.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                        <visible>String.IsEmpty(ListItem.Property(tilecolor)) | !Skin.HasSetting(home.tilecolor.nofocus) | !Skin.HasSetting(home.tilecolor)</visible>
-                    </control>
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/tile.png</texture>
-                        <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
-                        <aspectratio>stretch</aspectratio>
-                        <visible>String.IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
-                    </control>
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
-                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">special://skin/extras/colors/$INFO[ListItem.Property(tilecolor)].png</texture>
-                        <aspectratio scalediffuse="false">stretch</aspectratio>
-                        <visible>!String.IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
-                    </control>
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
-                        <aspectratio scalediffuse="false">center</aspectratio>
-                        <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-                    </control>
-                    <control type="label">
-                        <top>188</top>
-                        <height>78</height>
-                        <width>170</width>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <font>Font-HomeMenu</font>
-                        <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                        <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="188" height="266" condition="!String.IsEqual(Skin.String(home.style),$LOCALIZE[31181]) + !String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/tile.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                    </control>
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="Selected" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
-                        <aspectratio scalediffuse="false">center</aspectratio>
-                    </control>
-                    <control type="label">
-                        <top>188</top>
-                        <height>78</height>
-                        <width>170</width>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <font>Font-HomeMenu</font>
-                        <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                        <animation effect="slide" start="0" end="0,-12" time="100" reversible="false">Focus</animation>
-                    </control>
-                    <control type="image">
-                        <centerleft>85</centerleft>
-                        <bottom>0</bottom>
-                        <width>16</width>
-                        <height>16</height>
-                        <aspectratio>stretch</aspectratio>
-                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/16-arrow-down.png</texture>
-                        <visible>Integer.IsGreater(Container(9002).NumItems,0)</visible>
-                        <animation effect="fade" start="0" end="100" time="300" delay="300" reversible="false">Focus</animation>
-                    </control>
-                    <control type="image">
-                        <bottom>16</bottom>
-                        <width>170</width>
-                        <height>6</height>
-                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
-                        <aspectratio>scale</aspectratio>
-                    </control>
-                </focusedlayout>
-
-                <!-- Tile in Text -->
-                <itemlayout width="188" height="266" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31181])">
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="HomeBarTile">common/tile.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                        <visible>String.IsEmpty(ListItem.Property(tilecolor)) | !Skin.HasSetting(home.tilecolor.nofocus) | !Skin.HasSetting(home.tilecolor)</visible>
-                    </control>
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/tile.png</texture>
-                        <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
-                        <aspectratio>stretch</aspectratio>
-                        <visible>String.IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
-                    </control>
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
-                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">special://skin/extras/colors/$INFO[ListItem.Property(tilecolor)].png</texture>
-                        <aspectratio scalediffuse="false">stretch</aspectratio>
-                        <visible>!String.IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
-                    </control>
-                    <control type="image">
-                        <top>-6</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
-                        <aspectratio scalediffuse="false">center</aspectratio>
-                        <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-                        <visible>String.Contains(ListItem.Icon,special://skin/extras/icons/)</visible>
-                    </control>
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
-                        <aspectratio scalediffuse="false">center</aspectratio>
-                        <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-                        <visible>!String.Contains(ListItem.Icon,special://skin/extras/icons/)</visible>
-                    </control>
-                    <control type="label">
-                        <top>120</top>
-                        <height>78</height>
-                        <left>8</left>
-                        <width>160</width>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <font>Font-HomeMenu</font>
-                        <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                        <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="188" height="266" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31181])">
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/tile.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                    </control>
-                    <control type="image">
-                        <top>-6</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="Selected" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
-                        <aspectratio scalediffuse="false">center</aspectratio>
-                        <visible>String.Contains(ListItem.Icon,special://skin/extras/icons/)</visible>
-                    </control>
-                    <control type="image">
-                        <top>16</top>
-                        <width>196</width>
-                        <height>170</height>
-                        <texture colordiffuse="Selected" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
-                        <aspectratio scalediffuse="false">center</aspectratio>
-                        <visible>!String.Contains(ListItem.Icon,special://skin/extras/icons/)</visible>
-                    </control>
-                    <control type="label">
-                        <top>120</top>
-                        <left>8</left>
-                        <height>78</height>
-                        <width>160</width>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <font>Font-HomeMenu</font>
-                        <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-                    <control type="image">
-                        <centerleft>85</centerleft>
-                        <bottom>56</bottom>
-                        <width>16</width>
-                        <height>16</height>
-                        <aspectratio>stretch</aspectratio>
-                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/16-arrow-down.png</texture>
-                        <visible>Integer.IsGreater(Container(9002).NumItems,0)</visible>
-                        <animation effect="fade" start="0" end="100" time="300" delay="300" reversible="false">Focus</animation>
-                    </control>
-                </focusedlayout>
-
-                <!-- Text Only -->
-                <itemlayout width="188" height="266" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">
-                    <control type="label">
-                        <top>16</top>
-                        <height>78</height>
-                        <width>170</width>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <font>Font-HomeMenu</font>
-                        <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                        <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="188" height="266" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">
-                    <control type="label">
-                        <top>16</top>
-                        <height>78</height>
-                        <width>170</width>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <font>Font-HomeMenu</font>
-                        <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                        <animation effect="slide" start="0" end="0,-12" time="100" reversible="false">Focus</animation>
-                    </control>
-                    <control type="image">
-                        <centerleft>85</centerleft>
-                        <top>88</top>
-                        <width>16</width>
-                        <height>16</height>
-                        <aspectratio>stretch</aspectratio>
-                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/16-arrow-down.png</texture>
-                        <visible>Integer.IsGreater(Container(9002).NumItems,0)</visible>
-                        <animation effect="fade" start="0" end="100" time="300" delay="300" reversible="false">Focus</animation>
-                    </control>
-                    <control type="image">
-                        <top>80</top>
-                        <width>170</width>
-                        <height>6</height>
-                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
-                        <aspectratio>strech</aspectratio>
-                    </control>
-                </focusedlayout>
-                <content>
-                    <include>skinshortcuts-mainmenu</include>
-                </content>
-            </control>
-
-            <!-- Icon Hang -->
-            <control type="group">
-                <visible>!Skin.HasSetting(home.transparent)</visible>
-                <visible>Container(9000).HasNext | Container(9000).HasPrevious</visible>
-                <visible>!String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])</visible>
-                <left>-172</left>
-                <right>-172</right>
-                <bottom>0</bottom>
-                <height>266</height>
-                <control type="image">
-                    <top>16</top>
-                    <left>10</left>
-                    <width>196</width>
-                    <height>170</height>
-                    <texture colordiffuse="HomeBarBG">common/tile.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="image">
-                    <top>16</top>
-                    <right>10</right>
-                    <width>196</width>
-                    <height>170</height>
-                    <texture colordiffuse="HomeBarBG">common/tile.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="image">
-                    <bottom>0</bottom>
-                    <right>10</right>
-                    <width>196</width>
-                    <height>70</height>
-                    <texture colordiffuse="HomeBarBG">common/white.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-            </control>
-
-            <!-- Arrows -->
-            <control type="group">
-                <visible>Container(9000).HasNext | Container(9000).HasPrevious</visible>
-                <visible>!String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])</visible>
-                <left>0</left>
-                <right>0</right>
-                <bottom>0</bottom>
-                <height>266</height>
-                <control type="image">
-                    <centertop>45</centertop>
-                    <left>8</left>
-                    <width>16</width>
-                    <height>16</height>
-                    <texture colordiffuse="ListLabel">common/16-arrow-left.png</texture>
-                </control>
-                <control type="image">
-                    <centertop>160</centertop>
-                    <right>8</right>
-                    <width>16</width>
-                    <height>16</height>
-                    <texture colordiffuse="ListLabel" flipx="true">common/16-arrow-left.png</texture>
-                </control>
-            </control>
-
+        <control type="grouplist" id="9000">
+            <orientation>horizontal</orientation>
+            <usecontrolcoords>true</usecontrolcoords>
+            <itemgap>-4</itemgap>
+            <left>16</left>
+            <right>16</right>
+            <bottom>0</bottom>
+            <height>266</height>
+            <onup condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</onup>
+            <ondown condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</ondown>
+            <animation type="Visible">
+                <effect type="slide" start="0,266" end="0" time="150" />
+            </animation>
+            <include content="Home_Menu_Button">
+                <param name="groupid" value="801" />
+                <param name="buttonid" value="901" />
+                <param name="label" value="label" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="onclick" value="noop" />
+            </include>
+            <include content="Home_Menu_Button">
+                <param name="groupid" value="802" />
+                <param name="buttonid" value="902" />
+                <param name="label" value="label" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="onclick" value="noop" />
+            </include>
+            <include content="Home_Menu_Button">
+                <param name="groupid" value="803" />
+                <param name="buttonid" value="903" />
+                <param name="label" value="label" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="onclick" value="noop" />
+            </include>
+            <include content="Home_Menu_Button">
+                <param name="groupid" value="804" />
+                <param name="buttonid" value="904" />
+                <param name="label" value="label" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="onclick" value="noop" />
+            </include>
+            <include content="Home_Menu_Button">
+                <param name="groupid" value="805" />
+                <param name="buttonid" value="905" />
+                <param name="width" value="384" />
+                <param name="label" value="label" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="onclick" value="noop" />
+            </include>
+            <include content="Home_Menu_Button">
+                <param name="groupid" value="806" />
+                <param name="buttonid" value="906" />
+                <param name="label" value="label" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="onclick" value="noop" />
+            </include>
+            <include content="Home_Menu_Button">
+                <param name="groupid" value="807" />
+                <param name="buttonid" value="907" />
+                <param name="label" value="label" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="onclick" value="noop" />
+            </include>
+            <include content="Home_Menu_Button">
+                <param name="groupid" value="808" />
+                <param name="buttonid" value="908" />
+                <param name="label" value="this is a super long label" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="onclick" value="noop" />
+            </include>
+            <include content="Home_Menu_Button">
+                <param name="groupid" value="809" />
+                <param name="buttonid" value="909" />
+                <param name="label" value="label" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="onclick" value="noop" />
+            </include>
         </control>
+    </include>
+
+    <include name="Home_Menu_Button">
+        <param name="width" default="196" />
+        <param name="visible" default="true" />
+        <definition>
+            <control type="button" id="$PARAM[buttonid]">
+                <top>16</top>
+                <width>$PARAM[width]</width>
+                <height>170</height>
+                <texturenofocus colordiffuse="HomeBarTile" border="50">common/tile.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]" border="50">common/tile.png</texturefocus>
+                <aspectratio>stretch</aspectratio>
+                <textcolor>00ffffff</textcolor>
+                <focusedcolor>00ffffff</focusedcolor>
+                <onclick>$PARAM[onclick]</onclick>
+                <onunfocus>SetProperty(PreviousButton,$PARAM[buttonid],Home)</onunfocus>
+                <font />
+                <label />
+                <visible>$PARAM[visible]</visible>
+            </control>
+            <control type="group" id="$PARAM[groupid]">
+                <top>16</top>
+                <left>-$PARAM[width]</left>
+                <width>$PARAM[width]</width>
+                <height>170</height>
+                <visible>$PARAM[visible]</visible>
+                <control type="group">
+                    <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[groupid]) + !Control.HasFocus($PARAM[buttonid])">Conditional</animation>
+                    <control type="image">
+                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$PARAM[icon]</texture>
+                        <aspectratio scalediffuse="false">center</aspectratio>
+                    </control>
+                    <control type="label">
+                        <top>104</top>
+                        <height>78</height>
+                        <left>12</left>
+                        <right>24</right>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Font-HomeMenu</font>
+                        <textcolor>HomeBarFG</textcolor>
+                        <label>$PARAM[label]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
     </include>
 
     <!-- SubMenu -->
@@ -493,233 +199,6 @@
                     <include>skinshortcuts-submenu</include>
                 </content>
             </control>
-        </control>
-    </include>
-
-    <!-- Home Widget -->
-    <include name="Home_Widget_Control_NoPersist">
-        <control type="wraplist" id="9001">
-            <orientation>horizontal</orientation>
-            <width>100%</width>
-            <top>top</top>
-            <height>height</height>
-            <onfocus>SetProperty(FO9001,1,home)</onfocus>
-            <onunfocus>ClearProperty(FO9001,home)</onunfocus>
-            <onup>ClearProperty(FO9001,home)</onup>
-            <ondown>ClearProperty(FO9001,home)</ondown>
-            <onback>ClearProperty(FO9001,home)</onback>
-            <onback>9000</onback>
-            <ondown>9000</ondown>
-            <onup>9000</onup>
-            <oninfo condition="String.IsEmpty(Container(9001).ListItem.TvShowTitle) + String.IsEmpty(Container(9001).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(9001).ListItem.Title],imdb_id=$INFO[Container(9001).ListItem.IMDBNumber])</oninfo>
-            <oninfo condition="!String.IsEmpty(Container(9001).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(9001).ListItem.TvShowTitle],imdb_id=$INFO[Container(9001).ListItem.IMDBNumber])</oninfo>
-            <autoscroll time="8000">![Control.HasFocus(9001) | Control.HasFocus(9101)]</autoscroll>
-            <scrolltime tween="sine" easing="out">240</scrolltime>
-            <itemlayout />
-            <focusedlayout width="1920" height="1080" />
-            <content target="$VAR[Defs_HomeWidget_Target]">$VAR[Defs_HomeWidget_Content]</content>
-        </control>
-    </include>
-    <include name="Home_Widget_Control">
-        <include condition="!Skin.HasSetting(widgets.persistent)">Home_Widget_Control_NoPersist</include>
-        <include condition="Skin.HasSetting(widgets.persistent)">skinshortcuts-template-widget</include>
-        <control type="button" id="9101">
-            <width>100%</width>
-            <top>top</top>
-            <height>height</height>
-            <onfocus>SetProperty(FO9001,1,home)</onfocus>
-            <onunfocus>ClearProperty(FO9001,home)</onunfocus>
-            <onup>ClearProperty(FO9001,home)</onup>
-            <ondown>ClearProperty(FO9001,home)</ondown>
-            <onback>ClearProperty(FO9001,home)</onback>
-            <onback>9000</onback>
-            <ondown>9000</ondown>
-            <onup>9000</onup>
-            <onclick>PlayMedia($INFO[Container(9001).ListItem.FileNameAndPath])</onclick>
-            <visible>Integer.IsGreater(Container(9001).NumItems,0)</visible>
-        </control>
-    </include>
-    <include name="Home_Widget_DiscArt">
-        <control type="image">
-            <left>620</left>
-            <top>bigpad</top>
-            <width>300</width>
-            <height>300</height>
-            <aspectratio>keep</aspectratio>
-            <animation type="VisibleChange">
-                <effect type="slide" start="-300" end="0" time="300" />
-                <effect type="rotate" start="120" end="0" time="300" center="auto"/>
-            </animation>
-            <fadetime>300</fadetime>
-            <visible>!String.IsEmpty(Container(9001).ListItem.Art(discart))</visible>
-            <visible>String.IsEmpty(Container(9000).ListItem.Property(PosterWidget))</visible>
-            <texture background="true">$INFO[Container(9001).ListItem.Art(discart)]</texture>
-        </control>
-    </include>
-    <include name="Home_Widget_Left">
-        <include>Animation_Left</include>
-        <visible>Integer.IsGreater(Container(9001).NumItems,0)</visible>
-        <include condition="Skin.HasSetting(home.showdiscart) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153])">Home_Widget_DiscArt</include>
-        <control type="image">
-            <posx>-100</posx>
-            <width>900</width>
-            <height>340</height>
-            <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent) + [!String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153]) + ![!String.IsEmpty(Container(9000).ListItem.Property(PosterWidget)) + String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31166])] | [String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154]) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]]]">Conditional</animation>
-            <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
-        </control>
-        <control type="grouplist">
-            <posx>64</posx>
-            <posy>20</posy>
-            <width>650</width>
-            <orientation>vertical</orientation>
-            <visible>[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]</visible>
-            <control type="label">
-                <label>$VAR[Label_HomeWidget]</label>
-                <aligny>top</aligny>
-                <height>35</height>
-                <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-                <textcolor>HomeBarFG</textcolor>
-            </control>
-            <control type="label">
-                <label>$VAR[Label_HomeWidget_Label]</label>
-                <aligny>top</aligny>
-                <font>Font-WidgetInfoTitle</font>
-                <height>70</height>
-                <textcolor>$VAR[HighlightColor2]</textcolor>
-            </control>
-            <control type="textbox">
-                <label>$VAR[Label_HomeWidget_Plot]</label>
-                <aligny>top</aligny>
-                <align>left</align>
-                <height>120</height>
-                <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-                <textcolor>HomeBarFG</textcolor>
-                <font>Font-ListInfo</font>
-            </control>
-            <control type="label">
-                <label>$VAR[Label_HomeWidget_Info]</label>
-                <aligny>center</aligny>
-                <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-                <font>Font-ListInfo-Small</font>
-                <height>65</height>
-                <textcolor>HomeBarFG</textcolor>
-            </control>
-        </control>
-    </include>
-    <include name="Home_Widget_Right">
-        <include>Animation_Right</include>
-        <visible>Integer.IsGreater(Container(9001).NumItems,0)</visible>
-        <control type="image">
-            <posx>305</posx>
-            <width>2000</width>
-            <height>340</height>
-            <texture colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
-            <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
-        </control>
-        <control type="grouplist">
-            <visible>!Container(9001).IsUpdating</visible>
-            <visible>![String.IsEqual(Container(9000).ListItem.Property(widget),Weather) | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + [String.IsEqual(Skin.String(home.fallbackwidget),Weather) | String.IsEqual(Skin.String(home.fallbackwidget.node),Weather)]]] | !System.HasAddon(resource.images.weatherfanart.multi)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
-            <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
-            <animation effect="slide" start="0" end="220" condition="!Container(9001).OnPrevious" reversible="false" time="200">Conditional</animation>
-            <posx>455</posx>
-            <width>2000</width>
-            <top>pad</top>
-            <height>320</height>
-            <orientation>horizontal</orientation>
-            <itemgap>0</itemgap>
-            <include content="Object_HomeWidgetPoster">
-                <param name="id" value="-2" />
-                <param name="focuseditem" value="false" />
-            </include>
-            <include content="Object_HomeWidgetPoster">
-                <param name="id" value="-1" />
-                <param name="focuseditem" value="false" />
-            </include>
-            <include content="Object_HomeWidgetPoster">
-                <param name="id" value="0" />
-                <param name="focuseditem" value="true" />
-            </include>
-            <include content="Object_HomeWidgetPoster">
-                <param name="id" value="1" />
-                <param name="focuseditem" value="false" />
-            </include>
-            <include content="Object_HomeWidgetPoster">
-                <param name="id" value="2" />
-                <param name="focuseditem" value="false" />
-            </include>
-            <include content="Object_HomeWidgetPoster">
-                <param name="id" value="3" />
-                <param name="focuseditem" value="false" />
-            </include>
-            <include content="Object_HomeWidgetPoster">
-                <param name="id" value="4" />
-                <param name="focuseditem" value="false" />
-            </include>
-            <include content="Object_HomeWidgetPoster">
-                <param name="id" value="5" />
-                <param name="focuseditem" value="false" />
-            </include>
-        </control>
-        <control type="grouplist">
-            <left>850</left>
-            <right>0</right>
-            <orientation>horizontal</orientation>
-            <height>340</height>
-            <itemgap>70</itemgap>
-            <visible>!Container(9001).IsUpdating</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
-            <visible>[String.IsEqual(Container(9000).ListItem.Property(widget),Weather) | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + [String.IsEqual(Skin.String(home.fallbackwidget),Weather) | String.IsEqual(Skin.String(home.fallbackwidget.node),Weather)]]] + System.HasAddon(resource.images.weatherfanart.multi)</visible>
-            <include content="Object_WeatherOutlook">
-                <param name="day" value="Day0" />
-                <param name="dayname" value="$LOCALIZE[33006]" />
-            </include>
-            <include content="Object_WeatherOutlook">
-                <param name="day" value="Day1" />
-                <param name="dayname" value="$INFO[Window(weather).Property(Day1.Title)]" />
-            </include>
-            <include content="Object_WeatherOutlook">
-                <param name="day" value="Day2" />
-                <param name="dayname" value="$INFO[Window(weather).Property(Day2.Title)]" />
-            </include>
-            <include content="Object_WeatherOutlook">
-                <param name="day" value="Day3" />
-                <param name="dayname" value="$INFO[Window(weather).Property(Day3.Title)]" />
-            </include>
-        </control>
-    </include>
-    <include name="Home_Widget">
-        <control type="group">
-            <posy>400</posy>
-            <animation effect="slide" end="0,160" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-            <visible>[[Control.HasFocus(9001) | Control.HasFocus(9101)] + String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154])] | String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153]) | [!String.IsEmpty(Container(9000).ListItem.Property(PosterWidget)) + String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31166])]</visible>
-            <include>Home_Widget_Right</include>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)]</visible>
-            <visible>[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]</visible>
-        </control>
-        <control type="group">
-            <posy>400</posy>
-            <animation effect="slide" end="0,160" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-            <include>Home_Widget_Left</include>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)]</visible>
-            <visible>[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]</visible>
-        </control>
-    </include>
-    <include name="Home_Widget_Hidden">
-        <control type="group">
-            <posy>666</posy>
-            <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
-            <visible>String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154]) | [!String.IsEmpty(Container(9000).ListItem.Property(PosterWidget)) + String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31166])]</visible>
-            <include>Home_Widget_Right</include>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)]</visible>
-        </control>
-        <control type="group">
-            <posy>666</posy>
-            <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
-            <include>Home_Widget_Left</include>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)]</visible>
         </control>
     </include>
 
@@ -1007,5 +486,88 @@
                 </control>
             </control>
         </control>
+    </include>
+
+    <!-- ========== -->
+    <!-- BACKGROUND -->
+    <!-- ========== -->
+    <include name="Home_Background">
+        <control type="videowindow">
+            <visible>Skin.HasSetting(background.showvideo)</visible>
+            <visible>Player.HasVideo</visible>
+            <visible>!Window.IsVisible(weather)</visible>
+            <width>100%</width>
+            <height>100%</height>
+        </control>
+        <control type="group">
+            <width>100%</width>
+            <height>100%</height>
+            <animation type="Conditional" condition="Control.HasFocus(901)">
+                <include>Home_Parallax_Animate_Left</include>
+            </animation>
+            <animation type="Conditional" condition="Control.HasFocus(901) | Control.HasFocus(902)">
+                <include>Home_Parallax_Animate_Left</include>
+            </animation>
+            <animation type="Conditional" condition="Control.HasFocus(901) | Control.HasFocus(902) | Control.HasFocus(903)">
+                <include>Home_Parallax_Animate_Left</include>
+            </animation>
+            <animation type="Conditional" condition="Control.HasFocus(901) | Control.HasFocus(902) | Control.HasFocus(903) | Control.HasFocus(904)">
+                <include>Home_Parallax_Animate_Left</include>
+            </animation>
+
+            <animation type="Conditional" condition="Control.HasFocus(909) | Control.HasFocus(908) | Control.HasFocus(907) | Control.HasFocus(906)">
+                <include>Home_Parallax_Animate_Right</include>
+            </animation>
+            <animation type="Conditional" condition="Control.HasFocus(909) | Control.HasFocus(908) | Control.HasFocus(907)">
+                <include>Home_Parallax_Animate_Right</include>
+            </animation>
+            <animation type="Conditional" condition="Control.HasFocus(909) | Control.HasFocus(908)">
+                <include>Home_Parallax_Animate_Right</include>
+            </animation>
+            <animation type="Conditional" condition="Control.HasFocus(909)">
+                <include>Home_Parallax_Animate_Right</include>
+            </animation>
+
+            <control type="multiimage">
+                <width>100%</width>
+                <height>100%</height>
+                <fadetime>600</fadetime>
+                <randomize>true</randomize>
+                <timeperimage>5000</timeperimage>
+                <imagepath background="true">$VAR[Image_Background]</imagepath>
+                <aspectratio>scale</aspectratio>
+                <visible>![Player.HasVideo | Player.HasAudio] | [Player.HasAudio + !Skin.HasSetting(background.showvisualisation)] | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
+            </control>
+        </control>
+
+        <control type="image" description="Transition Fade">
+            <width>100%</width>
+            <height>100%</height>
+            <texture background="true" colordiffuse="Background">common/white.png</texture>
+            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+        </control>
+    </include>
+
+    <include name="Home_Parallax_Animate_Left">
+        <effect type="rotatey" end="-2" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="zoom" end="103" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="slide" end="10" time="1500" tween="quadratic" easing="out" delay="0" />
+    </include>
+    <include name="Home_Parallax_Animate_Right">
+        <effect type="rotatey" end="2" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="zoom" end="103" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="slide" end="-10" time="1500" tween="quadratic" easing="out" delay="0" />
+    </include>
+
+    <!-- Animations -->
+    <include name="Home_Icons_Animate">
+        <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
+        <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="![Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
+    </include>
+    <include name="Home_Dialogs_Icons_Animate">
+        <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),2)">Conditional</animation>
+        <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),1)">Conditional</animation>
+        <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="String.IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
     </include>
 </includes>

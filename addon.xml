@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-    id="skin.eminence.2"
-    version="2.5.34"
-    name="Eminence 2.0"
-    provider-name="jurialmunkey">
+    id="skin.tvpmc"
+    version="1.0.0"
+    name="TVPMC"
+    provider-name="TV PLUS MEDIA - Marcel Mr. Wicked and jurialmunkey">
     <requires>
         <import addon="xbmc.gui" version="5.12.0"/>
         <import addon="script.skinshortcuts" version="1.0.0"/>
@@ -18,9 +18,9 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">Clean, clear, simple, modern.</summary>
-        <disclaimer lang="en">Mouse and Touch device not supported</disclaimer>
-        <description lang="en">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
+        <summary lang="en">TV Plus Media Center Skin for Kodi.</summary>
+        <disclaimer lang="en">TV PLUS Media is not responsible for any damage caused by installing this software or the subsequent updates on non-authorized devices. Mouse and Touch device not supported</disclaimer>
+        <description lang="en">TV PLUS Media Center is a custom configured skin and software for the exclusive use of ULTRA BOXX and WICKED Media Streaming Devices. A "WICKED" thanks to jurialmunkey. If you have questions or need support visit www.TVPLUSMEDIA.com</description>
         <license>CC-NC-SA 3.0</license>
         <website></website>
         <email></email>
