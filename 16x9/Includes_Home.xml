@@ -3,82 +3,109 @@
     <!-- ======== -->
     <!-- HOME BAR -->
     <!-- ======== -->
+    <variable name="Home_TVBackground">
+        <value condition="Control.HasFocus(901)">special://skin/x/backgrounds/support.jpg</value>
+        <value condition="Control.HasFocus(902)">special://skin/x/backgrounds/videos.jpg</value>
+        <value condition="Control.HasFocus(903)">special://skin/x/backgrounds/music.jpg</value>
+        <value condition="Control.HasFocus(904)">special://skin/x/backgrounds/pictures.jpg</value>
+        <value condition="Control.HasFocus(905)">noop</value>
+        <value condition="Control.HasFocus(906)">special://skin/x/backgrounds/livetv.jpg</value>
+        <value condition="Control.HasFocus(907)">special://skin/x/backgrounds/liveradio.jpg</value>
+        <value condition="Control.HasFocus(908)">special://skin/x/backgrounds/news.jpg</value>
+        <value condition="Control.HasFocus(909)">special://skin/x/backgrounds/quit.jpg</value>
+    </variable>
+
+    <variable name="Home_TVStatic">
+        <value condition="!Integer.IsEqual(Window(Home).Property(ButtonSwitch,1))">noop</value>
+        <value>tvstatic/</value>
+    </variable>
+
     <include name="Home_Menu">
         <control type="grouplist" id="9000">
             <orientation>horizontal</orientation>
             <usecontrolcoords>true</usecontrolcoords>
             <itemgap>-4</itemgap>
-            <left>16</left>
-            <right>16</right>
+            <left>0</left>
+            <right>0</right>
             <bottom>0</bottom>
             <height>266</height>
+            <align>center</align>
             <onup condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</onup>
             <ondown condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</ondown>
             <animation type="Visible">
                 <effect type="slide" start="0,266" end="0" time="150" />
             </animation>
             <include content="Home_Menu_Button">
+                <param name="imageid" value="701" />
                 <param name="groupid" value="801" />
                 <param name="buttonid" value="901" />
-                <param name="label" value="label" />
-                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="label" value="Support" />
+                <param name="icon" value="special://skin/extras/icons/xactu.png" />
                 <param name="onclick" value="noop" />
             </include>
             <include content="Home_Menu_Button">
+                <param name="imageid" value="702" />
                 <param name="groupid" value="802" />
                 <param name="buttonid" value="902" />
-                <param name="label" value="label" />
-                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="label" value="Videos" />
+                <param name="icon" value="special://skin/extras/icons/video-addons.png" />
                 <param name="onclick" value="noop" />
             </include>
             <include content="Home_Menu_Button">
+                <param name="imageid" value="703" />
                 <param name="groupid" value="803" />
                 <param name="buttonid" value="903" />
-                <param name="label" value="label" />
-                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="label" value="Music" />
+                <param name="icon" value="special://skin/extras/icons/songs.png" />
                 <param name="onclick" value="noop" />
             </include>
             <include content="Home_Menu_Button">
+                <param name="imageid" value="704" />
                 <param name="groupid" value="804" />
                 <param name="buttonid" value="904" />
-                <param name="label" value="label" />
-                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="label" value="Pictures" />
+                <param name="icon" value="special://skin/extras/icons/pictures.png" />
                 <param name="onclick" value="noop" />
             </include>
             <include content="Home_Menu_Button">
+                <param name="imageid" value="705" />
                 <param name="groupid" value="805" />
                 <param name="buttonid" value="905" />
                 <param name="width" value="384" />
-                <param name="label" value="label" />
-                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="label" value="Tv Plus [Start Here]" />
+                <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
                 <param name="onclick" value="noop" />
             </include>
             <include content="Home_Menu_Button">
+                <param name="imageid" value="706" />
                 <param name="groupid" value="806" />
                 <param name="buttonid" value="906" />
-                <param name="label" value="label" />
-                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="label" value="Live TV" />
+                <param name="icon" value="special://skin/extras/icons/livetv.png" />
                 <param name="onclick" value="noop" />
             </include>
             <include content="Home_Menu_Button">
+                <param name="imageid" value="707" />
                 <param name="groupid" value="807" />
                 <param name="buttonid" value="907" />
-                <param name="label" value="label" />
-                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="label" value="Live Radio" />
+                <param name="icon" value="special://skin/extras/icons/liveradio.png" />
                 <param name="onclick" value="noop" />
             </include>
             <include content="Home_Menu_Button">
+                <param name="imageid" value="708" />
                 <param name="groupid" value="808" />
                 <param name="buttonid" value="908" />
-                <param name="label" value="this is a super long label" />
-                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="label" value="News" />
+                <param name="icon" value="special://skin/extras/icons/news.png" />
                 <param name="onclick" value="noop" />
             </include>
             <include content="Home_Menu_Button">
+                <param name="imageid" value="709" />
                 <param name="groupid" value="809" />
                 <param name="buttonid" value="909" />
-                <param name="label" value="label" />
-                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+                <param name="label" value="Quit" />
+                <param name="icon" value="special://skin/extras/icons/power.png" />
                 <param name="onclick" value="noop" />
             </include>
         </control>
@@ -86,9 +113,24 @@
 
     <include name="Home_Menu_Button">
         <param name="width" default="196" />
+        <param name="width" default="196" />
         <param name="visible" default="true" />
         <definition>
+            <control type="group" id="$PARAM[imageid]">
+                <width>$PARAM[width]</width>
+                <control type="image">
+                    <top>12</top>
+                    <left>-4</left>
+                    <right>-4</right>
+                    <height>178</height>
+                    <texture border="30">common/metal1.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                    <visible>Control.HasFocus($PARAM[buttonid])</visible>
+                </control>
+            </control>
             <control type="button" id="$PARAM[buttonid]">
+                <animation effect="slide" start="0" end="4" condition="true">Conditional</animation>
+                <left>-$PARAM[width]</left>
                 <top>16</top>
                 <width>$PARAM[width]</width>
                 <height>170</height>
@@ -98,7 +140,8 @@
                 <textcolor>00ffffff</textcolor>
                 <focusedcolor>00ffffff</focusedcolor>
                 <onclick>$PARAM[onclick]</onclick>
-                <onunfocus>SetProperty(PreviousButton,$PARAM[buttonid],Home)</onunfocus>
+                <onunfocus>SetProperty(ButtonSwitch,1,Home)</onunfocus>
+                <onunfocus>AlarmClock(ButtonSwitchOff,SetProperty(ButtonSwitch,0,Home),00:01,silent)</onunfocus>
                 <font />
                 <label />
                 <visible>$PARAM[visible]</visible>
@@ -112,6 +155,8 @@
                 <control type="group">
                     <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[groupid]) + !Control.HasFocus($PARAM[buttonid])">Conditional</animation>
                     <control type="image">
+                        <top>-32</top>
+                        <left>16</left>
                         <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$PARAM[icon]</texture>
                         <aspectratio scalediffuse="false">center</aspectratio>
                     </control>
@@ -230,28 +275,6 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
-                </control>
-                <control type="group">
-                    <visible>!Window.IsActive(DialogNotification.xml)</visible>
-                    <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-                    <visible>!Player.HasMedia</visible>
-                    <control type="image">
-                        <left>16</left>
-                        <posy>48r</posy>
-                        <width>32</width>
-                        <height>32</height>
-                        <texture colordiffuse="LineLabel">common/rss.png</texture>
-                    </control>
-                    <control type="rss">
-                        <posx>48</posx>
-                        <posy>48r</posy>
-                        <width>1040</width>
-                        <font>Font-RSS</font>
-                        <textcolor>SideArrow</textcolor>
-                        <headlinecolor>SideArrow</headlinecolor>
-                        <titlecolor>LineLabel</titlecolor>
-                        <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                    </control>
                 </control>
             </control>
             <control type="group">
@@ -488,6 +511,41 @@
         </control>
     </include>
 
+
+    <!-- RSS -->
+    <include name="Home_RSS">
+        <control type="group">
+            <include>Animation_FadeIn</include>
+            <visible>Window.IsVisible(weather) | Window.IsVisible(home)</visible>
+            <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
+            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>!Player.HasMedia</visible>
+            <visible>stringcompare(Skin.String(home.style),$LOCALIZE[31180])</visible>
+            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
+            <control type="image">
+                <posx>16</posx>
+                <bottom>16</bottom>
+                <width>32</width>
+                <height>32</height>
+                <texture colordiffuse="Highlight">common/rss.png</texture>
+            </control>
+            <control type="rss">
+                <left>48</left>
+                <bottom>20</bottom>
+                <right>16</right>
+                <height>32</height>
+                <aligny>center</aligny>
+                <font>Font-RSSTicker</font>
+                <textcolor>ff555555</textcolor>
+                <headlinecolor>ff555555</headlinecolor>
+                <titlecolor>$VAR[HighlightColor2]</titlecolor>
+            </control>
+        </control>
+    </include>
     <!-- ========== -->
     <!-- BACKGROUND -->
     <!-- ========== -->
@@ -538,6 +596,37 @@
                 <aspectratio>scale</aspectratio>
                 <visible>![Player.HasVideo | Player.HasAudio] | [Player.HasAudio + !Skin.HasSetting(background.showvisualisation)] | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
             </control>
+            <control type="multiimage">
+                <left>742</left>
+                <right>656</right>
+                <top>272</top>
+                <bottom>538</bottom>
+                <imagepath>tvanimated/</imagepath>
+                <aspectratio>stretch</aspectratio>
+                <animation effect="fade" start="100" end="0" delay="250" time="150">Hidden</animation>
+                <visible>IsEmpty(Control.GetLabel(999))</visible>
+            </control>
+            <control type="multiimage" id="999">
+                <left>742</left>
+                <right>656</right>
+                <top>272</top>
+                <bottom>538</bottom>
+                <fadetime>300</fadetime>
+                <animation effect="fade" start="0" end="100" time="300" delay="600" condition="!IsEmpty(Control.GetLabel(999))">Conditional</animation>
+                <imagepath>$VAR[Home_TVBackground]</imagepath>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="multiimage">
+                <left>742</left>
+                <right>656</right>
+                <top>272</top>
+                <bottom>538</bottom>
+                <imagepath>$VAR[Home_TVStatic]</imagepath>
+                <timeperimage>50</timeperimage>
+                <aspectratio>stretch</aspectratio>
+                <animation effect="fade" start="100" end="0" delay="250" time="100">Hidden</animation>
+                <visible>Integer.IsEqual(Window(Home).Property(ButtonSwitch),1)</visible>
+            </control>
         </control>
 
         <control type="image" description="Transition Fade">
@@ -550,14 +639,14 @@
     </include>
 
     <include name="Home_Parallax_Animate_Left">
-        <effect type="rotatey" end="-2" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
-        <effect type="zoom" end="103" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
-        <effect type="slide" end="10" time="1500" tween="quadratic" easing="out" delay="0" />
+        <effect type="rotatey" end="3" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="zoom" end="105" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="slide" end="-10" time="1500" tween="quadratic" easing="out" delay="0" />
     </include>
     <include name="Home_Parallax_Animate_Right">
-        <effect type="rotatey" end="2" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
-        <effect type="zoom" end="103" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
-        <effect type="slide" end="-10" time="1500" tween="quadratic" easing="out" delay="0" />
+        <effect type="rotatey" end="-3" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="zoom" end="105" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="slide" end="10" time="1500" tween="quadratic" easing="out" delay="0" />
     </include>
 
     <!-- Animations -->

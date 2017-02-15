@@ -29,6 +29,7 @@
                 <include>Home_Menu</include>
                 <include>Home_SubMenu</include>
                 <include>Home_NowPlaying</include>
+                <include>Home_RSS</include>
             </control>
         </control>
 
