@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1141" type="dialog">
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <top>50</top>
+            <bottom>50</bottom>
+            <left>50</left>
+            <right>50</right>
+            <include>Dialog_Background</include>
+            <control type="image">
+                <left>20</left>
+                <top>20</top>
+                <right>20</right>
+                <bottom>110</bottom>
+                <texture>special://skin/x/Backgrounds/tvplus.jpg</texture>
+            </control>
+            <control type="button" id="9000">
+                <centerleft>50%</centerleft>
+                <align>center</align>
+                <bottom>20</bottom>
+                <height>70</height>
+                <width>400</width>
+                <label>OK</label>
+                <onclick>Close</onclick>
+                <include>Defs_OptionButton</include>
+            </control>
+        </control>
+    </controls>
+
+</window>

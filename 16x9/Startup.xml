@@ -3,15 +3,19 @@
     <!-- startup -->
     <onload>Skin.Reset(HideSettings)</onload>
 
-    <!-- <onload condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True,pixels=10,bits=1,radius=10,delta_x=40,delta_y=90,black=#00cc00,white=#eeffcc)</onload>
-    <onload>SetProperty(cfa_daemon_set,blur,home)</onload>
-    <onload>SetProperty(cfa_daemon_fallback,special://skin/extras/backgrounds/home.jpg,home)</onload> -->
-
-    <onload condition="String.IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
-    <!-- <onload condition="!Skin.HasSetting(SkinHelper.EnableExtraFanart)">Skin.SetBool(SkinHelper.EnableExtraFanart)</onload> -->
-    <!-- <onload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload> -->
-    <onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-    <onload condition="!String.IsEmpty(Skin.String(StartupPlaylist))">PlayMedia($ESCINFO[Skin.String(StartupPlaylist)])</onload>
+    
+    <!-- TVPLUS DEFAULTS -->
+    <onload condition="Skin.HasSetting(TVPLUS.MASTERMODE)">Skin.Reset(TVPLUS.MASTERMODE)</onload>
+    <onload condition="!StringCompare(Skin.String(home.style),$LOCALIZE[31181])">Skin.SetString(home.style,$LOCALIZE[31181])</onload>
+    <onload condition="!Skin.HasSetting(background.showvideo)">Skin.SetBool(background.showvideo)</onload>
+    <onload condition="!Skin.HasSetting(disable.weatherheader)">Skin.SetBool(disable.weatherheader)</onload>
+    <onload condition="!Skin.HasSetting(OSDVisualisation.ShowFanart)">Skin.SetBool(OSDVisualisation.ShowFanart)</onload>
+    <onload condition="!Skin.HasSetting(ArtistSlideShow.Enabled)">Skin.SetBool(ArtistSlideShow.Enabled)</onload>
+    <onload>ClearProperty(DoubleOpenAddons,home)</onload>
+
+    <onload condition="Skin.HasSetting(TVPLUS.Welcome.Accepted)">ReplaceWindow(home)</onload>
+    <onload condition="!Skin.HasSetting(TVPLUS.Welcome.Accepted)">ReplaceWindow(1133)</onload>
+    <onload condition="!Window.Previous(LoginScreen.xml)">PlayMedia(special://skin/x/videos/tvpmkodiintro.mp4)</onload>
 </window>

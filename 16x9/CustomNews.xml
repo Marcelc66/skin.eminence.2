@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1134">
+    <defaultcontrol always="true">9002</defaultcontrol>
+    <backgroundcolor>Background</backgroundcolor>
+    <controls>
+        <control type="button" id="9002">
+            <visible allowhiddenfocus="true">false</visible>
+            <onleft>SetProperty(moving,1)</onleft>
+            <onright>SetProperty(moving,1)</onright>
+            <onleft condition="Container(9001).HasPrevious">Control.Move(9001,-1)</onleft>
+            <onright condition="Container(9001).HasNext">Control.Move(9001,1)</onright>
+            <onclick>Close</onclick>
+        </control>
+        <control type="list" id="9001">
+            <width>100%</width>
+            <height>100%</height>
+            <orientation>horizontal</orientation>
+            <onright>noop</onright>
+            <onleft>noop</onleft>
+            <autoscroll time="5000">IsEmpty(Window.Property(moving))</autoscroll>
+            <itemlayout width="1920" height="1080">
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture>$INFO[ListItem.FileNameAndPath]</texture>
+                </control>
+            </itemlayout>
+            <focusedlayout width="1920" height="1080">
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture>$INFO[ListItem.FileNameAndPath]</texture>
+                </control>
+            </focusedlayout>
+            <content>special://skin/x/News/</content>
+        </control>
+        <control type="image">
+            <width>96</width>
+            <height>96</height>
+            <texture colordiffuse="bfffffff" flipx="true">common/bigarrow.png</texture>
+            <centertop>54%</centertop>
+            <left>20</left>
+            <visible>Container(9001).HasPrevious</visible>
+        </control>
+        <control type="image">
+            <width>96</width>
+            <height>96</height>
+            <texture colordiffuse="bfffffff">common/bigarrow.png</texture>
+            <centertop>54%</centertop>
+            <right>20</right>
+            <visible>Container(9001).HasNext</visible>
+        </control>
+  </controls>
+</window>

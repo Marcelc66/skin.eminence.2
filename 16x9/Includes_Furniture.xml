@@ -659,7 +659,7 @@
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
         <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
         <value condition="VideoPlayer.IsFullscreen + [Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]">ObjectBackground</value>
-        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeBarBG</value>
+        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeBarTile</value>
         <value>ObjectBackground</value>
     </variable>
     <variable name="Furniture_TopBar_MainLabel_Color">
@@ -787,35 +787,59 @@
         <value>special://skin/extras/icons/home.png</value>
     </variable>
     <include name="Furniture_TopBar_Tile">
+        <control type="group">
+            <animation effect="fade" start="0" end="100" time="2000"  pulse="true" tween="quadratic" easing="in" condition="true" center="auto">Conditional</animation>
+            <visible>Window.IsVisible(home)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <control type="image">
+                <top>14</top>
+                <left>-92</left>
+                <width>309</width>
+                <height>172</height>
+                <texture border="75">common/metal1.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+           
+        </control>
         <control type="image">
             <posy>18</posy>
             <posx>-88</posx>
             <width>300</width>
-            <height>164</height>
+            <height>164</height>    
             <texture align="left" border="75">common/header.png</texture>
             <colordiffuse>$VAR[Furniture_TopBar_Tile_BGCOLOR]</colordiffuse>
             <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent) + [Window.IsVisible(home) | Window.IsVisible(weather)]">Conditional</animation>
         </control>
+        
     </include>
+    <variable name="Furniture_TopBar_Tile_Color">
+        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Paused | Player.Forwarding32x | Player.Forwarding16x | Player.Forwarding8x | Player.Forwarding4x | Player.Forwarding2x | Player.Rewinding32x | Player.Rewinding16x | Player.Rewinding8x | Player.Rewinding4x | Player.Rewinding2x | Player.Caching | Player.Seeking]">$VAR[HighlightColor]</value>
+        <value>HomeBarFG</value>
+    </variable>
     <include name="Furniture_TopBar_Tile_Content">
-
+        <control type="image">
+            <posy>20</posy>
+            <posx>20</posx>
+            <width>160</width>
+            <height>160</height> 
+            <aspectratio>keep</aspectratio>
+            <texture>wickedheaderlogo.png</texture>
+            <visible>Window.IsVisible(home)</visible>
+            <visible>!Window.IsVisible(DialogBusy.xml)</visible>
+            <animation effect="fade" start="20" end="100" time="2000"  pulse="true" tween="quadratic" easing="out" condition="true" center="auto">Conditional</animation>
+        </control>
         <control type="image">
             <posy>10</posy>
             <posx>30</posx>
             <width>128</width>
-            <height>128</height>
+            <height>128</height>    
             <texture>$VAR[Furniture_TopBar_Tile_Icon]</texture>
             <aspectratio>keep</aspectratio>
-            <colordiffuse>HomeBarFG</colordiffuse>
+            <colordiffuse>$VAR[Furniture_TopBar_Tile_Color]</colordiffuse>
             <visible>!Container.Scrolling</visible>
-            <animation type="Conditional" condition="!Window.IsVisible(DuialogBusy.xml)">
-                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="2000" />
-                <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" delay="2000" />
-            </animation>
-            <animation type="Conditional" condition="Window.IsVisible(DialogBusy.xml)">
-                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out"/>
-            </animation>
+            <visible>!Window.IsVisible(DialogBusy.xml)</visible>
+            <visible>!Window.IsVisible(home)</visible>
             <animation type="Visible">
                 <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="2000" />
                 <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" delay="2000" />
@@ -827,14 +851,7 @@
         </control>
         <control type="group">
             <visible>Container.Scrolling</visible>
-            <animation type="Conditional" condition="!Window.IsVisible(DuialogBusy.xml)">
-                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="2000" />
-                <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" delay="2000" />
-            </animation>
-            <animation type="Conditional" condition="Window.IsVisible(DialogBusy.xml)">
-                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out"/>
-            </animation>
+            <visible>!Window.IsVisible(DialogBusy.xml)</visible>
             <animation type="Visible">
                 <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
                 <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" />
@@ -844,7 +861,7 @@
                 <effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out" delay="2000" />
             </animation>
             <control type="label">
-                <posy>25</posy>
+                <posy>40</posy>
                 <posx>30</posx>
                 <width>128</width>
                 <height>100</height>
@@ -857,13 +874,14 @@
         </control>
         <control type="label">
             <posx>0</posx>
-            <posy>115</posy>
+            <posy>122</posy>
             <width>184</width>
             <aligny>top</aligny>
             <font>Font-Sublabel</font>
             <align>center</align>
-            <textcolor>HomeBarFG</textcolor>
+            <textcolor>$VAR[Furniture_TopBar_Tile_Color]</textcolor>
             <label>$VAR[Furniture_TopBar_Tile_Text]</label>
+            <visible>!Window.IsVisible(home) | Window.IsVisible(DialogBusy.xml)</visible>
         </control>
     </include>
     <include name="Furniture_TopBar_Header">
@@ -871,9 +889,10 @@
         <control type="group">
             <visible>![VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
             <visible>!Skin.HasSetting(disable.mainheader)</visible>
+            <!-- <animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9002) + Window.IsVisible(home)">Conditional</animation> -->
             <control type="label">
                 <posx>245</posx>
-                <posy>25</posy>
+                <posy>40</posy>
                 <width>1200</width>
                 <height>100</height>
                 <font>Font-Header</font>
@@ -881,11 +900,11 @@
                 <aligny>top</aligny>
                 <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
             </control>
-            <control type="textbox">
+            <control type="label">
                 <posx>245</posx>
-                <posy>115</posy>
+                <posy>122</posy>
                 <width>1050</width>
-                <font>Font-SubLabel</font>
+                <font>Font-Sublabel</font>
                 <aligny>top</aligny>
                 <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <label>$VAR[Furniture_TopBar_Header_SubLabel]</label>
@@ -896,27 +915,28 @@
             <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
             <control type="label">
                 <posx>245</posx>
-                <posy>25</posy>
+                <posy>40</posy>
                 <width>1200</width>
                 <height>100</height>
                 <font>Font-Header</font>
                 <label>$INFO[Player.Title]</label>
                 <aligny>top</aligny>
+                <scroll>true</scroll>
                 <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
             </control>
             <control type="grouplist">
                 <posx>245</posx>
-                <posy>115</posy>
+                <posy>122</posy>
                 <width>1050</width>
                 <orientation>horizontal</orientation>
                 <itemgap>0</itemgap>
-                <visible>!String.IsEmpty(Player.Duration) + Player.HasVideo</visible>
+                <visible>!IsEmpty(Player.Duration) + Player.HasVideo</visible>
                 <control type="label">
                     <width max="400">auto</width>
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$VAR[Label_HeaderDirector,,  ][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor2]]$VAR[Label_HeaderDirector][/COLOR]</label>
                     <visible>!VideoPlayer.Content(livetv)</visible>
                 </control>
                 <control type="label">
@@ -924,7 +944,7 @@
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName,,  ][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]</label>
                     <visible>VideoPlayer.Content(livetv)</visible>
                 </control>
                 <control type="label">
@@ -933,7 +953,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>$INFO[Player.FinishTime,$LOCALIZE[31071] ,]</label>
+                    <label>$INFO[Player.FinishTime,  $LOCALIZE[31071] ,]</label>
                 </control>
                 <control type="label">
                     <width>330</width>
@@ -942,22 +962,22 @@
                     <aligny>top</aligny>
                     <visible>!VideoPlayer.Content(livetv)</visible>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>$INFO[Player.Time(hh:mm:ss),  •  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
+                    <label>$INFO[Player.Time(hh:mm:ss),  -  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
                 </control>
             </control>
             <control type="grouplist">
                 <posx>245</posx>
-                <posy>115</posy>
+                <posy>122</posy>
                 <width>1050</width>
                 <orientation>horizontal</orientation>
                 <itemgap>0</itemgap>
-                <visible>!String.IsEmpty(Player.Duration) + !Player.HasVideo</visible>
+                <visible>!IsEmpty(Player.Duration) + !Player.HasVideo</visible>
                 <control type="label">
                     <width max="830">auto</width>
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  </label>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]</label>
                 </control>
                 <control type="label">
                     <width>320</width>
@@ -965,7 +985,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>$INFO[Player.Time(hh:mm:ss)]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
+                    <label>$INFO[Player.Time(hh:mm:ss),  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
                 </control>
             </control>
         </control>
@@ -982,12 +1002,12 @@
                 <height>100</height>
                 <fadetime>350</fadetime>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
-                <texture colordiffuse="$VAR[Furniture_TopBar_MainLabel_Color]">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
+                <texture colordiffuse="$VAR[Furniture_TopBar_MainLabel_Color]">$INFO[Weather.FanartCode,weather-icons/,.png]</texture>
                 <visible>!Skin.HasSetting(disable.weatherheader)</visible>
             </control>
             <control type="label">
                 <posx>268</posx>
-                <posy>115</posy>
+                <posy>122</posy>
                 <width>128</width>
                 <height>100</height>
                 <aligny>top</aligny>
@@ -998,9 +1018,18 @@
                 <label>$INFO[Weather.Temperature]</label>
                 <visible>!Skin.HasSetting(disable.weatherheader)</visible>
             </control>
+            <!-- <control type="image">
+                <right>130</right>
+                <posy>16</posy>
+                <width>350</width>
+                <height>40</height>
+                <fadetime>350</fadetime>
+                <aspectratio aligny="center" align="right">keep</aspectratio>
+                <texture flipx="false">tvplus-logo.png</texture>
+            </control> -->
             <control type="label">
                 <posx>270</posx>
-                <posy>25</posy>
+                <posy>40</posy>
                 <width>300</width>
                 <height>100</height>
                 <font>Font-Header</font>
@@ -1008,11 +1037,11 @@
                 <aligny>top</aligny>
                 <label>$INFO[System.Time(hh:mm)]</label>
                 <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
-                <animation effect="slide" start="0" end="-58" condition="!String.IsEmpty(System.Time(xx))">Conditional</animation>
+                <animation effect="slide" start="0" end="-58" condition="!IsEmpty(System.Time(xx))">Conditional</animation>
             </control>
             <control type="label">
                 <posx>270</posx>
-                <posy>71</posy>
+                <posy>65</posy>
                 <width>100</width>
                 <height>100</height>
                 <aligny>top</aligny>
@@ -1020,12 +1049,12 @@
                 <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <align>right</align>
                 <label>$INFO[System.Time(xx)]</label>
-                <visible>!String.IsEmpty(System.Time(xx))</visible>
+                <visible>!IsEmpty(System.Time(xx))</visible>
             </control>
             <control type="label">
                 <posx>270</posx>
-                <posy>115</posy>
-                <width>500</width>
+                <posy>122</posy>
+                <width>600</width>
                 <height>100</height>
                 <aligny>top</aligny>
                 <font>Font-Sublabel</font>
@@ -1033,12 +1062,12 @@
                 <align>right</align>
                 <label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(dd MMM yyyy)]</label>
             </control>
-        </control>
+        </control>   
     </include>
     <include name="Furniture_TopBar">
         <!-- <include>GlobalInfoOverlay</include> -->
         <control type="group">
-            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
+            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />
@@ -1050,7 +1079,7 @@
                 <width>100%</width>
                 <height>512</height>
                 <texture colordiffuse="7f000000">common/gradient.png</texture>
-                <visible>Window.IsVisible(weather) | Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
+                <visible>Skin.HasSetting(global.backpanelmode) | Window.IsVisible(weather) | Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
             </control>
             <control type="group">
                 <include>Furniture_TopBar_Header</include>
@@ -1058,7 +1087,7 @@
             <include>Furniture_TopBar_Clock</include>
         </control>
         <control type="group">
-            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Player.Muted | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
+            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Window.IsActive(DialogMuteBug.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />
@@ -1068,7 +1097,7 @@
             </animation>
             <include>Furniture_TopBar_Tile</include>
             <control type="group">
-                <visible>!Window.IsVisible(DialogVolumeBar.xml) | Player.Muted</visible>
+                <visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
                 <include>Furniture_TopBar_Tile_Content</include>
             </control>
         </control>

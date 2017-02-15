@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1133">
+    <defaultcontrol always="true">9001</defaultcontrol>
+    <backgroundcolor>Background</backgroundcolor>
+    <onload>Skin.Reset(TVPLUS.Welcome.Accepted)</onload>
+    <controls>
+        <control type="group">
+            <visible>!StringCompare(Player.Filenameandpath,special://skin/x/Videos/tvpmkodiintro.mp4)</visible>
+            <centerleft>50%</centerleft>
+            <centertop>50%</centertop>
+            <height>100%</height>
+            <width>100%</width>
+            <control type="image">
+                <left>0</left>
+                <top>10</top>
+                <right>0</right>
+                <height>128</height>
+                <aspectratio>keep</aspectratio>
+                <texture>WelcomeLogo.png</texture>
+            </control>
+            <control type="label">
+                <description>header label</description>
+                <left>30</left>
+                <top>168</top>
+                <width>1830</width>
+                <height>40</height>
+                <textoffsetx>15</textoffsetx>
+                <font>Font-InfoBox-Title</font>
+                <label>[COLOR=Highlight][B]IMPORTANT CONSUMER INFORMATION[/B][/COLOR]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>dialogheader</textcolor>
+            </control>
+            <control type="textbox">
+                <visible>IsEmpty(Window.Property(french))</visible>
+                <left>60</left>
+                <top>238</top>
+                <width>1800</width>
+                <height>740</height>
+                <font>Font-Disclaimer</font>
+                <align>left</align>
+                <pagecontrol>9003</pagecontrol>
+                <label>Your TV PLUS Systems functionality is much like a personal computer that has unrestricted access to the internet and any and all the content thereof. As such we advise you that there are copyrighted TV Shows, Movies, Kids, Sports, Adult and every type of media imaginable accessible to the user. As sold, the TV PLUS System is not configured to download, store or duplicate any media files and only streams network and/or internet content thus there are NEVER any copies or duplication made on your device or connected storage.[CR][CR]TV PLUS MEDIA produces the TV PLUS Systems and is a technology integrator, distributer & reseller of the “WICKED” Smart Home Media Streaming Systems for which the principal purpose is of a Smart TV Accessory, Personal Computing, Gaming as well as and not limited to, Media Streaming of personal & legal content from legitimate internet sources for personal home viewing and as intended by the various providers. Furthermore please be mindful that Adult & Mature content is accessible via an internet connection and any minors should be supervised while using the TV PLUS System.[CR][CR]TV PLUS MEDIA does not host, provide, archive, store, or distribute media of any kind to the exception of corporate marketing and WICKED UNIVERSITY teaching materials and as such does not have any affiliation, involvement or participation with any media content hosts or providers. The TV PLUS System is not sold nor intended for any COMMERCIAL or PUBLIC viewing use.[CR][CR]TV PLUS MEDIA hereby advises it's clients and all potential users that it is entirely the responsibility of the media consumer and/or user(s) to operate the system responsibly and in accordance to the governing laws applicable in your specific region.[CR][CR]Be well advised that TV PLUS MEDIA and/or it’s authorized Resellers or Partners will not discuss, support or provide any information by phone, email or via its website(s) or otherwise regarding access to or the streaming/viewing of illegal or copyrighted media of any kind![CR][CR]I agree by acceptance hereof, the Consumer and/or User(s) of the TV PLUS System will hold harmless TV PLUS MEDIA, it’s Authorized Resellers, Partners, Suppliers and Affiliates regarding any copyrights and/or viewing choices and/or options accessible with the TV PLUS MEDIA Systems or products. For further information you may visit our website and consult our Terms & Conditions document at www.TVPLUSMEDIA.com</label>
+                <autoscroll time="3000" delay="10000" repeat="10000">true</autoscroll>
+            </control>
+            <control type="textbox">
+                <visible>!IsEmpty(Window.Property(french))</visible>
+                <left>60</left>
+                <top>238</top>
+                <width>1800</width>
+                <height>700</height>
+                <font>Font-Disclaimer</font>
+                <align>left</align>
+                <pagecontrol>9003</pagecontrol>
+                <label>Votre système TV PLUS a une fonctionnalité comme un ordinateur personnel qui a un accès illimité à l'internet et tout le contenu de celui-ci. En tant que tel, nous vous avisons qu'il y a des média de TV, Films, Enfants, Sports, Adultes et tous les types imaginables et accessibles à l'utilisateur du système ou il pourrait avoir des des droits d'auteur. Tel que vendu, le Système TV PLUS n’est pas configuré pour télécharger, stocker ou dupliquer des fichiers de médias et seulement pour faire le streaming en ce qui concerne le contenu d'Internet donc il n'y a jamais de copies ou de reproduction faite sur votre appareil ou stockage connecté. [CR] [CR] TV PLUS MEDIA produit le Système TV PLUS et est un intégrateur de technologies, distributeur et revendeur de "WICKED" Smart Systèmes de Média streaming dont le but principal est d'un accessoires de télévision smart, ordinateur d'informatique personnelle, console de jeux ainsi que mais pas limite aux streaming de médias personnel et légal à partir de sources d'Internet légitimes pour la visualisation personnelle et comme prévu par les différents diffuseur. De plus soyez conscient que le contenu Adulte ou Mature est également accessible via une connexion Internet et tous les mineurs doivent être surveillés en utilisant le Système TV PLUS. [CR] [CR] TV PLUS MEDIA n’héberge pas, ne fournir pas, n’archives pas, ni en magasin pas, ou ne distribuer pas aucune médias à l'exception du markéting d'entreprise et des matériaux d'enseignement WICKED Université et en tant que telle n'a aucune affiliation, participation ou aucun lien avec des fournisseur ou diffuseur de contenu multimédia ou autre. Le Système TV PLUS n’est pas vendu, ni destiné à un usage commercial ou public. [CR] [CR] TV PLUS MEDIA vous informe par les présentes ces clients et tous les utilisateurs potentiels que ces entièrement de la responsabilité du consommateur et / ou de l'utilisateur(s) d’utiliser le système d’une manière responsable et conformément aux lois régissant et applicables dans votre région spécifique. [CR] [CR] Soyez bien informés que TV PLUS MEDIA et/ou ces Partenaires et/ou c’est revendeur autorisé ne discuterons pas, ou ne fournirons pas aucunes informations par téléphone, email ou via leur site Internet a l’égard de l'accès ou la diffusion / visualisation des médias illégale ou en contournement de les droits d'auteur de toute nature! [CR] [CR] Je suis d'accord par l'acceptation des présentes, la consommation et / ou utilisateur(s) du système TV PLUS que je décharge de toute responsabilité TV PLUS MEDIA, est auprès de ces partenaires et revendeurs agréés, fournisseurs et filiales concernant les droits d'auteur et / ou de visualisation des choix et / ou d'options accessibles avec le systèmes TV PLUS. Pour plus d'informations vous pouvez visiter notre site Web et consulter notre document sur les conditions de ventes au www.TVPLUS MEDIA.com</label>
+                <autoscroll time="3000" delay="10000" repeat="10000">true</autoscroll>
+            </control>
+            <control type="scrollbar" id="9003">
+                <left>-1000</left>
+                <width>1</width>
+                <height>1</height>
+            </control>
+            <control type="grouplist">
+                <top>944</top>
+                <height>44</height>
+                <orientation>horizontal</orientation>
+                <align>center</align>
+                <itemgap>10</itemgap>
+                <control type="image">
+                    <height>44</height>
+                    <width>44</width>
+                    <texture>WelcomeWickedLogo.png</texture>
+                </control>
+                <control type="label">
+                    <label>Mr. WICKED Says...  </label>
+                    <align>left</align>
+                    <width max="500">auto</width>
+                    <height>44</height>
+                    <aligny>center</aligny>
+                    <font>Font-OSD</font>
+                </control>
+            </control>
+            <control type="button" id="9001">
+                <description>Bilingual</description>
+                <left>250</left>
+                <top>1000</top>
+                <width>314</width>
+                <height>64</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/underline.png</texturefocus>
+                <textoffsety>20</textoffsety>
+                <label>Français / English</label>
+                <font>Font-Disclaimer-Button</font>
+                <textcolor>SideArrow</textcolor>
+                <focusedcolor>Selected</focusedcolor>
+                <align>center</align>
+                <onup>PageUp(9003)</onup>
+                <ondown>PageDown(9003)</ondown>
+                <onleft>noop</onleft>
+                <onright>9002</onright>
+                <onclick condition="IsEmpty(Window.Property(french))">SetProperty(french,1)</onclick>
+                <onclick condition="!IsEmpty(Window.Property(french))">ClearProperty(french)</onclick>
+            </control>
+            <control type="button" id="9002">
+                <description>Yes button</description>
+                <centerleft>50%</centerleft>
+                <top>1000</top>
+                <width>314</width>
+                <height>64</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/underline.png</texturefocus>
+                <textoffsety>20</textoffsety>
+                <label>ACCEPT & CONTINUE</label>
+                <font>Font-Disclaimer-Button</font>
+                <textcolor>SideArrow</textcolor>
+                <focusedcolor>Selected</focusedcolor>
+                <align>center</align>
+                <onup>PageUp(9003)</onup>
+                <ondown>PageDown(9003)</ondown>
+                <onleft>9001</onleft>
+                <onright>9004</onright>
+                <onclick>Skin.SetBool(TVPLUS.Welcome.Accepted)</onclick>
+                <onclick>Close</onclick>
+            </control>
+            <control type="button" id="9004">
+                <description>No button</description>
+                <right>250</right>
+                <top>1000</top>
+                <width>314</width>
+                <height>64</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/underline.png</texturefocus>
+                <textoffsety>20</textoffsety>
+                <label>REFUSE & EXIT</label>
+                <font>Font-Disclaimer-Button</font>
+                <textcolor>SideArrow</textcolor>
+                <focusedcolor>Selected</focusedcolor>
+                <align>center</align>
+                <onup>PageUp(9003)</onup>
+                <ondown>PageDown(9003)</ondown>
+                <onleft>9002</onleft>
+                <onright>noop</onright>
+                <onclick>XBMC.Quit()</onclick>
+            </control>
+        </control>
+
+        <control type="group">
+            <visible>StringCompare(Player.Filenameandpath,special://skin/x/Videos/tvpmkodiintro.mp4)</visible>
+            <control type="videowindow">
+                <width>100%</width>
+                <height>100%</height>
+            </control>
+        </control>
+   
+  </controls>
+</window>
