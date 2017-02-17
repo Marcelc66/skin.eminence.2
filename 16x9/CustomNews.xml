@@ -2,6 +2,7 @@
 <window id="1134">
     <defaultcontrol always="true">9001</defaultcontrol>
     <backgroundcolor>Background</backgroundcolor>
+    <onunload>CancelAlarm(SwitchRight,silent)</onunload>
     <controls>
         <control type="grouplist" id="9000">
             <orientation>horizontal</orientation>

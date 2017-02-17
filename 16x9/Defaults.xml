@@ -3,7 +3,7 @@
 
     <default type="label">
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
         <font>Font-Button</font>
         <aligny>center</aligny>
@@ -13,7 +13,7 @@
     <default type="fadelabel">
         <font>Font-Button</font>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
     </default>
 
@@ -21,7 +21,7 @@
         <pulseonselect>false</pulseonselect>
         <font>Font-Button</font>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
     </default>
 
@@ -29,7 +29,7 @@
         <font>Font-Button</font>
         <pulseonselect>false</pulseonselect>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
     </default>
 
@@ -40,7 +40,7 @@
         <radioheight>32</radioheight>
         <textoffsetx>30</textoffsetx>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
         <textureradioonfocus colordiffuse="Selected">common/radio-on.png</textureradioonfocus>
         <textureradioonnofocus colordiffuse="ListLabel">common/radio-on.png</textureradioonnofocus>
@@ -63,7 +63,7 @@
         <textureupdisabled flipy="true" colordiffuse="Disabled">common/spin-down.png</textureupdisabled>
         <texturedowndisabled colordiffuse="Disabled">common/spin-down.png</texturedowndisabled>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
     </default>
 
@@ -79,7 +79,7 @@
         <textureupdisabled flipy="true" colordiffuse="Disabled">common/spin-down.png</textureupdisabled>
         <texturedowndisabled colordiffuse="Disabled">common/spin-down.png</texturedowndisabled>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
     </default>
 
@@ -93,7 +93,7 @@
         <textureslidernib border="2">common/SliderNibNF.png</textureslidernib>
         <textureslidernibfocus border="2">common/SliderNibFO.png</textureslidernibfocus>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
     </default>
 
@@ -104,7 +104,7 @@
         <textureslidernibfocus border="2">common/SliderNibFO.png</textureslidernibfocus>
         <orientation>horizontal</orientation>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
     </default>
 
@@ -115,7 +115,7 @@
         <righttexture colordiffuse="ListLabel">osd/progress-end.png</righttexture>
         <overlaytexture>noop</overlaytexture>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
     </default>
 
@@ -130,7 +130,7 @@
     <default type="edit">
         <font>Font-Button</font>
         <textcolor>ListLabel</textcolor>
-        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <selectedcolor>HighlightSelected</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
     </default>
 

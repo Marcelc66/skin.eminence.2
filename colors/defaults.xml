@@ -6,8 +6,9 @@
     <color name="HomeBarTile">6f2a2a2a</color>
     <color name="HomeWidgetBG">ff181818</color>
     <color name="DialogBG">ff181818</color>
-    <color name="Highlight">ffed1111</color>
-    <color name="Highlight2">ffed1111</color>
+    <color name="Highlight">ffcd1212</color>
+    <color name="Highlight2">ffcd1212</color>
+    <color name="HighlightSelected">ffffff00</color>
     <color name="Selected">fff0f0f0</color>
     <color name="MainLabel">FFededed</color>
     <color name="SubLabel">BFededed</color>
