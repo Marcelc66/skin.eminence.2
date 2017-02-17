@@ -120,78 +120,19 @@
     </include>
 
     <include name="Object_BasicViewList">
-        <!-- View by (Hidden) -->
-        <control type="button" id="2">
-            <include>Defs_OptionButton2</include>
-            <visible>false</visible>
+        <control type="button" id="9978">
+            <onfocus>Action(Right)</onfocus>
+            <width>0</width>
+            <height>0</height>
+            <visible allowhiddenfocus="true">false</visible>
         </control>
-
-        <!-- Skin Helper View Mode Selector -->
-        <control type="radiobutton" id="9978">
-            <label>$INFO[Control.GetLabel(2)]</label>
-            <textureradioonfocus colordiffuse="Selected">indicator/lock.png</textureradioonfocus>
-            <textureradioonnofocus colordiffuse="ListLabel">indicator/lock.png</textureradioonnofocus>
-            <textureradioondisabled colordiffuse="Disabled">indicator/lock.png</textureradioondisabled>
-            <textureradioofffocus>noop</textureradioofffocus>
-            <textureradiooffnofocus>noop</textureradiooffnofocus>
-            <textureradiooffdisabled>noop</textureradiooffdisabled>
-            
+        <!-- Fullscreen -->
+        <control type="button" id="9099">
             <include>Defs_OptionButton2</include>
-
-            <onclick condition="[Container.Content() + !String.IsEmpty(Skin.String(Skin.ForcedView.))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(tags) + !String.IsEmpty(Skin.String(Skin.ForcedView.tags))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(years) + !String.IsEmpty(Skin.String(Skin.ForcedView.years))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(genres) + !String.IsEmpty(Skin.String(Skin.ForcedView.genres))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(countries) + !String.IsEmpty(Skin.String(Skin.ForcedView.countries))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(studios) + !String.IsEmpty(Skin.String(Skin.ForcedView.studios))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(playlists) + !String.IsEmpty(Skin.String(Skin.ForcedView.playlists))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(movies) + !String.IsEmpty(Skin.String(Skin.ForcedView.movies))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(sets) + !String.IsEmpty(Skin.String(Skin.ForcedView.sets))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(tvshows) + !String.IsEmpty(Skin.String(Skin.ForcedView.tvshows))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(seasons) + !String.IsEmpty(Skin.String(Skin.ForcedView.seasons))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(episodes) + !String.IsEmpty(Skin.String(Skin.ForcedView.episodes))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(artists) + !String.IsEmpty(Skin.String(Skin.ForcedView.artists))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(albums) + !String.IsEmpty(Skin.String(Skin.ForcedView.albums))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(songs) + !String.IsEmpty(Skin.String(Skin.ForcedView.songs))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(musicvideos) + !String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(addons) + !String.IsEmpty(Skin.String(Skin.ForcedView.addons))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(actors) + !String.IsEmpty(Skin.String(Skin.ForcedView.actors))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(directors) + !String.IsEmpty(Skin.String(Skin.ForcedView.directors))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(files) + !String.IsEmpty(Skin.String(Skin.ForcedView.files))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(mixed) + !String.IsEmpty(Skin.String(Skin.ForcedView.mixed))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(images) + !String.IsEmpty(Skin.String(Skin.ForcedView.images))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(games) + !String.IsEmpty(Skin.String(Skin.ForcedView.games))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(unknown) + !String.IsEmpty(Skin.String(Skin.ForcedView.unknown))]">ActivateWindow(1111)</onclick>
-            <onclick condition="[Container.Content(videos) + !String.IsEmpty(Skin.String(Skin.ForcedView.videos))]">ActivateWindow(1111)</onclick>
-
-            <onclick condition="[Container.Content() + String.IsEmpty(Skin.String(Skin.ForcedView.))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(tags) + String.IsEmpty(Skin.String(Skin.ForcedView.tags))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(years) + String.IsEmpty(Skin.String(Skin.ForcedView.years))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(genres) + String.IsEmpty(Skin.String(Skin.ForcedView.genres))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(countries) + String.IsEmpty(Skin.String(Skin.ForcedView.countries))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(studios) + String.IsEmpty(Skin.String(Skin.ForcedView.studios))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(playlists) + String.IsEmpty(Skin.String(Skin.ForcedView.playlists))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(movies) + String.IsEmpty(Skin.String(Skin.ForcedView.movies))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(sets) + String.IsEmpty(Skin.String(Skin.ForcedView.sets))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(tvshows) + String.IsEmpty(Skin.String(Skin.ForcedView.tvshows))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(seasons) + String.IsEmpty(Skin.String(Skin.ForcedView.seasons))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(episodes) + String.IsEmpty(Skin.String(Skin.ForcedView.episodes))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(artists) + String.IsEmpty(Skin.String(Skin.ForcedView.artists))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(albums) + String.IsEmpty(Skin.String(Skin.ForcedView.albums))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(songs) + String.IsEmpty(Skin.String(Skin.ForcedView.songs))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(musicvideos) + String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(addons) + String.IsEmpty(Skin.String(Skin.ForcedView.addons))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(actors) + String.IsEmpty(Skin.String(Skin.ForcedView.actors))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(directors) + String.IsEmpty(Skin.String(Skin.ForcedView.directors))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(files) + String.IsEmpty(Skin.String(Skin.ForcedView.files))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(mixed) + String.IsEmpty(Skin.String(Skin.ForcedView.mixed))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(images) + String.IsEmpty(Skin.String(Skin.ForcedView.images))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(games) + String.IsEmpty(Skin.String(Skin.ForcedView.games))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(unknown) + String.IsEmpty(Skin.String(Skin.ForcedView.unknown))]">ActivateWindow(1110)</onclick>
-            <onclick condition="[Container.Content(videos) + String.IsEmpty(Skin.String(Skin.ForcedView.videos))]">ActivateWindow(1110)</onclick>
-            
-            <selected>[Container.Content() + !String.IsEmpty(Skin.String(Skin.ForcedView.))] | [Container.Content(tags) + !String.IsEmpty(Skin.String(Skin.ForcedView.tags))] | [Container.Content(years) + !String.IsEmpty(Skin.String(Skin.ForcedView.years))] | [Container.Content(genres) + !String.IsEmpty(Skin.String(Skin.ForcedView.genres))] | [Container.Content(countries) + !String.IsEmpty(Skin.String(Skin.ForcedView.countries))] | [Container.Content(studios) + !String.IsEmpty(Skin.String(Skin.ForcedView.studios))] | [Container.Content(playlists) + !String.IsEmpty(Skin.String(Skin.ForcedView.playlists))] | [Container.Content(movies) + !String.IsEmpty(Skin.String(Skin.ForcedView.movies))] | [Container.Content(sets) + !String.IsEmpty(Skin.String(Skin.ForcedView.sets))] | [Container.Content(tvshows) + !String.IsEmpty(Skin.String(Skin.ForcedView.tvshows))] | [Container.Content(seasons) + !String.IsEmpty(Skin.String(Skin.ForcedView.seasons))] | [Container.Content(episodes) + !String.IsEmpty(Skin.String(Skin.ForcedView.episodes))] | [Container.Content(artists) + !String.IsEmpty(Skin.String(Skin.ForcedView.artists))] | [Container.Content(albums) + !String.IsEmpty(Skin.String(Skin.ForcedView.albums))] | [Container.Content(songs) + !String.IsEmpty(Skin.String(Skin.ForcedView.songs))] | [Container.Content(musicvideos) + !String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos))] | [Container.Content(addons) + !String.IsEmpty(Skin.String(Skin.ForcedView.addons))] | [Container.Content(actors) + !String.IsEmpty(Skin.String(Skin.ForcedView.actors))] | [Container.Content(directors) + !String.IsEmpty(Skin.String(Skin.ForcedView.directors))] | [Container.Content(files) + !String.IsEmpty(Skin.String(Skin.ForcedView.files))] | [Container.Content(mixed) + !String.IsEmpty(Skin.String(Skin.ForcedView.mixed))] | [Container.Content(images) + !String.IsEmpty(Skin.String(Skin.ForcedView.images))] | [Container.Content(games) + !String.IsEmpty(Skin.String(Skin.ForcedView.games))] | [Container.Content(unknown) + !String.IsEmpty(Skin.String(Skin.ForcedView.unknown))] | [Container.Content(videos) + !String.IsEmpty(Skin.String(Skin.ForcedView.videos))]</selected>
-            <visible>Control.IsEnabled(2)</visible>
+            <label>$VAR[Label_FullscreenButton]</label>
+            <visible>Player.HasMedia</visible>
+            <onclick>Fullscreen</onclick>
+            <visible>Control.IsEnabled(9099)</visible>
         </control>
 
         <!-- Sort by -->
@@ -210,14 +151,7 @@
             <visible>Control.IsEnabled(3)</visible>
         </control>
 
-        <!-- Fullscreen -->
-        <control type="button" id="9099">
-            <include>Defs_OptionButton2</include>
-            <label>$VAR[Label_FullscreenButton]</label>
-            <visible>Player.HasMedia</visible>
-            <onclick>Fullscreen</onclick>
-            <visible>Control.IsEnabled(9099)</visible>
-        </control>
+        
     </include>
     <include name="Object_WeatherOutlook">
         <definition>
