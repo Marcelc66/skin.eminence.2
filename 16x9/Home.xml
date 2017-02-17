@@ -17,20 +17,21 @@
     <onunload condition="!String.IsEmpty(Container(9000).ListItem.Property(TileColor))">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
     <onunload>ClearProperty(SubMenuType)</onunload>
     <onunload>ClearProperty(FocusPosition)</onunload>
+    <onunload>SetFocus(905)</onunload>
     <controls>
 
         <include>Home_Background</include>
+        <include>Home_RSS</include>
+        <include>Home_NowPlaying</include>
         <include>Furniture_TopBar</include>
 
         <control type="group">
             <include>Home_Icons_Animate</include>
             <control type="group">
                 <animation effect="slide" tween="quadratic" easing="out" time="150" start="0,266" end="0">WindowOpen</animation>
-                <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>
-                <include>Home_RSS</include>
+                <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>        
                 <include>Home_Menu</include>
                 <include>Home_SubMenu</include>
-                <include>Home_NowPlaying</include>
             </control>
         </control>
     </controls>

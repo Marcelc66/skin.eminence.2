@@ -4,20 +4,60 @@
     <!-- HOME BAR -->
     <!-- ======== -->
     <variable name="Home_TVBackground">
+        
+        <!-- Support -->
         <value condition="Control.HasFocus(901)">special://skin/x/backgrounds/support.jpg</value>
+        <value condition="Control.HasFocus(911)">special://skin/x/backgrounds/guides.jpg</value>
+        <value condition="Control.HasFocus(912)">special://skin/x/backgrounds/support.jpg</value>
+        <value condition="Control.HasFocus(913)">special://skin/x/backgrounds/usermaintenance.jpg</value>
+        
+        <!-- Videos -->
         <value condition="Control.HasFocus(902)">special://skin/x/backgrounds/videos.jpg</value>
+        <value condition="Control.HasFocus(921)">special://skin/x/backgrounds/youtube.jpg</value>
+        <value condition="Control.HasFocus(922)">special://skin/x/backgrounds/videos.jpg</value>
+        
+        <!-- Music -->
         <value condition="Control.HasFocus(903)">special://skin/x/backgrounds/music.jpg</value>
+        <value condition="Control.HasFocus(931)">special://skin/x/backgrounds/pulsemusic.jpg</value>
+        <value condition="Control.HasFocus(932)">special://skin/x/backgrounds/music.jpg</value>
+        <value condition="Control.HasFocus(933)">special://skin/x/backgrounds/music.jpg</value>
+
+        <!-- Pictures -->
         <value condition="Control.HasFocus(904)">special://skin/x/backgrounds/pictures.jpg</value>
-        <value condition="Control.HasFocus(905)">noop</value>
+        <value condition="Control.HasFocus(941)">special://skin/x/backgrounds/bigpicture.jpg</value>
+        <value condition="Control.HasFocus(942)">special://skin/x/backgrounds/pictures.jpg</value>
+        <value condition="Control.HasFocus(943)">special://skin/x/backgrounds/pictures.jpg</value>
+        
+        <!-- TV Plus -->
+        <value condition="Control.HasFocus(905)">common/null.png</value>
+        <value condition="Control.HasFocus(951)">special://skin/x/backgrounds/favourites.jpg</value>
+        <value condition="Control.HasFocus(952)">special://skin/x/backgrounds/tvplus.jpg</value>
+        <value condition="Control.HasFocus(953)">special://skin/x/backgrounds/wickedmix.jpg</value>
+        <value condition="Control.HasFocus(954)">special://skin/x/backgrounds/wickedxxx.jpg</value>
+
+        <!-- Live TV -->
         <value condition="Control.HasFocus(906)">special://skin/x/backgrounds/livetv.jpg</value>
+        <value condition="Control.HasFocus(961)">special://skin/x/backgrounds/tvpluslive.jpg</value>
+        <value condition="Control.HasFocus(962)">special://skin/x/backgrounds/mobdro.jpg</value>
+        <value condition="Control.HasFocus(963)">special://skin/x/backgrounds/wickediptv.jpg</value>
+
+        <!-- Live Radio -->
         <value condition="Control.HasFocus(907)">special://skin/x/backgrounds/liveradio.jpg</value>
-        <value condition="Control.HasFocus(908)">special://skin/x/backgrounds/news.jpg</value>
+        <value condition="Control.HasFocus(971)">special://skin/x/backgrounds/tunein.jpg</value>
+        <value condition="Control.HasFocus(972)">special://skin/x/backgrounds/radionet.jpg</value>
+        <value condition="Control.HasFocus(973)">special://skin/x/backgrounds/iheart.jpg</value>
+        <value condition="Control.HasFocus(974)">special://skin/x/backgrounds/mixcloud.jpg</value>
+
+        <!-- News -->
+        <value condition="Control.HasFocus(908)">special://skin/x/news/</value>
+
+        <!-- Quit -->
         <value condition="Control.HasFocus(909)">special://skin/x/backgrounds/quit.jpg</value>
     </variable>
 
     <variable name="Home_TVStatic">
         <value condition="!Integer.IsEqual(Window(Home).Property(ButtonSwitch,1))">noop</value>
-        <value>tvstatic/</value>
+        <value>home/tvstatic/</value>
     </variable>
 
     <!-- Main Menu -->
@@ -35,8 +75,9 @@
             <onright>noop</onright>
             <onup condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</onup>
             <ondown condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</ondown>
+            <onback>SetFocus(905)</onback>
             <animation type="Visible">
-                <effect type="slide" start="0,266" end="0" time="150" />
+                <effect type="slide" start="0,266" end="0" time="150" delay="150" />
             </animation>
             <visible allowhiddenfocus="true">!ControlGroup(9002).HasFocus()</visible>
             <include content="Home_Menu_Button">
@@ -44,7 +85,7 @@
                 <param name="groupid" value="801" />
                 <param name="buttonid" value="901" />
                 <param name="label" value="Support" />
-                <param name="icon" value="special://skin/extras/icons/xactu.png" />
+                <param name="icon" value="special://skin/extras/icons/support.png" />
                 <param name="onfocus" value="SetProperty(SubMenuType,901,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,901,Home)" />
                 <param name="onclick" value="SetFocus(9002)" />
@@ -118,7 +159,8 @@
                 <param name="icon" value="special://skin/extras/icons/news.png" />
                 <param name="onfocus" value="SetProperty(SubMenuType,908,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
-                <param name="onclick" value="SetFocus(9002)" />
+                <param name="onclick" value="ActivateWindow(1134)" />
+                <param name="set-onclick-target" value="true" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="709" />
@@ -158,235 +200,290 @@
                 </animation>
                 <!-- Support SubMenu -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
                     <param name="imageid" value="711" />
                     <param name="groupid" value="811" />
                     <param name="buttonid" value="911" />
                     <param name="width" value="473" />
                     <param name="label" value="Guides" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+                    <param name="icon" value="special://skin/extras/icons/guides.png" />
                     <param name="onclick" value="noop" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
                     <param name="imageid" value="712" />
                     <param name="groupid" value="812" />
                     <param name="buttonid" value="912" />
                     <param name="width" value="473" />
                     <param name="label" value="Wicked U" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+                    <param name="icon" value="special://skin/extras/icons/xactu.png" />
                     <param name="onclick" value="noop" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
                     <param name="imageid" value="713" />
                     <param name="groupid" value="813" />
                     <param name="buttonid" value="913" />
                     <param name="width" value="473" />
-                    <param name="label" value="User Maintainence" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+                    <param name="label" value="User Maintenance" />
+                    <param name="icon" value="special://skin/extras/icons/usermaintenance.png" />
                     <param name="onclick" value="noop" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
                 </include>
 
                 <!-- Videos SubMenu -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
                     <param name="imageid" value="721" />
                     <param name="groupid" value="821" />
                     <param name="buttonid" value="921" />
                     <param name="width" value="473" />
                     <param name="label" value="Youtube" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/youtube.png" />
+                    <param name="onclick" value="ActivateWindow(Videos,plugin://plugin.video.youtube,return)" />
+                    <param name="onclick-target" value="plugin://plugin.video.youtube" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),902)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
                     <param name="imageid" value="722" />
                     <param name="groupid" value="822" />
                     <param name="buttonid" value="922" />
                     <param name="width" value="473" />
                     <param name="label" value="Video Files" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/video-addons.png" />
+                    <param name="onclick" value="ActivateWindow(Videos,sources://video/,Return)" />
+                    <param name="onclick-target" value="sources://video/" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),902)" />
                 </include>
 
                 <!-- Music SubMenu -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
                     <param name="imageid" value="731" />
                     <param name="groupid" value="831" />
                     <param name="buttonid" value="931" />
                     <param name="width" value="473" />
                     <param name="label" value="Pulse Music" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/pulsemusic.png" />
+                    <param name="onclick" value="ActivateWindow(Videos,&quot;plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/&quot;,return)" />
+                    <param name="onclick-target" value="plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
                     <param name="imageid" value="732" />
                     <param name="groupid" value="832" />
                     <param name="buttonid" value="932" />
                     <param name="width" value="473" />
                     <param name="label" value="Music Addons" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/songs.png" />
+                    <param name="onclick" value="ActivateWindow(Music,Addons,return)" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
                     <param name="imageid" value="733" />
                     <param name="groupid" value="833" />
                     <param name="buttonid" value="933" />
                     <param name="width" value="473" />
                     <param name="label" value="Music Files" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/song.png" />
+                    <param name="onclick" value="ActivateWindow(Music,Files,return)" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
                 </include>
 
                 <!-- Pictures SubMenu -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
                     <param name="imageid" value="741" />
                     <param name="groupid" value="841" />
                     <param name="buttonid" value="941" />
                     <param name="width" value="473" />
                     <param name="label" value="The Big Picture" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/thebigpicture.png" />
+                    <param name="onclick" value="RunScript(script.image.bigpictures)" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
                     <param name="imageid" value="742" />
                     <param name="groupid" value="842" />
                     <param name="buttonid" value="942" />
                     <param name="width" value="473" />
                     <param name="label" value="Picture Addons" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/pictures.png" />
+                    <param name="onclick" value="ActivateWindow(Pictures,Addons,return)" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
                     <param name="imageid" value="743" />
                     <param name="groupid" value="843" />
                     <param name="buttonid" value="943" />
                     <param name="width" value="473" />
                     <param name="label" value="Picture Files" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/filebox.png" />
+                    <param name="onclick" value="ActivateWindow(Pictures,Files,return)" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
                 </include>
 
                 <!-- TVPLUS Submenu -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
                     <param name="imageid" value="751" />
                     <param name="groupid" value="851" />
                     <param name="buttonid" value="951" />
                     <param name="width" value="473" />
                     <param name="label" value="Favourites" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/favourites.png" />
+                    <param name="onclick" value="ActivateWindow(favourites)" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
                     <param name="imageid" value="752" />
                     <param name="groupid" value="852" />
                     <param name="buttonid" value="952" />
                     <param name="width" value="473" />
                     <param name="label" value="TV Plus" />
                     <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
+                    <param name="set-onclick-target" value="true" />
+                    <param name="onclick-target" value="addons://sources/video/" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
                 </include>
+                <!-- FIX ME -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
                     <param name="imageid" value="753" />
                     <param name="groupid" value="853" />
                     <param name="buttonid" value="953" />
                     <param name="width" value="473" />
                     <param name="label" value="Wicked Mix" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+                    <param name="icon" value="special://skin/extras/icons/wickedmix.png" />
                     <param name="onclick" value="noop" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
                 </include>
+                <!-- FIX ME -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
                     <param name="imageid" value="754" />
                     <param name="groupid" value="854" />
                     <param name="buttonid" value="954" />
                     <param name="width" value="473" />
                     <param name="label" value="Wicked XXX" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+                    <param name="icon" value="special://skin/extras/icons/wickedxxx-main.png" />
                     <param name="onclick" value="noop" />
+                    <param name="set-onclick-target" value="true" />
+                    <param name="wickedxxx" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
                 </include>
 
                 <!-- Live TV SubMenu -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
                     <param name="imageid" value="761" />
                     <param name="groupid" value="861" />
                     <param name="buttonid" value="961" />
                     <param name="width" value="473" />
                     <param name="label" value="TV Plus Live" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/tvplus-live.png" />
+                    <param name="onclick" value="StartAndroidActivity(&quot;com.filmon.android.tvpluslivetv&quot;)" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
                 </include>
+                <!-- FIX ME -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
                     <param name="imageid" value="762" />
                     <param name="groupid" value="862" />
                     <param name="buttonid" value="962" />
                     <param name="width" value="473" />
                     <param name="label" value="Mobdro" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+                    <param name="icon" value="special://skin/extras/icons/mobdro.png" />
                     <param name="onclick" value="noop" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
                     <param name="imageid" value="763" />
                     <param name="groupid" value="863" />
                     <param name="buttonid" value="963" />
                     <param name="width" value="473" />
                     <param name="label" value="Wicked IPTV" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/wicked-iptv.png" />
+                    <param name="onclick" value="ActivateWindow(TVChannels)" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
                 </include>
 
                 <!-- Live Radio -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
                     <param name="imageid" value="771" />
                     <param name="groupid" value="871" />
                     <param name="buttonid" value="971" />
                     <param name="width" value="473" />
                     <param name="label" value="TuneIn" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/tunein.png" />
+                    <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.tuneinradio&quot;,return)" />
+                    <param name="onclick-target" value="plugin://plugin.audio.tuneinradio" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
                 </include>
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
                     <param name="imageid" value="772" />
                     <param name="groupid" value="872" />
                     <param name="buttonid" value="972" />
                     <param name="width" value="473" />
                     <param name="label" value="Radio.Net" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/radionet.png" />
+                    <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.radio_de&quot;,return)" />
+                    <param name="onclick-target" value="plugin://plugin.audio.radio_de" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
                 </include>
+                <!-- FIX ME -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
                     <param name="imageid" value="773" />
                     <param name="groupid" value="873" />
                     <param name="buttonid" value="973" />
                     <param name="width" value="473" />
                     <param name="label" value="iHeart" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+                    <param name="icon" value="special://skin/extras/icons/iheart.png" />
                     <param name="onclick" value="noop" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
                 </include>
+                <!-- FIX ME -->
                 <include content="Home_Menu_Button">
+                    <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
                     <param name="imageid" value="774" />
                     <param name="groupid" value="874" />
                     <param name="buttonid" value="974" />
                     <param name="width" value="473" />
                     <param name="label" value="MixCloud" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+                    <param name="icon" value="special://skin/extras/icons/mixcloud.png" />
                     <param name="onclick" value="noop" />
+                    <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
                 </include>
 
@@ -394,6 +491,7 @@
                 <!-- NO CONTENT CURRENTLY -->
 
                 <!-- QUIT SUBMENU ??? -->
+                <!-- FIX ME -->
 
             </control>
         </control>
@@ -404,6 +502,8 @@
         <param name="visible" default="true" />
         <param name="onfocus" default="noop" />
         <param name="onfocus2" default="noop" />
+        <param name="set-onclick-target" default="false" />
+        <param name="wickedxxx" default="false" />
         <definition>
             <control type="group" id="$PARAM[imageid]">
                 <width>$PARAM[width]</width>
@@ -429,8 +529,12 @@
                 <aspectratio>stretch</aspectratio>
                 <textcolor>00ffffff</textcolor>
                 <focusedcolor>00ffffff</focusedcolor>
-                <onclick>SetFocus(9000)</onclick>
-                <onclick condition="String.StartsWith($PARAM[onclick],ActivateWindow) + !String.Contains($PARAM[onclick],DialogFavourites) + !String.Contains($PARAM[onclick],DialogButtonMenu) + !String.Contains($PARAM[onclick],shutdownmenu) + !String.Contains($PARAM[onclick],favourites)">SetProperty(FO9001,2,home)</onclick>
+                <onclick condition="$PARAM[set-onclick-target]">SetProperty(FO9001,2,home)</onclick>
+                <onclick condition="$PARAM[set-onclick-target]">SetProperty(WindowBaseReturn,$PARAM[onclick-target],home)</onclick>
+                <onclick condition="$PARAM[wickedxxx]">SetProperty(PASSWORD,1,home)</onclick>
+                <onclick condition="$PARAM[wickedxxx]">Skin.Reset(ADULTPASS)</onclick>
+                <onclick condition="$PARAM[wickedxxx]">Skin.SetNumeric(ADULTPASS)</onclick>
+                <onclick condition="$PARAM[wickedxxx]">ActivateWindow(1175)</onclick>
                 <onclick>$PARAM[onclick]</onclick>
                 <onfocus>$PARAM[onfocus]</onfocus>
                 <onfocus>$PARAM[onfocus2]</onfocus>
@@ -475,262 +579,73 @@
     <!-- Now Playing -->
     <include name="Home_NowPlaying">
         <control type="group">
-            <animation effect="slide" end="0,160" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-            <control type="group">
-                <visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
-                <!-- <visible>![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible> -->
-                <visible>!Window.IsActive(DialogNotification.xml)</visible>
-                <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-                <visible>!Player.HasMedia</visible>
-                <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-                <visible>!String.IsEqual(Skin.String(home.style),$LOCALIZE[31181])</visible>
-                <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
-                <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                <control type="image">
-                    <left>0</left>
-                    <posy>64r</posy>
-                    <width>1100</width>
-                    <height>64</height>
-                    <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
-                    <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
-                </control>
-                <control type="image">
-                    <left>16</left>
-                    <posy>48r</posy>
-                    <width>32</width>
-                    <height>32</height>
-                    <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
-                </control>
+            <visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
+            <visible>!Window.IsActive(DialogNotification.xml)</visible>
+            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>Player.HasMedia</visible>
+            <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+            <control type="image">
+                <left>0</left>
+                <posy>64r</posy>
+                <width>1100</width>
+                <height>64</height>
+                <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
+                <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
             </control>
-            <control type="group">
-                <visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
-                <visible>!Window.IsActive(DialogNotification.xml)</visible>
-                <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-                <visible>Player.HasMedia</visible>
-                <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
-                <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                <control type="image">
-                    <left>0</left>
-                    <posy>64r</posy>
-                    <width>1100</width>
-                    <height>64</height>
-                    <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
-                    <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
-                </control>
 
-                <!-- Player Controls -->
-                <control type="grouplist" id="9005">
-                    <onup condition="Integer.IsGreater(Container(9001).NumItems,0) + [[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]]">9001</onup>
-                    <ondown>9000</ondown>
-                    <visible allowhiddenfocus="true">ControlGroup(9005).HasFocus()</visible>
-                    <orientation>horizontal</orientation>
-                    <itemgap>8</itemgap>
-                    <bottom>16</bottom>
-                    <left>16</left>
-                    <width>1020</width>
-                    <height>32</height>
-                    <control type="button" id="12">
-                        <description>Skip Back</description>
-                        <width>32</width>
-                        <height>32</height>
-                        <label></label>
-                        <font>noop</font>
-                        <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
-                        <texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
-                        <onclick>PlayerControl(Previous)</onclick>
-                    </control>
-
-                    <control type="button" id="13">
-                        <description>Rewind</description>
-                        <width>32</width>
-                        <height>32</height>
-                        <label></label>
-                        <font>noop</font>
-                        <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
-                        <texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
-                        <onclick>PlayerControl(Rewind)</onclick>
-                    </control>
-
-                    <control type="togglebutton" id="14">
-                        <description>Play/Pause</description>
-                        <width>32</width>
-                        <height>32</height>
-                        <label></label>
-                        <altlabel></altlabel>
-                        <font>noop</font>
-                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
-                        <texturenofocus colordiffuse="LineLabel">osd/pause.png</texturenofocus>
-                        <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-                        <alttexturefocus colordiffuse="$VAR[HighlightColor]">osd/play.png</alttexturefocus>
-                        <alttexturenofocus colordiffuse="LineLabel">osd/play.png</alttexturenofocus>
-                        <onclick>PlayerControl(Play)</onclick>
-                    </control>
-
-                    <control type="button" id="15">
-                        <description>Stop</description>
-                        <width>32</width>
-                        <height>32</height>
-                        <label></label>
-                        <font>noop</font>
-                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
-                        <texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
-                        <onclick>PlayerControl(Stop)</onclick>
-                    </control>
-
-                    <control type="button" id="16">
-                        <description>Fast Forward</description>
-                        <width>32</width>
-                        <height>32</height>
-                        <label></label>
-                        <font>noop</font>
-                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
-                        <texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
-                        <onclick>PlayerControl(Forward)</onclick>
-                    </control>
-
-                    <control type="button" id="17">
-                        <description>Next</description>
-                        <width>32</width>
-                        <height>32</height>
-                        <label></label>
-                        <font>noop</font>
-                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
-                        <texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
-                        <onclick>PlayerControl(Next)</onclick>
-                    </control>
-                </control>
-                <control type="grouplist">
-                    <visible>ControlGroup(9005).HasFocus()</visible>
-                    <orientation>horizontal</orientation>
-                    <itemgap>8</itemgap>
-                    <bottom>16</bottom>
-                    <left>256</left>
-                    <width>820</width>
-                    <height>32</height>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="580">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]</label>
-                        <visible>Player.HasAudio</visible>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="580">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]</label>
-                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + String.IsEmpty(VideoPlayer.TvShowTitle)</visible>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="580">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.TvShowTitle][/COLOR]  $INFO[VideoPlayer.Title]</label>
-                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + !String.IsEmpty(VideoPlayer.TvShowTitle)</visible>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="580">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]  $INFO[VideoPlayer.Title]</label>
-                        <visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="320">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>
-                    </control>
-                </control>
-
-                <!-- Now Playing -->
-                <control type="image">
-                    <left>16</left>
-                    <posy>48r</posy>
-                    <width>32</width>
-                    <height>32</height>
-                    <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
-                    <visible>!ControlGroup(9005).HasFocus()</visible>
-                </control>
-                <control type="grouplist">
-                    <visible>!ControlGroup(9005).HasFocus()</visible>
-                    <orientation>horizontal</orientation>
-                    <itemgap>0</itemgap>
-                    <bottom>16</bottom>
-                    <left>48</left>
-                    <width>1020</width>
-                    <height>32</height>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="820">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]</label>
-                        <visible>Player.HasAudio</visible>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="820">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]</label>
-                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + String.IsEmpty(VideoPlayer.TvShowTitle)</visible>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="820">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.TvShowTitle][/COLOR]  $INFO[VideoPlayer.Title]</label>
-                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + !String.IsEmpty(VideoPlayer.TvShowTitle)</visible>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="820">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]  $INFO[VideoPlayer.Title]</label>
-                        <visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <width max="320">auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                        <label>  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>
-                    </control>
-                </control>
+            <!-- Now Playing -->
+            <control type="image">
+                <left>16</left>
+                <posy>48r</posy>
+                <width>32</width>
+                <height>32</height>
+                <texture colordiffuse="ff555555">$VAR[Image_RSS_Icon]</texture>
             </control>
-            <control type="group">
-                <bottom>266</bottom>
-                <visible>Window.IsActive(DialogNotification.xml)</visible>
-                <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                <control type="image">
-                    <left>0</left>
-                    <posy>64r</posy>
-                    <width>1100</width>
-                    <height>64</height>
-                    <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
-                    <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+            <control type="grouplist">
+                <orientation>horizontal</orientation>
+                <itemgap>0</itemgap>
+                <bottom>16</bottom>
+                <left>48</left>
+                <right>16</right>
+                <height>32</height>
+                <control type="label">
+                    <height>100%</height>
+                    <width max="1620">auto</width>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>ff555555</textcolor>
+                    <label>   [COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]</label>
+                    <visible>Player.HasAudio</visible>
                 </control>
-            </control>
-            <control type="group">
-                <bottom>266</bottom>
-                <visible>!Window.IsActive(DialogNotification.xml)</visible>
-                <visible>Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-                <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                <control type="image">
-                    <left>0</left>
-                    <posy>64r</posy>
-                    <width>1100</width>
-                    <height>64</height>
-                    <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
-                    <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+                <control type="label">
+                    <height>100%</height>
+                    <width max="1620">auto</width>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>ff555555</textcolor>
+                    <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                    <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + String.IsEmpty(VideoPlayer.TvShowTitle)</visible>
+                </control>
+                <control type="label">
+                    <height>100%</height>
+                    <width max="1620">auto</width>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>ff555555</textcolor>
+                    <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.TvShowTitle][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                    <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + !String.IsEmpty(VideoPlayer.TvShowTitle)</visible>
+                </control>
+                <control type="label">
+                    <height>100%</height>
+                    <width max="1620">auto</width>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>ff555555</textcolor>
+                    <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                    <visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
+                </control>
+                <control type="label">
+                    <height>100%</height>
+                    <width max="320">auto</width>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>ff555555</textcolor>
+                    <label>  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>
                 </control>
             </control>
         </control>
@@ -775,15 +690,14 @@
     <!-- ========== -->
     <include name="Home_Background">
         <control type="videowindow">
-            <visible>Skin.HasSetting(background.showvideo)</visible>
-            <visible>Player.HasVideo</visible>
-            <visible>!Window.IsVisible(weather)</visible>
             <width>100%</width>
             <height>100%</height>
+            <visible>Skin.HasSetting(background.showvideo) + Player.HasVideo</visible>
         </control>
         <control type="group">
             <width>100%</width>
             <height>100%</height>
+            <!-- <animation effect="fade" start="100" end="85" time="200" condition="Skin.HasSetting(background.showvideo) + Player.HasVideo">Conditional</animation> -->
             <animation type="Conditional" condition="Integer.IsEqual(Window(Home).Property(ViewPositioning),901)">
                 <include>Home_Parallax_Animate_Left</include>
             </animation>
@@ -818,28 +732,38 @@
                 <timeperimage>5000</timeperimage>
                 <imagepath background="true">$VAR[Image_Background]</imagepath>
                 <aspectratio>scale</aspectratio>
-                <visible>![Player.HasVideo | Player.HasAudio] | [Player.HasAudio + !Skin.HasSetting(background.showvisualisation)] | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
             </control>
             <control type="multiimage">
                 <left>742</left>
                 <right>656</right>
                 <top>272</top>
                 <bottom>538</bottom>
-                <imagepath>tvanimated/</imagepath>
+                <imagepath>home/tvanimated/</imagepath>
                 <aspectratio>stretch</aspectratio>
                 <animation effect="fade" start="100" end="0" delay="250" time="150">Hidden</animation>
-                <visible>IsEmpty(Control.GetLabel(999))</visible>
+                <visible>String.IsEqual(Control.GetLabel(999),common/null.png) | Control.HasFocus(905)</visible>
             </control>
+            <control type="image">
+                <width>100%</width>
+                <height>100%</height>
+                <texture>home/wickedoverlay.png</texture>
+                <aspectratio>stretch</aspectratio>
+                <animation effect="fade" start="100" end="0" delay="250" time="150">Hidden</animation>
+                <visible>String.IsEqual(Control.GetLabel(999),common/null.png) | Control.HasFocus(905)</visible>
+            </control>
+
             <control type="multiimage" id="999">
                 <left>742</left>
                 <right>656</right>
                 <top>272</top>
                 <bottom>538</bottom>
-                <fadetime>300</fadetime>
-                <animation effect="fade" start="0" end="100" time="300" delay="600" condition="!IsEmpty(Control.GetLabel(999))">Conditional</animation>
+                <fadetime>750</fadetime>
+                <animation effect="fade" start="0" end="100" time="300" delay="600" condition="!String.IsEqual(Control.GetLabel(999),common/null.png) + !Control.HasFocus(905)">Conditional</animation>
                 <imagepath>$VAR[Home_TVBackground]</imagepath>
+                <timeperimage>3000</timeperimage>
                 <aspectratio>stretch</aspectratio>
             </control>
+            
             <control type="multiimage">
                 <left>742</left>
                 <right>656</right>
@@ -851,6 +775,22 @@
                 <animation effect="fade" start="100" end="0" delay="0" time="100">Hidden</animation>
                 <visible>Integer.IsEqual(Window(Home).Property(ButtonSwitch),1)</visible>
             </control>
+            <!-- <control type="group">
+                <visible>Skin.HasSetting(background.showvideo) + Player.HasVideo</visible>
+                <left>742</left>
+                <right>656</right>
+                <top>272</top>
+                <bottom>538</bottom>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="FF000000">common/white.png</texture>
+                </control>
+                <control type="videowindow">
+                    <width>100%</width>
+                    <height>100%</height>
+                </control>
+            </control> -->
         </control>
 
         <control type="image" description="Transition Fade">
@@ -863,14 +803,14 @@
     </include>
 
     <include name="Home_Parallax_Animate_Left">
-        <effect type="rotatey" end="3" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
-        <effect type="zoom" end="105" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
-        <effect type="slide" end="-10" time="1500" tween="quadratic" easing="out" delay="0" />
-    </include>
-    <include name="Home_Parallax_Animate_Right">
         <effect type="rotatey" end="-3" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
         <effect type="zoom" end="105" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
         <effect type="slide" end="10" time="1500" tween="quadratic" easing="out" delay="0" />
+    </include>
+    <include name="Home_Parallax_Animate_Right">
+        <effect type="rotatey" end="3" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="zoom" end="105" time="1500" tween="quadratic" easing="out" delay="0" center="auto" />
+        <effect type="slide" end="-10" time="1500" tween="quadratic" easing="out" delay="0" />
     </include>
 
     <!-- Animations -->

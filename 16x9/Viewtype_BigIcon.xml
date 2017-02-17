@@ -325,7 +325,7 @@
                                 <width>100%</width>
                                 <height>100%</height>
                                 <aspectratio>scale</aspectratio>
-                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
+                                <texture background="true" fallback="home/home.jpg">$VAR[Image_Thumb]</texture>
                             </control>
                         </itemlayout>
                         <focusedlayout width="1280" height="720">
@@ -333,7 +333,7 @@
                                 <width>100%</width>
                                 <height>100%</height>
                                 <aspectratio>scale</aspectratio>
-                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
+                                <texture background="true" fallback="home/home.jpg">$VAR[Image_Thumb]</texture>
                             </control>
                         </focusedlayout>
                     </control>

@@ -33,7 +33,7 @@
                             <width>100%</width>
                             <height>100%</height>
                             <aspectratio>scale</aspectratio>
-                            <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_HubFanart]</texture>
+                            <texture background="true" fallback="home/home.jpg">$VAR[Image_HubFanart]</texture>
                         </control>
                     </itemlayout>
                     <focusedlayout width="1280" height="720">
@@ -41,7 +41,7 @@
                             <width>100%</width>
                             <height>100%</height>
                             <aspectratio>scale</aspectratio>
-                            <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_HubFanart]</texture>
+                            <texture background="true" fallback="home/home.jpg">$VAR[Image_HubFanart]</texture>
                         </control>
                     </focusedlayout>
                     <content target="$VAR[Defs_Hub_Widget_Target]">$VAR[Defs_Hub_Widget]</content>
@@ -181,7 +181,7 @@
                 </control>
                 <control type="image">
                 	<visible>!Integer.IsGreater(Container(9500).NumItems,0)</visible>
-                	<texture>special://skin/extras/backgrounds/home.jpg</texture>
+                	<texture>home/home.jpg</texture>
                 </control>
             </control>
             <control type="group" description="hub side">

@@ -9,7 +9,7 @@
             <centerleft>50%</centerleft>
             <width>favdialogw</width>
             <bottom>80</bottom>
-            <height>532</height>
+            <height>790</height>
             <include>Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[1036]" />
@@ -17,7 +17,7 @@
             </include>
             <control type="group">
                 <left>bigpad</left>
-                <bottom>bigpad</bottom>
+                <top>80</top>
                 <width>432</width>
                 <height>432</height>
                 <include>Object_FlatBackground</include>
@@ -26,6 +26,37 @@
                     <texture background="true" fallback="DefaultAddon.png">$INFO[Container(450).ListItem.Icon]</texture>
                 </control>
             </control>
+
+            <!-- INFO BOX -->
+            <control type="image">
+                <left>28</left>
+                <top>525</top>
+                <width>64</width>
+                <height>64</height>
+                <texture colordiffuse="ListLabel">common/infobubble.png</texture>
+            </control>
+            <control type="textbox">
+                <left>110</left>
+                <top>525</top>
+                <width>394</width>
+                <height>64</height>
+                <align>left</align>
+                <font>Font-ListInfo-Small-Bold</font>
+                <aligny>center</aligny>
+                <label>[COLOR=$VAR[HighlightColor]]"WICKED" TIP[/COLOR]</label>
+            </control>
+            <control type="textbox">
+                <left>28</left>
+                <top>590</top>
+                <width>394</width>
+                <height>180</height>
+                <align>left</align>
+                <font>Font-RSS</font>
+                <aligny>center</aligny>
+                <label>To create a favourite, highlight the item in red and click the menu button on your remote. Favourites are added in the list except in the case that your Add-On has its own favourite section.</label>
+            </control>
+
+            <!-- Favourites List -->
             <include content="Dialog_FavouriteList">
                 <param name="id" value="450" />
                 <param name="left" value="472" />

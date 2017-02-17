@@ -1,38 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1134">
-    <defaultcontrol always="true">9002</defaultcontrol>
+    <defaultcontrol always="true">9001</defaultcontrol>
     <backgroundcolor>Background</backgroundcolor>
     <controls>
-        <control type="button" id="9002">
-            <visible allowhiddenfocus="true">false</visible>
-            <onleft>SetProperty(moving,1)</onleft>
-            <onright>SetProperty(moving,1)</onright>
-            <onleft condition="Container(9001).HasPrevious">Control.Move(9001,-1)</onleft>
-            <onright condition="Container(9001).HasNext">Control.Move(9001,1)</onright>
-            <onclick>Close</onclick>
-        </control>
-        <control type="list" id="9001">
+        <control type="grouplist" id="9000">
+            <orientation>horizontal</orientation>
             <width>100%</width>
             <height>100%</height>
-            <orientation>horizontal</orientation>
-            <onright>noop</onright>
+            <itemgap>0</itemgap>
             <onleft>noop</onleft>
-            <autoscroll time="5000">IsEmpty(Window.Property(moving))</autoscroll>
-            <itemlayout width="1920" height="1080">
-                <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture>$INFO[ListItem.FileNameAndPath]</texture>
-                </control>
-            </itemlayout>
-            <focusedlayout width="1920" height="1080">
-                <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture>$INFO[ListItem.FileNameAndPath]</texture>
-                </control>
-            </focusedlayout>
-            <content>special://skin/x/News/</content>
+            <onright>Close</onright>
+            <control type="button" id="9001">
+                <onleft>noop</onleft>
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/01news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/01news.jpg</texturenofocus>
+            </control>
+            <control type="button" id="9002">
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/02news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/02news.jpg</texturenofocus>
+            </control>
+            <control type="button" id="9003">
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/03news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/03news.jpg</texturenofocus>
+            </control>
+            <control type="button" id="9004">
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/04news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/04news.jpg</texturenofocus>
+            </control>
+            <control type="button" id="9005">
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/05news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/05news.jpg</texturenofocus>
+            </control>
+            <control type="button" id="9006">
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/06news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/06news.jpg</texturenofocus>
+            </control>
+            <control type="button" id="9007">
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/07news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/07news.jpg</texturenofocus>
+            </control>
+            <control type="button" id="9008">
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/08news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/08news.jpg</texturenofocus>
+            </control>
+            <control type="button" id="9009">
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/09news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/09news.jpg</texturenofocus>
+            </control>
+            <control type="button" id="9010">
+                <width>1920</width>
+                <height>1080</height>
+                <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
+                <texturefocus>special://skin/x/News/10news.jpg</texturefocus>
+                <texturenofocus>special://skin/x/News/10news.jpg</texturenofocus>
+                <onright>Close</onright>
+            </control>
         </control>
         <control type="image">
             <width>96</width>
@@ -40,7 +89,7 @@
             <texture colordiffuse="bfffffff" flipx="true">common/bigarrow.png</texture>
             <centertop>54%</centertop>
             <left>20</left>
-            <visible>Container(9001).HasPrevious</visible>
+            <visible>Container(9000).HasPrevious</visible>
         </control>
         <control type="image">
             <width>96</width>
@@ -48,7 +97,7 @@
             <texture colordiffuse="bfffffff">common/bigarrow.png</texture>
             <centertop>54%</centertop>
             <right>20</right>
-            <visible>Container(9001).HasNext</visible>
+            <visible>Container(9000).HasNext</visible>
         </control>
   </controls>
 </window>
