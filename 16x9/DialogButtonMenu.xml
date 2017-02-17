@@ -2,36 +2,70 @@
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <controls>
-        <include>GlobalOverlay</include>
         <control type="group">
-            <include>Dialog_Top</include>
-            <include>Dialog_Background</include>
-            <include content="Dialog_Top_IconHeader">
-                <param name="label" value="$LOCALIZE[33060]" />
-                <param name="icon" value="special://skin/extras/icons/power.png" />
-            </include>
-            <include content="Dialog_Top_Arrows">
-                <param name="id" value="9000" />
-            </include>
-
-            <control type="list" id="9000">
-                <include>Dialog_Top_PowerMenu</include>
-                <content>
-                    <item id="1">
-                        <label>$LOCALIZE[31171]</label>
-                        <onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
-                        <onclick>ReloadSkin()</onclick>
-                        <icon/>
-                    </item>
-                    <item id="2">
-                        <onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
-                        <onclick>ActivateWindow(Settings)</onclick>
-                        <label>Settings</label>
-                        <icon/>
-                    </item>
-                </content>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <control type="image" description="Background">
+                <width>100%</width>
+                <height>100%</height>
+                <texture background="true" colordiffuse="Background">common/white.png</texture>
+            </control>
+            <control type="image" description="Background">
+                <width>100%</width>
+                <height>100%</height>
+                <fadetime>500</fadetime>
+                <texture background="true">$VAR[Home_PowerMenu_Background]</texture>
             </control>
 
+            <control type="grouplist">
+                <orientation>horizontal</orientation>
+                <height>64</height>
+                <itemgap>20</itemgap>
+                <centerleft>50%</centerleft>
+                <top>80</top>
+                <align>center</align>
+                <visible>!Control.HasFocus(9002)</visible>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <texture colordiffuse="ListLabel">common/infobubble.png</texture>
+                </control>
+                <control type="textbox">
+                    <width>1080</width>
+                    <height>64</height>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>Font-RSS</font>
+                    <label>[B][COLOR=red]Are you sure you want to quit?[/COLOR][/B] Click QUIT to confirm. You must use QUIT when leaving TV PLUS. [CR]Please be patient as it may take up to 1 min to save your files & to shutdown properly.</label>
+                </control>
+            </control>
+
+            <control type="grouplist" id="9000">
+                <ondown>Close</ondown>
+                <onup>Close</onup>
+                <onleft>noop</onleft>
+                <onright>noop</onright>
+                <orientation>horizontal</orientation>
+                <align>center</align>
+                <centerleft>50%</centerleft>
+                <bottom>90</bottom>
+                <itemgap>20</itemgap>
+                <height>72</height>
+                <control type="button" id="9001">
+                    <label>Quit (Press OK to confirm)</label>
+                    <onclick>Close</onclick>
+                    <onclick>XBMC.Quit()</onclick>
+                    <onfocus>SetProperty(PowerBackground,special://skin/x/Backgrounds/quit2.jpg,home)</onfocus>
+                    <include>Defs_OptionButton2</include>
+                </control>
+                <control type="button" id="9002">
+                    <label>$LOCALIZE[360]</label>
+                    <onclick>Close</onclick>
+                    <onclick>ActivateScreensaver</onclick>
+                    <onfocus>SetProperty(PowerBackground,special://skin/x/Backgrounds/default1.jpg,home)</onfocus>
+                    <include>Defs_OptionButton2</include>
+                </control>
+            </control>
         </control>
     </controls>
 </window>

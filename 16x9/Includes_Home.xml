@@ -3,63 +3,6 @@
     <!-- ======== -->
     <!-- HOME BAR -->
     <!-- ======== -->
-    <variable name="Home_TVBackground">
-        
-        <!-- Support -->
-        <value condition="Control.HasFocus(901)">special://skin/x/backgrounds/support.jpg</value>
-        <value condition="Control.HasFocus(911)">special://skin/x/backgrounds/guides.jpg</value>
-        <value condition="Control.HasFocus(912)">special://skin/x/backgrounds/support.jpg</value>
-        <value condition="Control.HasFocus(913)">special://skin/x/backgrounds/usermaintenance.jpg</value>
-        
-        <!-- Videos -->
-        <value condition="Control.HasFocus(902)">special://skin/x/backgrounds/videos.jpg</value>
-        <value condition="Control.HasFocus(921)">special://skin/x/backgrounds/youtube.jpg</value>
-        <value condition="Control.HasFocus(922)">special://skin/x/backgrounds/videos.jpg</value>
-        
-        <!-- Music -->
-        <value condition="Control.HasFocus(903)">special://skin/x/backgrounds/music.jpg</value>
-        <value condition="Control.HasFocus(931)">special://skin/x/backgrounds/pulsemusic.jpg</value>
-        <value condition="Control.HasFocus(932)">special://skin/x/backgrounds/music.jpg</value>
-        <value condition="Control.HasFocus(933)">special://skin/x/backgrounds/music.jpg</value>
-
-        <!-- Pictures -->
-        <value condition="Control.HasFocus(904)">special://skin/x/backgrounds/pictures.jpg</value>
-        <value condition="Control.HasFocus(941)">special://skin/x/backgrounds/bigpicture.jpg</value>
-        <value condition="Control.HasFocus(942)">special://skin/x/backgrounds/pictures.jpg</value>
-        <value condition="Control.HasFocus(943)">special://skin/x/backgrounds/pictures.jpg</value>
-        
-        <!-- TV Plus -->
-        <value condition="Control.HasFocus(905)">common/null.png</value>
-        <value condition="Control.HasFocus(951)">special://skin/x/backgrounds/favourites.jpg</value>
-        <value condition="Control.HasFocus(952)">special://skin/x/backgrounds/tvplus.jpg</value>
-        <value condition="Control.HasFocus(953)">special://skin/x/backgrounds/wickedmix.jpg</value>
-        <value condition="Control.HasFocus(954)">special://skin/x/backgrounds/wickedxxx.jpg</value>
-
-        <!-- Live TV -->
-        <value condition="Control.HasFocus(906)">special://skin/x/backgrounds/livetv.jpg</value>
-        <value condition="Control.HasFocus(961)">special://skin/x/backgrounds/tvpluslive.jpg</value>
-        <value condition="Control.HasFocus(962)">special://skin/x/backgrounds/mobdro.jpg</value>
-        <value condition="Control.HasFocus(963)">special://skin/x/backgrounds/wickediptv.jpg</value>
-
-        <!-- Live Radio -->
-        <value condition="Control.HasFocus(907)">special://skin/x/backgrounds/liveradio.jpg</value>
-        <value condition="Control.HasFocus(971)">special://skin/x/backgrounds/tunein.jpg</value>
-        <value condition="Control.HasFocus(972)">special://skin/x/backgrounds/radionet.jpg</value>
-        <value condition="Control.HasFocus(973)">special://skin/x/backgrounds/iheart.jpg</value>
-        <value condition="Control.HasFocus(974)">special://skin/x/backgrounds/mixcloud.jpg</value>
-
-        <!-- News -->
-        <value condition="Control.HasFocus(908)">special://skin/x/news/</value>
-
-        <!-- Quit -->
-        <value condition="Control.HasFocus(909)">special://skin/x/backgrounds/quit.jpg</value>
-    </variable>
-
-    <variable name="Home_TVStatic">
-        <value condition="!Integer.IsEqual(Window(Home).Property(ButtonSwitch,1))">noop</value>
-        <value>home/tvstatic/</value>
-    </variable>
-
     <!-- Main Menu -->
     <include name="Home_Menu">
         <control type="grouplist" id="9000">
@@ -130,6 +73,7 @@
                 <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
                 <param name="onclick" value="SetFocus(9002)" />
+                <param name="reddot" value="true" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="706" />
@@ -170,7 +114,7 @@
                 <param name="icon" value="special://skin/extras/icons/power.png" />
                 <param name="onfocus" value="SetProperty(SubMenuType,909,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
-                <param name="onclick" value="SetFocus(9002)" />
+                <param name="onclick" value="ActivateWindow(shutdownmenu)" />
             </include>
         </control>
     </include>
@@ -364,6 +308,7 @@
                     <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
                     <param name="set-onclick-target" value="true" />
                     <param name="onclick-target" value="addons://sources/video/" />
+                    <param name="reddot" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
                 </include>
                 <!-- FIX ME -->
@@ -497,6 +442,7 @@
         </control>
     </include>
 
+    <!-- Button Include -->
     <include name="Home_Menu_Button">
         <param name="width" default="196" />
         <param name="visible" default="true" />
@@ -504,6 +450,7 @@
         <param name="onfocus2" default="noop" />
         <param name="set-onclick-target" default="false" />
         <param name="wickedxxx" default="false" />
+        <param name="reddot" default="false" />
         <definition>
             <control type="group" id="$PARAM[imageid]">
                 <width>$PARAM[width]</width>
@@ -551,30 +498,53 @@
                 <height>170</height>
                 <visible>$PARAM[visible]</visible>
                 <control type="group">
-                    <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[groupid]) + !Control.HasFocus($PARAM[buttonid])">Conditional</animation>
                     <control type="image">
                         <top>-32</top>
                         <left>16</left>
                         <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$PARAM[icon]</texture>
                         <aspectratio scalediffuse="false">center</aspectratio>
+                        <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[groupid]) + !Control.HasFocus($PARAM[buttonid])">Conditional</animation>
                     </control>
-                    <control type="label">
-                        <top>104</top>
-                        <height>78</height>
+                    <control type="grouplist">
+                        <bottom>10</bottom>
+                        <height>32</height>
                         <left>16</left>
                         <right>20</right>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <font>Font-HomeMenu</font>
-                        <textcolor>HomeBarFG</textcolor>
-                        <label>$PARAM[label]</label>
+                        <orientation>horizontal</orientation>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>12</itemgap>
+                        <control type="image">
+                            <centertop>14</centertop>
+                            <width>12</width>
+                            <height>12</height>
+                            <texture colordiffuse="HomeBarFG">common/circle.png</texture>
+                            <visible>$PARAM[reddot]</visible>
+                            <visible>Control.HasFocus($PARAM[buttonid])</visible>
+                        </control>
+                        <control type="image">
+                            <centertop>14</centertop>
+                            <width>12</width>
+                            <height>12</height>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/circle.png</texture>
+                            <visible>$PARAM[reddot]</visible>
+                            <visible>!Control.HasFocus($PARAM[buttonid])</visible>
+                        </control>
+                        <control type="label">
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <width>auto</width>
+                            <font>Font-HomeMenu</font>
+                            <textcolor>HomeBarFG</textcolor>
+                            <label>$PARAM[label]</label>
+                            <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[groupid]) + !Control.HasFocus($PARAM[buttonid])">Conditional</animation>
+                        </control>
                     </control>
                 </control>
             </control>
         </definition>
     </include>
-
-
 
     <!-- Now Playing -->
     <include name="Home_NowPlaying">
@@ -651,7 +621,6 @@
         </control>
     </include>
 
-
     <!-- RSS -->
     <include name="Home_RSS">
         <control type="group">
@@ -685,9 +654,72 @@
             </control>
         </control>
     </include>
+
     <!-- ========== -->
     <!-- BACKGROUND -->
     <!-- ========== -->
+    <variable name="Home_TVBackground">
+        
+        <!-- Support -->
+        <value condition="Control.HasFocus(901)">special://skin/x/backgrounds/support.jpg</value>
+        <value condition="Control.HasFocus(911)">special://skin/x/backgrounds/guides.jpg</value>
+        <value condition="Control.HasFocus(912)">special://skin/x/backgrounds/support.jpg</value>
+        <value condition="Control.HasFocus(913)">special://skin/x/backgrounds/usermaintenance.jpg</value>
+        
+        <!-- Videos -->
+        <value condition="Control.HasFocus(902)">special://skin/x/backgrounds/videos.jpg</value>
+        <value condition="Control.HasFocus(921)">special://skin/x/backgrounds/youtube.jpg</value>
+        <value condition="Control.HasFocus(922)">special://skin/x/backgrounds/videos.jpg</value>
+        
+        <!-- Music -->
+        <value condition="Control.HasFocus(903)">special://skin/x/backgrounds/music.jpg</value>
+        <value condition="Control.HasFocus(931)">special://skin/x/backgrounds/pulsemusic.jpg</value>
+        <value condition="Control.HasFocus(932)">special://skin/x/backgrounds/music.jpg</value>
+        <value condition="Control.HasFocus(933)">special://skin/x/backgrounds/music.jpg</value>
+
+        <!-- Pictures -->
+        <value condition="Control.HasFocus(904)">special://skin/x/backgrounds/pictures.jpg</value>
+        <value condition="Control.HasFocus(941)">special://skin/x/backgrounds/bigpicture.jpg</value>
+        <value condition="Control.HasFocus(942)">special://skin/x/backgrounds/pictures.jpg</value>
+        <value condition="Control.HasFocus(943)">special://skin/x/backgrounds/pictures.jpg</value>
+        
+        <!-- TV Plus -->
+        <value condition="Control.HasFocus(905)">common/null.png</value>
+        <value condition="Control.HasFocus(951)">special://skin/x/backgrounds/favourites.jpg</value>
+        <value condition="Control.HasFocus(952)">special://skin/x/backgrounds/tvplus.jpg</value>
+        <value condition="Control.HasFocus(953)">special://skin/x/backgrounds/wickedmix.jpg</value>
+        <value condition="Control.HasFocus(954)">special://skin/x/backgrounds/wickedxxx.jpg</value>
+
+        <!-- Live TV -->
+        <value condition="Control.HasFocus(906)">special://skin/x/backgrounds/livetv.jpg</value>
+        <value condition="Control.HasFocus(961)">special://skin/x/backgrounds/tvpluslive.jpg</value>
+        <value condition="Control.HasFocus(962)">special://skin/x/backgrounds/mobdro.jpg</value>
+        <value condition="Control.HasFocus(963)">special://skin/x/backgrounds/wickediptv.jpg</value>
+
+        <!-- Live Radio -->
+        <value condition="Control.HasFocus(907)">special://skin/x/backgrounds/liveradio.jpg</value>
+        <value condition="Control.HasFocus(971)">special://skin/x/backgrounds/tunein.jpg</value>
+        <value condition="Control.HasFocus(972)">special://skin/x/backgrounds/radionet.jpg</value>
+        <value condition="Control.HasFocus(973)">special://skin/x/backgrounds/iheart.jpg</value>
+        <value condition="Control.HasFocus(974)">special://skin/x/backgrounds/mixcloud.jpg</value>
+
+        <!-- News -->
+        <value condition="Control.HasFocus(908)">special://skin/x/news/</value>
+
+        <!-- Quit -->
+        <value condition="Control.HasFocus(909)">special://skin/x/backgrounds/quit.jpg</value>
+    </variable>
+
+    <variable name="Home_TVStatic">
+        <value condition="!Integer.IsEqual(Window(Home).Property(ButtonSwitch,1))">noop</value>
+        <value>home/tvstatic/</value>
+    </variable>
+
+    <variable name="Home_PowerMenu_Background">
+        <value condition="Control.HasFocus(9002)">special://skin/x/backgrounds/screensaver.jpg</value>
+        <value>special://skin/x/backgrounds/quit2.jpg</value>
+    </variable>
+
     <include name="Home_Background">
         <control type="videowindow">
             <width>100%</width>
