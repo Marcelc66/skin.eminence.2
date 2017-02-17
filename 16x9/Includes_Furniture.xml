@@ -838,8 +838,11 @@
             <aspectratio>keep</aspectratio>
             <colordiffuse>$VAR[Furniture_TopBar_Tile_Color]</colordiffuse>
             <visible>!Container.Scrolling</visible>
-            <visible>!Window.IsVisible(DialogBusy.xml)</visible>
             <visible>!Window.IsVisible(home)</visible>
+            <animation type="Conditional" condition="Window.IsVisible(DialogBusy.xml)">
+                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+                <effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out"/>
+            </animation>
             <animation type="Visible">
                 <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="2000" />
                 <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" delay="2000" />
@@ -851,7 +854,10 @@
         </control>
         <control type="group">
             <visible>Container.Scrolling</visible>
-            <visible>!Window.IsVisible(DialogBusy.xml)</visible>
+            <animation type="Conditional" condition="Window.IsVisible(DialogBusy.xml)">
+                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+                <effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out"/>
+            </animation>
             <animation type="Visible">
                 <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
                 <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" />

@@ -68,7 +68,7 @@
                                 <control type="image">
                                     <width>100%</width>
                                     <height>100%</height>
-                                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                                    <texture border="5">common/metal-border-button.png</texture>
                                 </control>
                                 <control type="label">
                                     <font>Font-ListInfo-Small-Bold</font>

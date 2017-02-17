@@ -118,7 +118,7 @@
                     <visible>Control.HasFocus(9500)</visible>
                     <control type="image">
                         <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <visible>!Skin.HasSetting(furniture.hidehubplot)</visible>
                     <control type="grouplist">
@@ -222,7 +222,7 @@
                             <width>100%</width>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            <texture border="5">common/metal-border-button.png</texture>
                         </control>
                         <control type="image">
                             <right>pad</right>
@@ -566,7 +566,7 @@
                             <control type="image">
                                 <width>667</width>
                                 <height>100%</height>
-                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                                <texture border="5">common/metal-border-button.png</texture>
                             </control>
                             <control type="image">
                                 <left>-8</left>

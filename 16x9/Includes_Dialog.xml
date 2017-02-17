@@ -88,7 +88,7 @@
                 <left>0</left>
                 <right>pad</right>
                 <height>100%</height>
-                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                <texture border="5">common/metal-border-button.png</texture>
             </control>
             <control type="label">
                 <left>bigpad</left>
@@ -284,7 +284,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <control type="label">
                         <left>30</left>
@@ -349,7 +349,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <control type="image">
                         <left>pad</left>
@@ -447,7 +447,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>72</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <control type="label">
                         <left>bigpad</left>
@@ -580,7 +580,7 @@
                         <right>5</right>
                         <bottom>pad</bottom>
                         <top>0</top>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <control type="group">
                         <control type="label">
@@ -600,7 +600,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <control type="group">
                         <left>$PARAM[pad]</left>
@@ -653,7 +653,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <control type="image">
                         <centerleft>50%</centerleft>
@@ -741,7 +741,7 @@
                         <control type="image">
                             <width>100%</width>
                             <height>100%</height>
-                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            <texture border="5">common/metal-border-button.png</texture>
                             <animation effect="fade" start="100" end="25" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
                         </control>
                         <control type="label">

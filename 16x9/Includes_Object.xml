@@ -10,7 +10,7 @@
                 <width>220</width>
                 <bottom>0</bottom>
                 <top>0</top>
-                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                <bordertexture border="5">common/metal-border-button.png</bordertexture>
                 <bordersize>10</bordersize>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
@@ -36,7 +36,7 @@
                 <width>220</width>
                 <bottom>0</bottom>
                 <top>0</top>
-                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                <bordertexture border="5">common/metal-border-button.png</bordertexture>
                 <bordersize>10</bordersize>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
@@ -63,7 +63,7 @@
                 <width>220</width>
                 <bottom>0</bottom>
                 <top>0</top>
-                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                <bordertexture border="5">common/metal-border-button.png</bordertexture>
                 <bordersize>10</bordersize>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
@@ -681,7 +681,7 @@
                         <control type="image">
                             <width>100%</width>
                             <height>100%</height>
-                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            <texture border="5">common/metal-border-button.png</texture>
                         </control>
                         <control type="image">
                             <left>pad</left>

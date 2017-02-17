@@ -3,6 +3,7 @@
     <!-- home -->
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">905</defaultcontrol>
+    <onload condition="Skin.HasSetting(TVPLUS.MASTERMODE)">Skin.Reset(TVPLUS.MASTERMODE)</onload>
     <onload>ClearProperty(Header.Label,home)</onload>
     <onload>ClearProperty(Header.Icon,home)</onload>
     <onload>ClearProperty(HighlightColor,home)</onload>

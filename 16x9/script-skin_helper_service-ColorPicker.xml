@@ -48,7 +48,7 @@
                         <top>0</top>
                         <right>pad</right>
                         <bottom>pad</bottom>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <control type="image">
                         <top>pad</top>

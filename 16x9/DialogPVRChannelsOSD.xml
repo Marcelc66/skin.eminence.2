@@ -113,7 +113,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>109</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <control type="image">
                         <width>100%</width>

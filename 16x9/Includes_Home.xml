@@ -116,6 +116,32 @@
                 <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
                 <param name="onclick" value="ActivateWindow(shutdownmenu)" />
             </include>
+
+            <!-- MASTER MODE -->
+            <include content="Home_Menu_Button">
+                <param name="imageid" value="798" />
+                <param name="groupid" value="898" />
+                <param name="buttonid" value="998" />
+                <param name="label" value="Programs" />
+                <param name="icon" value="special://skin/extras/icons/addons.png" />
+                <param name="onfocus" value="ClearProperty(SubMenuType,Home)" />
+                <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
+                <param name="onclick" value="noop" />
+                <param name="mastermode-programs" value="true" />
+                <param name="visible" value="Skin.HasSetting(TVPLUS.MASTERMODE)" />
+            </include>
+            <include content="Home_Menu_Button">
+                <param name="imageid" value="799" />
+                <param name="groupid" value="899" />
+                <param name="buttonid" value="999" />
+                <param name="label" value="Settings" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+                <param name="onfocus" value="ClearProperty(SubMenuType,Home)" />
+                <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
+                <param name="onclick" value="noop" />
+                <param name="mastermode-settings" value="true" />
+                <param name="visible" value="Skin.HasSetting(TVPLUS.MASTERMODE)" />
+            </include>
         </control>
     </include>
 
@@ -324,7 +350,6 @@
                     <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
                 </include>
-                <!-- FIX ME -->
                 <include content="Home_Menu_Button">
                     <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
                     <param name="imageid" value="754" />
@@ -361,7 +386,7 @@
                     <param name="width" value="473" />
                     <param name="label" value="Mobdro" />
                     <param name="icon" value="special://skin/extras/icons/mobdro.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="onclick" value="StartAndroidActivity(&quot;com.mobdro.android&quot;)" />
                     <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
                 </include>
@@ -414,7 +439,8 @@
                     <param name="width" value="473" />
                     <param name="label" value="iHeart" />
                     <param name="icon" value="special://skin/extras/icons/iheart.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.iheart/&quot;,return)" />
+                    <param name="onclick-target" value="plugin://plugin.audio.iheart/" />
                     <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
                 </include>
@@ -426,8 +452,9 @@
                     <param name="buttonid" value="974" />
                     <param name="width" value="473" />
                     <param name="label" value="MixCloud" />
-                    <param name="icon" value="special://skin/extras/icons/mixcloud.png" />
-                    <param name="onclick" value="noop" />
+                    <param name="icon" value="special://skin/extras/icons/iheart.png" />
+                    <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.mixcloud/&quot;,return)" />
+                    <param name="onclick-target" value="plugin://plugin.audio.mixcloud/" />
                     <param name="set-onclick-target" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
                 </include>
@@ -450,6 +477,8 @@
         <param name="onfocus2" default="noop" />
         <param name="set-onclick-target" default="false" />
         <param name="wickedxxx" default="false" />
+        <param name="mastermode-settings" default="false" />
+        <param name="mastermode-programs" default="false" />
         <param name="reddot" default="false" />
         <definition>
             <control type="group" id="$PARAM[imageid]">
@@ -482,6 +511,11 @@
                 <onclick condition="$PARAM[wickedxxx]">Skin.Reset(ADULTPASS)</onclick>
                 <onclick condition="$PARAM[wickedxxx]">Skin.SetNumeric(ADULTPASS)</onclick>
                 <onclick condition="$PARAM[wickedxxx]">ActivateWindow(1175)</onclick>
+                <onclick condition="$PARAM[mastermode-settings] | $PARAM[mastermode-programs]">SetProperty(PASSWORD,1,home)</onclick>
+                <onclick condition="$PARAM[mastermode-settings] | $PARAM[mastermode-programs]">Skin.Reset(MASTERPASS)</onclick>
+                <onclick condition="$PARAM[mastermode-settings] | $PARAM[mastermode-programs]">Skin.SetNumeric(MASTERPASS)</onclick>
+                <onclick condition="$PARAM[mastermode-settings]">ActivateWindow(1176)</onclick>
+                <onclick condition="$PARAM[mastermode-programs]">ActivateWindow(1177)</onclick>
                 <onclick>$PARAM[onclick]</onclick>
                 <onfocus>$PARAM[onfocus]</onfocus>
                 <onfocus>$PARAM[onfocus2]</onfocus>

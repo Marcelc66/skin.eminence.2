@@ -20,15 +20,15 @@
     </include>
     <include name="Defs_OptionButton">
         <include>Defs_OptionButton_Basic</include>
-        <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
-        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+        <texturefocus border="5">common/metal-border-button.png</texturefocus>
+        <alttexturefocus border="5">common/metal-border-button.png</alttexturefocus>
     </include>
     <include name="Defs_OptionButton2">
         <include>Defs_OptionButton_Basic</include>
         <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
-        <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
+        <texturefocus border="5">common/metal-border-button.png</texturefocus>
         <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
-        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+        <alttexturefocus border="5">common/metal-border-button.png</alttexturefocus>
     </include>
     <include name="Defs_OptionButton3">
         <width>auto</width>
@@ -36,9 +36,9 @@
         <font>Font-ListInfo-Small-Bold</font>
         <include>Defs_OptionButton_Basic</include>
         <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
-        <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
+        <texturefocus border="5">common/metal-border-button.png</texturefocus>
         <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
-        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+        <alttexturefocus border="5">common/metal-border-button.png</alttexturefocus>
     </include>
     <include name="Defs_OptionButton_Circle">
         <height>64</height>
@@ -79,9 +79,9 @@
         <textoffsetx>bigpad</textoffsetx>
         <radioposx>295</radioposx>
         <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
-        <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
+        <texturefocus border="5">common/metal-border-button.png</texturefocus>
         <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
-        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+        <alttexturefocus border="5">common/metal-border-button.png</alttexturefocus>
     </include>
     <variable name="Defs_Hub_Widget">
         <value condition="Window.IsVisible(1101) + !String.IsEmpty(Skin.String(Widget.1101))">$INFO[Skin.String(Widget.1101)]</value>

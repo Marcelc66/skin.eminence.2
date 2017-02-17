@@ -4,6 +4,8 @@
     <include name="Viewtype_List">
         <control type="group">
             <visible>Control.IsVisible(550)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -28,6 +30,8 @@
     <include name="Viewtype_SquareList">
         <control type="group">
             <visible>Control.IsVisible(50)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <left>20</left>
             <right>20</right>
             <top>20</top>
@@ -40,7 +44,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
                 <param name="id" value="50" />
-                <param name="condition" value="![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos) | Container.Content(files) | String.IsEqual(Container.FolderPath,addons://sources/video) | String.IsEqual(Container.FolderPath,addons//sources/music) | Container.Content(images) | Container.Content(programs)]" />
+                <param name="condition" value="![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos) | Container.Content(files) | String.IsEqual(Container.FolderPath,addons://sources/video) | String.IsEqual(Container.FolderPath,addons://sources/music) | String.IsEqual(Container.FolderPath,addons://sources/executable) | Container.Content(images) | Container.Content(programs)]" />
             </include>
             <control type="group">
                 <width>listinfow</width>
@@ -51,6 +55,8 @@
     <include name="Viewtype_PlainList">
         <control type="group">
             <visible>Control.IsVisible(552)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -73,6 +79,8 @@
     <include name="Viewtype_MediaInfo">
         <control type="group">
             <visible>Control.IsVisible(51)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -92,6 +100,8 @@
     <include name="Viewtype_MediaInfo2">
         <control type="group">
             <visible>Control.IsVisible(57)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -112,6 +122,8 @@
     <include name="Viewtype_InfoList2">
         <control type="group">
             <visible>Control.IsVisible(553)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
 
             <control type="group">
                 <left>bigpad</left>
@@ -139,6 +151,8 @@
     <include name="Viewtype_Icon">
         <control type="group">
             <visible>Control.IsVisible(500)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <control type="group">
                 <left>bigpad</left>
                 <right>bigpad</right>
@@ -161,6 +175,8 @@
     <include name="Viewtype_IconExtra">
         <control type="group">
             <visible>Control.IsVisible(59)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <control type="group">
                 <left>bigpad</left>
                 <right>bigpad</right>
@@ -177,7 +193,7 @@
                         <param name="iconitemw" value="iconextraitemw" />
                         <param name="iconpadw" value="iconextrapadw" />
                         <param name="iconpanelpadw" value="iconextrapanelpadw" />
-                        <param name="condition" value="String.IsEqual(Container.FolderPath,addons://sources/video) | String.IsEqual(Container.FolderPath,addons//sources/music)" />
+                        <param name="condition" value="String.IsEqual(Container.FolderPath,addons://sources/video) | String.IsEqual(Container.FolderPath,addons://sources/music) | String.IsEqual(Container.FolderPath,addons://sources/executable)" />
                     </include>
                 </control>
                 <include>Object_ExtraInfo</include>
@@ -366,7 +382,7 @@
         <param name="label3" default="true" />
         <definition>
             <control type="image">
-                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                <texture border="5">common/metal-border-button.png</texture>
             </control>
             
             <!-- Detailed List -->
@@ -685,7 +701,7 @@
                             <bottom>pad</bottom>
                             <include>Object_Background</include>
                             <control type="image">
-                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                                <texture border="5">common/metal-border-button.png</texture>
                             </control>
                             <control type="group">
                                 <width>622</width>
@@ -696,6 +712,9 @@
                                     <aspectratio>keep</aspectratio>
                                     <texture background="true">$VAR[Image_Thumb]</texture>
                                 </control>
+                            </control>
+                            <control type="image">
+                                <texture border="5">common/metal-border.png</texture>
                             </control>
                             <control type="group">
                                 <left>622</left>
@@ -890,7 +909,7 @@
                                 <top>-10</top>
                                 <bottom>-10</bottom>
                                 <bordersize>10</bordersize>
-                                <bordertexture colordiffuse="$VAR[HighlightColor]" border="10">common/border.png</bordertexture>
+                                <bordertexture border="5">common/metal-border-button.png</bordertexture>
                                 <aspectratio aligny="center">keep</aspectratio>
                                 <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster]</texture>
                                 <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
@@ -899,7 +918,7 @@
                         </control>
                         <control type="image">
                             <bordersize>10</bordersize>
-                            <bordertexture colordiffuse="$VAR[HighlightColor]" border="10">common/border.png</bordertexture>
+                            <bordertexture border="5">common/metal-border-button.png</bordertexture>
                             <aspectratio>scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                             <visible>![String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))]</visible>
@@ -926,7 +945,7 @@
                             <top>pad</top>
                             <bottom>pad</bottom>
                             <control type="image">
-                                <texture background="true" colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                                <texture background="true" border="5">common/metal-border-button.png</texture>
                             </control>
                             <control type="label">
                                 <label>$INFO[ListItem.Label]</label>
