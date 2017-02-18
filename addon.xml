@@ -3,7 +3,7 @@
     id="skin.tvpmc"
     version="1.0.0"
     name="TVPMC"
-    provider-name="TV PLUS MEDIA - Marcel Mr. Wicked and jurialmunkey">
+    provider-name="TV PLUS MEDIA - Mr. Wicked-Marcel and jurialmunkey">
     <requires>
         <import addon="xbmc.gui" version="5.12.0"/>
         <import addon="script.skinshortcuts" version="1.0.0"/>
