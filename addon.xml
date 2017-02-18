@@ -18,9 +18,9 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">TV Plus Media Center Skin for Kodi.</summary>
-        <disclaimer lang="en">TV PLUS Media is not responsible for any damage caused by installing this software or the subsequent updates on non-authorized devices. Mouse and Touch device not supported</disclaimer>
-        <description lang="en">TV PLUS Media Center is a custom configured skin and software for the exclusive use of ULTRA BOXX and WICKED Media Streaming Devices. A "WICKED" thanks to jurialmunkey. If you have questions or need support visit www.TVPLUSMEDIA.com</description>
+        <summary lang="en">TV PLUS MEDIA CENTER is a custom configured skin for kodi /summary>
+        <disclaimer lang="en">TV PLUS Media is not responsible for any damage caused by installing this software or the subsequent updates on non-authorized devices. TV PLUS MEDIA does not host or provide media of any kind and does not support copyright infringement and therefore it is the users responsibility to observe the governing laws in your respective area.</disclaimer>
+        <description lang="en">TV PLUS MEDIA CENTER is a custom configured skin and software for the exclusive use of ULTRA BOXX and WICKED Media Streaming Devices ONLY. A "WICKED" thanks to jurialmunkey. For support visit www.TVPLUSMEDIA.com</description>
         <license>CC-NC-SA 3.0</license>
         <website></website>
         <email></email>
