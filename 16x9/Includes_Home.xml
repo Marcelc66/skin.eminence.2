@@ -761,19 +761,19 @@
         <!-- Videos -->
         <value condition="Control.HasFocus(902)">special://skin/tvpmc/bg/videos.jpg</value>
         <value condition="Control.HasFocus(921)">special://skin/tvpmc/bg/youtube.jpg</value>
-        <value condition="Control.HasFocus(922)">special://skin/tvpmc/bg/videos.jpg</value>
+        <value condition="Control.HasFocus(922)">special://skin/tvpmc/bg/myfiles.jpg</value>
         
         <!-- Music -->
         <value condition="Control.HasFocus(903)">special://skin/tvpmc/bg/music.jpg</value>
         <value condition="Control.HasFocus(931)">special://skin/tvpmc/bg/pulsemusic.jpg</value>
         <value condition="Control.HasFocus(932)">special://skin/tvpmc/bg/music.jpg</value>
-        <value condition="Control.HasFocus(933)">special://skin/tvpmc/bg/music.jpg</value>
+        <value condition="Control.HasFocus(933)">special://skin/tvpmc/bg/myfiles.jpg</value>
 
         <!-- Pictures -->
         <value condition="Control.HasFocus(904)">special://skin/tvpmc/bg/pictures.jpg</value>
         <value condition="Control.HasFocus(941)">special://skin/tvpmc/bg/bigpicture.jpg</value>
         <value condition="Control.HasFocus(942)">special://skin/tvpmc/bg/pictures.jpg</value>
-        <value condition="Control.HasFocus(943)">special://skin/tvpmc/bg/pictures.jpg</value>
+        <value condition="Control.HasFocus(943)">special://skin/tvpmc/bg/myfiles.jpg</value>
         
         <!-- TV Plus -->
         <value condition="Control.HasFocus(905)">common/null.png</value>
