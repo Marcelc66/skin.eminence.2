@@ -97,17 +97,17 @@
                     <item id="1">
                         <label>Setting up your TV PLUS</label>
                         <onclick>ActivateWindow(1136)</onclick>
-                        <icon>special://skin/x/XACTU/Setup.png</icon>
+                        <icon>special://skin/tvpmc/XACTU/Setup.png</icon>
                     </item>
                     <item id="2">
                         <label>How to use TV PLUS</label>
                         <onclick>ActivateWindow(1137)</onclick>
-                        <icon>special://skin/x/XACTU/Learn.png</icon>
+                        <icon>special://skin/tvpmc/XACTU/Learn.png</icon>
                     </item>
                     <item id="3">
                         <label>Tips and Tricks</label>
                         <onclick>ActivateWindow(1138)</onclick>
-                        <icon>special://skin/x/XACTU/Tips.png</icon>
+                        <icon>special://skin/tvpmc/XACTU/Tips.png</icon>
                     </item>
                 </content>
             </control>

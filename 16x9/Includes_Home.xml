@@ -695,53 +695,53 @@
     <variable name="Home_TVBackground">
         
         <!-- Support -->
-        <value condition="Control.HasFocus(901)">special://skin/x/backgrounds/support.jpg</value>
-        <value condition="Control.HasFocus(911)">special://skin/x/backgrounds/guides.jpg</value>
-        <value condition="Control.HasFocus(912)">special://skin/x/backgrounds/support.jpg</value>
-        <value condition="Control.HasFocus(913)">special://skin/x/backgrounds/usermaintenance.jpg</value>
+        <value condition="Control.HasFocus(901)">special://skin/tvpmc/backgrounds/support.jpg</value>
+        <value condition="Control.HasFocus(911)">special://skin/tvpmc/backgrounds/guides.jpg</value>
+        <value condition="Control.HasFocus(912)">special://skin/tvpmc/backgrounds/support.jpg</value>
+        <value condition="Control.HasFocus(913)">special://skin/tvpmc/backgrounds/usermaintenance.jpg</value>
         
         <!-- Videos -->
-        <value condition="Control.HasFocus(902)">special://skin/x/backgrounds/videos.jpg</value>
-        <value condition="Control.HasFocus(921)">special://skin/x/backgrounds/youtube.jpg</value>
-        <value condition="Control.HasFocus(922)">special://skin/x/backgrounds/videos.jpg</value>
+        <value condition="Control.HasFocus(902)">special://skin/tvpmc/backgrounds/videos.jpg</value>
+        <value condition="Control.HasFocus(921)">special://skin/tvpmc/backgrounds/youtube.jpg</value>
+        <value condition="Control.HasFocus(922)">special://skin/tvpmc/backgrounds/videos.jpg</value>
         
         <!-- Music -->
-        <value condition="Control.HasFocus(903)">special://skin/x/backgrounds/music.jpg</value>
-        <value condition="Control.HasFocus(931)">special://skin/x/backgrounds/pulsemusic.jpg</value>
-        <value condition="Control.HasFocus(932)">special://skin/x/backgrounds/music.jpg</value>
-        <value condition="Control.HasFocus(933)">special://skin/x/backgrounds/music.jpg</value>
+        <value condition="Control.HasFocus(903)">special://skin/tvpmc/backgrounds/music.jpg</value>
+        <value condition="Control.HasFocus(931)">special://skin/tvpmc/backgrounds/pulsemusic.jpg</value>
+        <value condition="Control.HasFocus(932)">special://skin/tvpmc/backgrounds/music.jpg</value>
+        <value condition="Control.HasFocus(933)">special://skin/tvpmc/backgrounds/music.jpg</value>
 
         <!-- Pictures -->
-        <value condition="Control.HasFocus(904)">special://skin/x/backgrounds/pictures.jpg</value>
-        <value condition="Control.HasFocus(941)">special://skin/x/backgrounds/bigpicture.jpg</value>
-        <value condition="Control.HasFocus(942)">special://skin/x/backgrounds/pictures.jpg</value>
-        <value condition="Control.HasFocus(943)">special://skin/x/backgrounds/pictures.jpg</value>
+        <value condition="Control.HasFocus(904)">special://skin/tvpmc/backgrounds/pictures.jpg</value>
+        <value condition="Control.HasFocus(941)">special://skin/tvpmc/backgrounds/bigpicture.jpg</value>
+        <value condition="Control.HasFocus(942)">special://skin/tvpmc/backgrounds/pictures.jpg</value>
+        <value condition="Control.HasFocus(943)">special://skin/tvpmc/backgrounds/pictures.jpg</value>
         
         <!-- TV Plus -->
         <value condition="Control.HasFocus(905)">common/null.png</value>
-        <value condition="Control.HasFocus(951)">special://skin/x/backgrounds/favourites.jpg</value>
-        <value condition="Control.HasFocus(952)">special://skin/x/backgrounds/tvplus.jpg</value>
-        <value condition="Control.HasFocus(953)">special://skin/x/backgrounds/wickedmix.jpg</value>
-        <value condition="Control.HasFocus(954)">special://skin/x/backgrounds/wickedxxx.jpg</value>
+        <value condition="Control.HasFocus(951)">special://skin/tvpmc/backgrounds/favourites.jpg</value>
+        <value condition="Control.HasFocus(952)">special://skin/tvpmc/backgrounds/tvplus.jpg</value>
+        <value condition="Control.HasFocus(953)">special://skin/tvpmc/backgrounds/wickedmix.jpg</value>
+        <value condition="Control.HasFocus(954)">special://skin/tvpmc/backgrounds/wickedxxx.jpg</value>
 
         <!-- Live TV -->
-        <value condition="Control.HasFocus(906)">special://skin/x/backgrounds/livetv.jpg</value>
-        <value condition="Control.HasFocus(961)">special://skin/x/backgrounds/tvpluslive.jpg</value>
-        <value condition="Control.HasFocus(962)">special://skin/x/backgrounds/mobdro.jpg</value>
-        <value condition="Control.HasFocus(963)">special://skin/x/backgrounds/wickediptv.jpg</value>
+        <value condition="Control.HasFocus(906)">special://skin/tvpmc/backgrounds/livetv.jpg</value>
+        <value condition="Control.HasFocus(961)">special://skin/tvpmc/backgrounds/tvpluslive.jpg</value>
+        <value condition="Control.HasFocus(962)">special://skin/tvpmc/backgrounds/mobdro.jpg</value>
+        <value condition="Control.HasFocus(963)">special://skin/tvpmc/backgrounds/wickediptv.jpg</value>
 
         <!-- Live Radio -->
-        <value condition="Control.HasFocus(907)">special://skin/x/backgrounds/liveradio.jpg</value>
-        <value condition="Control.HasFocus(971)">special://skin/x/backgrounds/tunein.jpg</value>
-        <value condition="Control.HasFocus(972)">special://skin/x/backgrounds/radionet.jpg</value>
-        <value condition="Control.HasFocus(973)">special://skin/x/backgrounds/iheart.jpg</value>
-        <value condition="Control.HasFocus(974)">special://skin/x/backgrounds/mixcloud.jpg</value>
+        <value condition="Control.HasFocus(907)">special://skin/tvpmc/backgrounds/liveradio.jpg</value>
+        <value condition="Control.HasFocus(971)">special://skin/tvpmc/backgrounds/tunein.jpg</value>
+        <value condition="Control.HasFocus(972)">special://skin/tvpmc/backgrounds/radionet.jpg</value>
+        <value condition="Control.HasFocus(973)">special://skin/tvpmc/backgrounds/iheart.jpg</value>
+        <value condition="Control.HasFocus(974)">special://skin/tvpmc/backgrounds/mixcloud.jpg</value>
 
         <!-- News -->
-        <value condition="Control.HasFocus(908)">special://skin/x/news/</value>
+        <value condition="Control.HasFocus(908)">special://skin/tvpmc/news/</value>
 
         <!-- Quit -->
-        <value condition="Control.HasFocus(909)">special://skin/x/backgrounds/quit.jpg</value>
+        <value condition="Control.HasFocus(909)">special://skin/tvpmc/backgrounds/quit.jpg</value>
     </variable>
 
     <variable name="Home_TVStatic">
@@ -750,8 +750,8 @@
     </variable>
 
     <variable name="Home_PowerMenu_Background">
-        <value condition="Control.HasFocus(9002)">special://skin/x/backgrounds/screensaver.jpg</value>
-        <value>special://skin/x/backgrounds/quit2.jpg</value>
+        <value condition="Control.HasFocus(9002)">special://skin/tvpmc/backgrounds/screensaver.jpg</value>
+        <value>special://skin/tvpmc/backgrounds/quit2.jpg</value>
     </variable>
 
     <include name="Home_Background">

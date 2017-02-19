@@ -12,7 +12,7 @@
             <include>Dialog_Background</include>
             <include name="Dialog_Top_IconHeader">
                 <param name="label" value="X ACT University - Tips and Tricks" />
-                <param name="icon" value="special://skin/x/XACTU/Tips.png" />
+                <param name="icon" value="special://skin/tvpmc/XACTU/Tips.png" />
             </include>
             <control type="image">
                 <left>side</left>
@@ -27,7 +27,7 @@
                 <width>414</width>
                 <height>414</height>
                 <aspectratio>keep</aspectratio>
-                <texture background="true" fallback="special://skin/x/XACTU/Tips.png">$INFO[Container(8001).ListItem.Icon]</texture>
+                <texture background="true" fallback="special://skin/tvpmc/XACTU/Tips.png">$INFO[Container(8001).ListItem.Icon]</texture>
             </control>
             <control type="panel" id="8001">
                 <onup>8001</onup>

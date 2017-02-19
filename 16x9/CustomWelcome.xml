@@ -5,7 +5,7 @@
     <onload>Skin.Reset(TVPLUS.Welcome.Accepted)</onload>
     <controls>
         <control type="group">
-            <visible>!StringCompare(Player.Filenameandpath,special://skin/x/Videos/tvpmkodiintro.mp4)</visible>
+            <visible>!StringCompare(Player.Filenameandpath,special://skin/tvpmc/Videos/tvpmkodiintro.mp4)</visible>
             <centerleft>50%</centerleft>
             <centertop>50%</centertop>
             <height>100%</height>
@@ -142,7 +142,7 @@
         </control>
 
         <control type="group">
-            <visible>StringCompare(Player.Filenameandpath,special://skin/x/Videos/tvpmkodiintro.mp4)</visible>
+            <visible>StringCompare(Player.Filenameandpath,special://skin/tvpmc/Videos/tvpmkodiintro.mp4)</visible>
             <control type="videowindow">
                 <width>100%</width>
                 <height>100%</height>

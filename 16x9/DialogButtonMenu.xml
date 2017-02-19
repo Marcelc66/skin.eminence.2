@@ -55,14 +55,14 @@
                     <label>Quit (Press OK to confirm)</label>
                     <onclick>Close</onclick>
                     <onclick>XBMC.Quit()</onclick>
-                    <onfocus>SetProperty(PowerBackground,special://skin/x/Backgrounds/quit2.jpg,home)</onfocus>
+                    <onfocus>SetProperty(PowerBackground,special://skin/tvpmc/Backgrounds/quit2.jpg,home)</onfocus>
                     <include>Defs_OptionButton2</include>
                 </control>
                 <control type="button" id="9002">
                     <label>$LOCALIZE[360]</label>
                     <onclick>Close</onclick>
                     <onclick>ActivateScreensaver</onclick>
-                    <onfocus>SetProperty(PowerBackground,special://skin/x/Backgrounds/default1.jpg,home)</onfocus>
+                    <onfocus>SetProperty(PowerBackground,special://skin/tvpmc/Backgrounds/default1.jpg,home)</onfocus>
                     <include>Defs_OptionButton2</include>
                 </control>
             </control>
