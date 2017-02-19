@@ -115,7 +115,9 @@
                 <param name="onfocus" value="SetProperty(SubMenuType,908,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
                 <param name="onclick" value="ActivateWindow(1134)" />
+                <param name="onclick2" value="SetProperty(StopIconBounce,True,Home)" />
                 <param name="set-onclick-target" value="true" />
+                <param name="animate-bounce-icon" value="true" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="709" />
@@ -590,9 +592,9 @@
                         <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$PARAM[icon]</texture>
                         <aspectratio scalediffuse="false">center</aspectratio>
                         <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[groupid]) + !Control.HasFocus($PARAM[buttonid])">Conditional</animation>
-                        <animation type="Conditional" condition="$PARAM[animate-bounce-icon]" loop="true">
+                        <animation type="Conditional" condition="$PARAM[animate-bounce-icon]  + !String.IsEqual(Window(Home).Property(StopIconBounce),True)" loop="true" reversible="false">
                             <effect type="fade" start="100" end="100" time="3600" delay="0"/>
-                            <effect type="slide" tween="bounce" easing="out" start="0,-75" end="0" time="800" delay="0"/>
+                            <effect type="slide" tween="bounce" easing="out" start="0,-50" end="0" time="800" delay="0"/>
                         </animation>
                     </control>
                     <control type="grouplist">
