@@ -22,7 +22,10 @@
             <animation type="Visible">
                 <effect type="slide" start="0,266" end="0" time="150" delay="150" />
             </animation>
-            <visible allowhiddenfocus="true">!ControlGroup(9002).HasFocus()</visible>
+            <animation type="Hidden">
+                <effect type="slide" end="0,266" start="0" time="0" delay="0" />
+            </animation>
+            <visible allowhiddenfocus="true">![ControlGroup(9002).HasFocus() | String.IsEqual(Window(Home).Property(SubmenuFocus),True)]</visible>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="701" />
                 <param name="groupid" value="801" />
@@ -32,6 +35,7 @@
                 <param name="onfocus" value="SetProperty(SubMenuType,901,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,901,Home)" />
                 <param name="onclick" value="SetFocus(9002)" />
+                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="702" />
@@ -42,6 +46,7 @@
                 <param name="onfocus" value="SetProperty(SubMenuType,902,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
                 <param name="onclick" value="SetFocus(9002)" />
+                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="703" />
@@ -52,6 +57,7 @@
                 <param name="onfocus" value="SetProperty(SubMenuType,903,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
                 <param name="onclick" value="SetFocus(9002)" />
+                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="704" />
@@ -62,6 +68,7 @@
                 <param name="onfocus" value="SetProperty(SubMenuType,904,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
                 <param name="onclick" value="SetFocus(9002)" />
+                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="705" />
@@ -72,7 +79,8 @@
                 <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
                 <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
-                <param name="onclick" value="SetFocus(9002)" />
+                <param name="onclick" value="SetFocus(952)" />
+                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
                 <param name="reddot" value="true" />
                 <param name="animate-bounce-tile" value="true" />
             </include>
@@ -85,6 +93,7 @@
                 <param name="onfocus" value="SetProperty(SubMenuType,906,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
                 <param name="onclick" value="SetFocus(9002)" />
+                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="707" />
@@ -95,6 +104,7 @@
                 <param name="onfocus" value="SetProperty(SubMenuType,907,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
                 <param name="onclick" value="SetFocus(9002)" />
+                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="708" />
@@ -149,10 +159,24 @@
     <!-- SubMenu -->
     <include name="Home_SubMenu">
         <control type="group">
+            <control type="button" id="9200" description="ClearFocus">
+                <onfocus>ClearProperty(SubmenuFocus)</onfocus>
+                <onleft>SetFocus(905)</onleft>
+                <onright>SetFocus(905)</onright>
+                <onup>SetFocus(905)</onup>
+                <ondown>SetFocus(905)</ondown>
+                <left>0</left>
+                <right>0</right>
+                <bottom>300</bottom>
+                <top>0</top>
+            </control>
             <control type="grouplist" id="9002">
                 <onup>9000</onup>
                 <ondown>9000</ondown>
                 <onback>9000</onback>
+                <onup>ClearProperty(SubmenuFocus,Home)</onup>
+                <ondown>ClearProperty(SubmenuFocus,Home)</ondown>
+                <onback>ClearProperty(SubmenuFocus,Home)</onback>
                 <orientation>horizontal</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
                 <itemgap>-4</itemgap>
@@ -163,11 +187,11 @@
                 <align>center</align>
                 <onleft>noop</onleft>
                 <onright>noop</onright>
-                <animation type="Conditional" reversible="false" condition="ControlGroup(9002).HasFocus()">
+                <animation type="Conditional" reversible="false" condition="[ControlGroup(9002).HasFocus() | String.IsEqual(Window(Home).Property(SubmenuFocus),True)]">
                     <effect type="slide" start="0,266" end="0" time="150" />
                     <effect type="fade" start="0" end="100" time="0" />
                 </animation>
-                <animation type="Conditional" reversible="false" condition="!ControlGroup(9002).HasFocus()">
+                <animation type="Conditional" reversible="false" condition="![ControlGroup(9002).HasFocus() | String.IsEqual(Window(Home).Property(SubmenuFocus),True)]">
                     <effect type="slide" end="0,266" start="0" time="0" />
                     <effect type="fade" start="100" end="0" time="200" />
                 </animation>
@@ -332,9 +356,10 @@
                     <param name="groupid" value="852" />
                     <param name="buttonid" value="952" />
                     <param name="width" value="473" />
-                    <param name="label" value="TV Plus [Stop Here]" />
+                    <param name="label" value="TV Plus [Start Here]" />
                     <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
                     <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
+                    <param name="onclick2" value="SetProperty(StopTileBounce,True,Home)" />
                     <param name="set-onclick-target" value="true" />
                     <param name="onclick-target" value="addons://sources/video/" />
                     <param name="reddot" value="true" />
@@ -479,6 +504,9 @@
         <param name="visible" default="true" />
         <param name="onfocus" default="noop" />
         <param name="onfocus2" default="noop" />
+        <param name="onclick" default="noop" />
+        <param name="onclick2" default="noop" />
+        <param name="onclick3" default="noop" />
         <param name="set-onclick-target" default="false" />
         <param name="wickedxxx" default="false" />
         <param name="mastermode-settings" default="false" />
@@ -488,9 +516,9 @@
         <param name="animate-bounce-icon" default="false" />
         <definition>
             <control type="group" id="$PARAM[imageid]">
-                <animation type="Conditional" condition="$PARAM[animate-bounce-tile]" loop="true">
+                <animation type="Conditional" condition="$PARAM[animate-bounce-tile] + !String.IsEqual(Window(Home).Property(StopTileBounce),True)" loop="true" reversible="false">
                     <effect type="fade" start="100" end="100" time="3600" delay="0"/>
-                    <effect type="slide" tween="bounce" easing="out" start="14,-100" end="0" time="800" delay="0"/>
+                    <effect type="slide" tween="bounce" easing="out" start="7,-50" end="0" time="800" delay="0"/>
                     <!-- <effect type="zoom" start="75" end="100" time="600" tween="bounce" center="auto" /> -->
                 </animation>
                 <width>$PARAM[width]</width>
@@ -506,9 +534,9 @@
                 </control>
             </control>
             <control type="button" id="$PARAM[buttonid]">
-                <animation type="Conditional" condition="$PARAM[animate-bounce-tile]" loop="true">
+                <animation type="Conditional" condition="$PARAM[animate-bounce-tile] + !String.IsEqual(Window(Home).Property(StopTileBounce),True)" loop="true" reversible="false">
                     <effect type="fade" start="100" end="100" time="3600" delay="0"/>
-                    <effect type="slide" tween="bounce" easing="out" start="14,-100" end="0" time="800" delay="0"/>
+                    <effect type="slide" tween="bounce" easing="out" start="7,-50" end="0" time="800" delay="0"/>
                     <!-- <effect type="zoom" start="75" end="100" time="600" tween="bounce" center="auto" /> -->
                 </animation>
                 <animation effect="slide" start="0" end="4" condition="true">Conditional</animation>
@@ -533,6 +561,8 @@
                 <onclick condition="$PARAM[mastermode-settings]">ActivateWindow(1176)</onclick>
                 <onclick condition="$PARAM[mastermode-programs]">ActivateWindow(1177)</onclick>
                 <onclick>$PARAM[onclick]</onclick>
+                <onclick>$PARAM[onclick2]</onclick>
+                <onclick>$PARAM[onclick3]</onclick>
                 <onfocus>$PARAM[onfocus]</onfocus>
                 <onfocus>$PARAM[onfocus2]</onfocus>
                 <onunfocus>SetProperty(ButtonSwitch,1,Home)</onunfocus>
@@ -542,9 +572,9 @@
                 <visible>$PARAM[visible]</visible>
             </control>
             <control type="group" id="$PARAM[groupid]">
-                <animation type="Conditional" condition="$PARAM[animate-bounce-tile]" loop="true">
+                <animation type="Conditional" condition="$PARAM[animate-bounce-tile] + !String.IsEqual(Window(Home).Property(StopTileBounce),True)" loop="true" reversible="false">
                     <effect type="fade" start="100" end="100" time="3600" delay="0"/>
-                    <effect type="slide" tween="bounce" easing="out" start="14,-100" end="0" time="800" delay="0"/>
+                    <effect type="slide" tween="bounce" easing="out" start="7,-50" end="0" time="800" delay="0"/>
                     <!-- <effect type="zoom" start="75" end="100" time="600" tween="bounce" center="auto" /> -->
                 </animation>
                 <top>16</top>
