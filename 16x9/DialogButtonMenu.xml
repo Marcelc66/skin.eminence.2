@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">9000</defaultcontrol>
+    <defaultcontrol always="true">9001</defaultcontrol>
     <controls>
         <control type="group">
             <include>Animation_FadeIn</include>
@@ -18,12 +18,11 @@
             </control>
 
             <control type="group">
-                <height>68</height>
+                <height>76</height>
                 <itemgap>20</itemgap>
                 <centerleft>50%</centerleft>
-                <top>80</top>
-                <width>1200</width>
-                <visible>!Control.HasFocus(9002)</visible>
+                <top>70</top>
+                <width>1850</width>
                 <control type="group">
                     <top>-20</top>
                     <bottom>-20</bottom>
@@ -42,22 +41,43 @@
                 </control>
                 <control type="grouplist">
                     <width>100%</width>
-                    <height>64</height>
+                    <height>72</height>
                     <orientation>horizontal</orientation>
                     <align>center</align>
                     <itemgap>25</itemgap>
                     <control type="image">
                         <width>64</width>
-                        <height>64</height>
+                        <height>100%</height>
+                        <aspectratio aligny="center">keep</aspectratio>
                         <texture colordiffuse="ListLabel">common/infobubble.png</texture>
                     </control>
                     <control type="textbox">
-                        <width>1080</width>
-                        <height>64</height>
+                        <width>980</width>
+                        <height>100%</height>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>Font-RSS</font>
-                        <label>[B][COLOR=red]Are you sure you want to quit?[/COLOR][/B] Click QUIT to confirm. You must use QUIT when leaving TV PLUS. [CR]Please be patient as it may take up to 1 min to save your files & to shutdown properly.</label>
+                        <label>[B][COLOR=red]Are you sure you want to quit?[/COLOR][/B] Click QUIT to confirm. You must use QUIT when leaving TV PLUS. Please be patient as it may take up to 1 min to save your files & to shutdown properly.</label>
+                    </control>
+                    <control type="button" id="9001">
+                        <label>Quit (Press OK to confirm)</label>
+                        <align>center</align>
+                        <onclick>Close</onclick>
+                        <onclick>XBMC.Quit()</onclick>
+                        <onright>9002</onright>
+                        <ondown>9003</ondown>
+                        <onfocus>SetProperty(PowerBackground,special://skin/tvpmc/bg/quit2.jpg,home)</onfocus>
+                        <include>Defs_OptionButton2</include>
+                    </control>
+                    <control type="button" id="9002">
+                        <label>Screensaver (Launch now)</label>
+                        <align>center</align>
+                        <onclick>Close</onclick>
+                        <onleft>9001</onleft>
+                        <ondown>9003</ondown>
+                        <onclick>ActivateScreensaver</onclick>
+                        <onfocus>SetProperty(PowerBackground,special://skin/tvpmc/bg/default1.jpg,home)</onfocus>
+                        <include>Defs_OptionButton2</include>
                     </control>
                 </control>
             </control>
@@ -67,7 +87,7 @@
                 <bottom>90</bottom>
                 <itemgap>20</itemgap>
                 <height>72</height>
-                <width>750</width>
+                <width>365</width>
                 <control type="group">
                     <top>-20</top>
                     <bottom>-20</bottom>
@@ -85,7 +105,7 @@
                     </control>
                 </control>
             </control>
-            <control type="grouplist" id="9000">
+            <control type="grouplist">
                 <ondown>Close</ondown>
                 <onup>Close</onup>
                 <onleft>noop</onleft>
@@ -96,28 +116,17 @@
                 <bottom>90</bottom>
                 <itemgap>20</itemgap>
                 <height>72</height>
-                <control type="button" id="9001">
-                    <label>Quit (Press OK to confirm)</label>
+                
+                <control type="button" id="9003">
+                    <label>Cancel</label>
                     <align>center</align>
                     <onclick>Close</onclick>
-                    <onclick>XBMC.Quit()</onclick>
-                    <onfocus>SetProperty(PowerBackground,special://skin/tvpmc/bg/quit2.jpg,home)</onfocus>
+                    <onup>9001</onup>
+                    <ondown>9001</ondown>
+                    <onleft>9001</onleft>
+                    <onright>9001</onright>
                     <include>Defs_OptionButton2</include>
                 </control>
-                <control type="button" id="9002">
-                    <label>Screensaver (Launch now)</label>
-                    <align>center</align>
-                    <onclick>Close</onclick>
-                    <onclick>ActivateScreensaver</onclick>
-                    <onfocus>SetProperty(PowerBackground,special://skin/tvpmc/bg/default1.jpg,home)</onfocus>
-                    <include>Defs_OptionButton2</include>
-                </control>
-                <!-- <control type="button" id="9003">
-                    <label>222</label>
-                    <onclick>Close</onclick>
-                    <onfocus>SetProperty(PowerBackground,special://skin/tvpmc/bg/default1.jpg,home)</onfocus>
-                    <include>Defs_OptionButton2</include>
-                </control> -->
             </control>
         </control>
     </controls>

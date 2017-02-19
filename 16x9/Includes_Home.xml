@@ -755,7 +755,7 @@
         <!-- Support -->
         <value condition="Control.HasFocus(901)">special://skin/tvpmc/bg/support.jpg</value>
         <value condition="Control.HasFocus(911)">special://skin/tvpmc/bg/guides.jpg</value>
-        <value condition="Control.HasFocus(912)">special://skin/tvpmc/bg/support.jpg</value>
+        <value condition="Control.HasFocus(912)">special://skin/tvpmc/bg/wickedu.jpg</value>
         <value condition="Control.HasFocus(913)">special://skin/tvpmc/bg/usermaintenance.jpg</value>
         
         <!-- Videos -->
