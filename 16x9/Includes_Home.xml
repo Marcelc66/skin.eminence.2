@@ -68,12 +68,13 @@
                 <param name="groupid" value="805" />
                 <param name="buttonid" value="905" />
                 <param name="width" value="384" />
-                <param name="label" value="Tv Plus [Start Here]" />
+                <param name="label" value="Tv Plus" />
                 <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
                 <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
                 <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
                 <param name="onclick" value="SetFocus(9002)" />
                 <param name="reddot" value="true" />
+                <param name="animate-bounce-tile" value="true" />
             </include>
             <include content="Home_Menu_Button">
                 <param name="imageid" value="706" />
@@ -164,9 +165,11 @@
                 <onright>noop</onright>
                 <animation type="Conditional" reversible="false" condition="ControlGroup(9002).HasFocus()">
                     <effect type="slide" start="0,266" end="0" time="150" />
+                    <effect type="fade" start="0" end="100" time="0" />
                 </animation>
                 <animation type="Conditional" reversible="false" condition="!ControlGroup(9002).HasFocus()">
                     <effect type="slide" end="0,266" start="0" time="0" />
+                    <effect type="fade" start="100" end="0" time="200" />
                 </animation>
                 <!-- Support SubMenu -->
                 <include content="Home_Menu_Button">
@@ -329,12 +332,13 @@
                     <param name="groupid" value="852" />
                     <param name="buttonid" value="952" />
                     <param name="width" value="473" />
-                    <param name="label" value="TV Plus" />
+                    <param name="label" value="TV Plus [Stop Here]" />
                     <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
                     <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
                     <param name="set-onclick-target" value="true" />
                     <param name="onclick-target" value="addons://sources/video/" />
                     <param name="reddot" value="true" />
+                    <param name="animate-bounce-tile" value="true" />
                     <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
                 </include>
                 <!-- FIX ME -->
@@ -480,8 +484,15 @@
         <param name="mastermode-settings" default="false" />
         <param name="mastermode-programs" default="false" />
         <param name="reddot" default="false" />
+        <param name="animate-bounce-tile" default="false" />
+        <param name="animate-bounce-icon" default="false" />
         <definition>
             <control type="group" id="$PARAM[imageid]">
+                <animation type="Conditional" condition="$PARAM[animate-bounce-tile]" loop="true">
+                    <effect type="fade" start="100" end="100" time="3600" delay="0"/>
+                    <effect type="slide" tween="bounce" easing="out" start="14,-100" end="0" time="800" delay="0"/>
+                    <!-- <effect type="zoom" start="75" end="100" time="600" tween="bounce" center="auto" /> -->
+                </animation>
                 <width>$PARAM[width]</width>
                 <visible>$PARAM[visible]</visible>
                 <control type="image">
@@ -495,6 +506,11 @@
                 </control>
             </control>
             <control type="button" id="$PARAM[buttonid]">
+                <animation type="Conditional" condition="$PARAM[animate-bounce-tile]" loop="true">
+                    <effect type="fade" start="100" end="100" time="3600" delay="0"/>
+                    <effect type="slide" tween="bounce" easing="out" start="14,-100" end="0" time="800" delay="0"/>
+                    <!-- <effect type="zoom" start="75" end="100" time="600" tween="bounce" center="auto" /> -->
+                </animation>
                 <animation effect="slide" start="0" end="4" condition="true">Conditional</animation>
                 <left>-$PARAM[width]</left>
                 <top>16</top>
@@ -526,18 +542,28 @@
                 <visible>$PARAM[visible]</visible>
             </control>
             <control type="group" id="$PARAM[groupid]">
+                <animation type="Conditional" condition="$PARAM[animate-bounce-tile]" loop="true">
+                    <effect type="fade" start="100" end="100" time="3600" delay="0"/>
+                    <effect type="slide" tween="bounce" easing="out" start="14,-100" end="0" time="800" delay="0"/>
+                    <!-- <effect type="zoom" start="75" end="100" time="600" tween="bounce" center="auto" /> -->
+                </animation>
                 <top>16</top>
                 <left>-$PARAM[width]</left>
                 <width>$PARAM[width]</width>
                 <height>170</height>
                 <visible>$PARAM[visible]</visible>
                 <control type="group">
+
                     <control type="image">
                         <top>-32</top>
                         <left>16</left>
                         <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$PARAM[icon]</texture>
                         <aspectratio scalediffuse="false">center</aspectratio>
                         <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[groupid]) + !Control.HasFocus($PARAM[buttonid])">Conditional</animation>
+                        <animation type="Conditional" condition="$PARAM[animate-bounce-icon]" loop="true">
+                            <effect type="fade" start="100" end="100" time="3600" delay="0"/>
+                            <effect type="slide" tween="bounce" easing="out" start="0,-75" end="0" time="800" delay="0"/>
+                        </animation>
                     </control>
                     <control type="grouplist">
                         <bottom>10</bottom>
