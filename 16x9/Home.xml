@@ -35,5 +35,7 @@
                 <include>Home_SubMenu</include>
             </control>
         </control>
+
+        <include>Home_Foreground</include>
     </controls>
 </window>

@@ -62,7 +62,7 @@
                 <param name="ondown" value="6" />
                 <param name="moveid" value="5" />
                 <param name="left" value="616" />
-                <param name="width" value="1180" />
+                <param name="width" value="1156" />
             </include>
             <!-- Button grouplist -->
             <control type="grouplist" id="8000">

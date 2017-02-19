@@ -106,8 +106,7 @@
 
         <!-- Category Template -->
         <control type="togglebutton" id="10">
-            <width>100%</width>
-            <height>72</height>
+            <width>465</width>
             <include>Defs_OptionButton</include>
         </control>
 
