@@ -16,7 +16,7 @@
                 <top>20</top>
                 <right>20</right>
                 <bottom>110</bottom>
-                <texture>special://skin/tvpmc/Backgrounds/tvplus.jpg</texture>
+                <texture>special://skin/tvpmc/bg/tvplus.jpg</texture>
             </control>
             <control type="button" id="9000">
                 <centerleft>50%</centerleft>

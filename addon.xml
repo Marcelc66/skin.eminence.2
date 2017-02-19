@@ -11,14 +11,13 @@
         <import addon="script.extendedinfo" version="5.0.0"/>
         <import addon="script.image.resource.select" version="0.0.5"/>
         <import addon="plugin.program.autocompletion" version="1.0.1"/>
-        <import addon="resource.images.weathericons.white" version="0.0.6"/>
     </requires>
     <extension point="xbmc.gui.skin" effectslowdown="1.00" debugging="false">
         <res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">TV PLUS MEDIA CENTER is a custom configured skin for kodi /summary>
+        <summary lang="en">TV PLUS MEDIA CENTER is a custom configured skin for kodi </summary>
         <disclaimer lang="en">TV PLUS Media is not responsible for any damage caused by installing this software or the subsequent updates on non-authorized devices. TV PLUS MEDIA does not host or provide media of any kind and does not support copyright infringement and therefore it is the users responsibility to observe the governing laws in your respective area.</disclaimer>
         <description lang="en">TV PLUS MEDIA CENTER is a custom configured skin and software for the exclusive use of ULTRA BOXX and WICKED Media Streaming Devices ONLY. A "WICKED" thanks to jurialmunkey. For support visit www.TVPLUSMEDIA.com</description>
         <license>CC-NC-SA 3.0</license>

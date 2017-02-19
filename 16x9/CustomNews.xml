@@ -16,71 +16,71 @@
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/01news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/01news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/01news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/01news.jpg</texturenofocus>
             </control>
             <control type="button" id="9002">
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/02news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/02news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/02news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/02news.jpg</texturenofocus>
             </control>
             <control type="button" id="9003">
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/03news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/03news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/03news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/03news.jpg</texturenofocus>
             </control>
             <control type="button" id="9004">
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/04news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/04news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/04news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/04news.jpg</texturenofocus>
             </control>
             <control type="button" id="9005">
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/05news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/05news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/05news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/05news.jpg</texturenofocus>
             </control>
             <control type="button" id="9006">
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/06news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/06news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/06news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/06news.jpg</texturenofocus>
             </control>
             <control type="button" id="9007">
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/07news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/07news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/07news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/07news.jpg</texturenofocus>
             </control>
             <control type="button" id="9008">
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/08news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/08news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/08news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/08news.jpg</texturenofocus>
             </control>
             <control type="button" id="9009">
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/09news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/09news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/09news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/09news.jpg</texturenofocus>
             </control>
             <control type="button" id="9010">
                 <width>1920</width>
                 <height>1080</height>
                 <onfocus>AlarmClock(SwitchRight,Action(Right),00:05,silent)</onfocus>
-                <texturefocus>special://skin/tvpmc/News/10news.jpg</texturefocus>
-                <texturenofocus>special://skin/tvpmc/News/10news.jpg</texturenofocus>
+                <texturefocus>special://skin/tvpmc/news/10news.jpg</texturefocus>
+                <texturenofocus>special://skin/tvpmc/news/10news.jpg</texturenofocus>
                 <onright>Close</onright>
             </control>
         </control>

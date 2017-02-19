@@ -17,5 +17,5 @@
 
     <onload condition="Skin.HasSetting(TVPLUS.Welcome.Accepted)">ReplaceWindow(home)</onload>
     <onload condition="!Skin.HasSetting(TVPLUS.Welcome.Accepted)">ReplaceWindow(1133)</onload>
-    <onload condition="!Window.Previous(LoginScreen.xml)">PlayMedia(special://skin/tvpmc/videos/tvpmkodiintro.mp4)</onload>
+    <onload condition="!Window.Previous(LoginScreen.xml)">PlayMedia(special://skin/tvpmc/videos/tvpmcintro.mp4)</onload>
 </window>

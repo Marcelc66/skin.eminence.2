@@ -39,7 +39,7 @@
 
     <variable name="Image_PVRThumb">
         <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.FanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
-        <value>home/home.jpg</value>
+        <value>special://skin/tvpmc/bg/-masterhomepage.jpg</value>
     </variable>
 
     <variable name="Image_Icon">
@@ -141,7 +141,7 @@
         <value condition="Window.IsVisible(home) + String.IsEqual(Container(9000).ListItem.Property(background),playlistBackground)">$INFO[Container(9988).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Container(9000).ListItem.Property(Background))">$INFO[Container(9000).ListItem.Property(Background)]</value>
         <value condition="Window.IsVisible(home) + Integer.IsGreater(Container(9000).NumItems,0) + String.IsEqual(Skin.String(home.fallbackwidget.target),pictures) + !String.IsEmpty(Container(9001).ListItem.Icon) + String.IsEmpty(Container(9000).ListItem.Property(widget))">$INFO[Container(9001).ListItem.FileNameAndPath]</value>
-        <value condition="Window.IsVisible(home) + String.IsEmpty(Skin.String(background.fallback))">home/home.jpg</value>
+        <value condition="Window.IsVisible(home) + String.IsEmpty(Skin.String(background.fallback))">special://skin/tvpmc/bg/-masterhomepage.jpg</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
 
         <value condition="Skin.HasSetting(background.hidefanart) + String.IsEmpty(Skin.String(background.fallback))">common/black.png</value>
