@@ -468,7 +468,7 @@
                     <param name="groupid" value="873" />
                     <param name="buttonid" value="973" />
                     <param name="width" value="473" />
-                    <param name="label" value="iHeart" />
+                    <param name="label" value="i Heart" />
                     <param name="icon" value="special://skin/extras/icons/iheart.png" />
                     <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.iheart/&quot;,return)" />
                     <param name="onclick-target" value="plugin://plugin.audio.iheart/" />
