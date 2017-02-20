@@ -26,138 +26,182 @@
                 <effect type="slide" end="0,266" start="0" time="0" delay="0" />
             </animation>
             <visible allowhiddenfocus="true">![ControlGroup(9002).HasFocus() | String.IsEqual(Window(Home).Property(SubmenuFocus),True)]</visible>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="701" />
-                <param name="groupid" value="801" />
-                <param name="buttonid" value="901" />
-                <param name="label" value="Support" />
-                <param name="icon" value="special://skin/extras/icons/support.png" />
-                <param name="onfocus" value="SetProperty(SubMenuType,901,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,901,Home)" />
-                <param name="onclick" value="SetFocus(9002)" />
-                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
-            </include>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="702" />
-                <param name="groupid" value="802" />
-                <param name="buttonid" value="902" />
-                <param name="label" value="Videos" />
-                <param name="icon" value="special://skin/extras/icons/video-addons.png" />
-                <param name="onfocus" value="SetProperty(SubMenuType,902,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
-                <param name="onclick" value="SetFocus(9002)" />
-                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
-            </include>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="703" />
-                <param name="groupid" value="803" />
-                <param name="buttonid" value="903" />
-                <param name="label" value="Music" />
-                <param name="icon" value="special://skin/extras/icons/songs.png" />
-                <param name="onfocus" value="SetProperty(SubMenuType,903,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
-                <param name="onclick" value="SetFocus(9002)" />
-                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
-            </include>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="704" />
-                <param name="groupid" value="804" />
-                <param name="buttonid" value="904" />
-                <param name="label" value="Pictures" />
-                <param name="icon" value="special://skin/extras/icons/pictures.png" />
-                <param name="onfocus" value="SetProperty(SubMenuType,904,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
-                <param name="onclick" value="SetFocus(9002)" />
-                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
-            </include>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="705" />
-                <param name="groupid" value="805" />
-                <param name="buttonid" value="905" />
-                <param name="width" value="384" />
-                <param name="label" value="Tv Plus" />
-                <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
-                <param name="onclick" value="SetFocus(952)" />
-                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
-                <param name="reddot" value="true" />
-                <param name="animate-bounce-tile" value="true" />
-            </include>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="706" />
-                <param name="groupid" value="806" />
-                <param name="buttonid" value="906" />
-                <param name="label" value="Live TV" />
-                <param name="icon" value="special://skin/extras/icons/livetv.png" />
-                <param name="onfocus" value="SetProperty(SubMenuType,906,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
-                <param name="onclick" value="SetFocus(9002)" />
-                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
-            </include>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="707" />
-                <param name="groupid" value="807" />
-                <param name="buttonid" value="907" />
-                <param name="label" value="Live Radio" />
-                <param name="icon" value="special://skin/extras/icons/liveradio.png" />
-                <param name="onfocus" value="SetProperty(SubMenuType,907,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
-                <param name="onclick" value="SetFocus(9002)" />
-                <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
-            </include>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="708" />
-                <param name="groupid" value="808" />
-                <param name="buttonid" value="908" />
-                <param name="label" value="News" />
-                <param name="icon" value="special://skin/extras/icons/news.png" />
-                <param name="onfocus" value="SetProperty(SubMenuType,908,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
-                <param name="onclick" value="ActivateWindow(1134)" />
-                <param name="onclick2" value="SetProperty(StopIconBounce,True,Home)" />
-                <param name="set-onclick-target" value="true" />
-                <param name="animate-bounce-icon" value="true" />
-            </include>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="709" />
-                <param name="groupid" value="809" />
-                <param name="buttonid" value="909" />
-                <param name="label" value="Quit" />
-                <param name="icon" value="special://skin/extras/icons/power.png" />
-                <param name="onfocus" value="SetProperty(SubMenuType,909,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
-                <param name="onclick" value="ActivateWindow(shutdownmenu)" />
-            </include>
-
-            <!-- MASTER MODE -->
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="798" />
-                <param name="groupid" value="898" />
-                <param name="buttonid" value="998" />
-                <param name="label" value="Programs" />
-                <param name="icon" value="special://skin/extras/icons/addons.png" />
-                <param name="onfocus" value="ClearProperty(SubMenuType,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
-                <param name="onclick" value="noop" />
-                <param name="mastermode-programs" value="true" />
-                <param name="visible" value="Skin.HasSetting(TVPLUS.MASTERMODE)" />
-            </include>
-            <include content="Home_Menu_Button">
-                <param name="imageid" value="799" />
-                <param name="groupid" value="899" />
-                <param name="buttonid" value="999" />
-                <param name="label" value="Settings" />
-                <param name="icon" value="special://skin/extras/icons/settings.png" />
-                <param name="onfocus" value="ClearProperty(SubMenuType,Home)" />
-                <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
-                <param name="onclick" value="noop" />
-                <param name="mastermode-settings" value="true" />
-                <param name="visible" value="Skin.HasSetting(TVPLUS.MASTERMODE)" />
-            </include>
+            <include condition="!StringCompare(System.ProfileName,WICKED XXX)">Home_Menu_Standard</include>
+            <include condition="StringCompare(System.ProfileName,WICKED XXX)">Home_Menu_Adult</include>
         </control>
     </include>
 
+    <include name="Home_Menu_Standard">
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="701" />
+            <param name="groupid" value="801" />
+            <param name="buttonid" value="901" />
+            <param name="label" value="Support" />
+            <param name="icon" value="special://skin/extras/icons/support.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,901,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,901,Home)" />
+            <param name="onclick" value="SetFocus(9002)" />
+            <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="702" />
+            <param name="groupid" value="802" />
+            <param name="buttonid" value="902" />
+            <param name="label" value="Videos" />
+            <param name="icon" value="special://skin/extras/icons/video-addons.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,902,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
+            <param name="onclick" value="SetFocus(9002)" />
+            <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="703" />
+            <param name="groupid" value="803" />
+            <param name="buttonid" value="903" />
+            <param name="label" value="Music" />
+            <param name="icon" value="special://skin/extras/icons/songs.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,903,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
+            <param name="onclick" value="SetFocus(9002)" />
+            <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="704" />
+            <param name="groupid" value="804" />
+            <param name="buttonid" value="904" />
+            <param name="label" value="Pictures" />
+            <param name="icon" value="special://skin/extras/icons/pictures.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,904,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
+            <param name="onclick" value="SetFocus(9002)" />
+            <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="705" />
+            <param name="groupid" value="805" />
+            <param name="buttonid" value="905" />
+            <param name="width" value="384" />
+            <param name="label" value="Tv Plus" />
+            <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
+            <param name="onclick" value="SetFocus(952)" />
+            <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
+            <param name="reddot" value="true" />
+            <param name="animate-bounce-tile" value="true" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="706" />
+            <param name="groupid" value="806" />
+            <param name="buttonid" value="906" />
+            <param name="label" value="Live TV" />
+            <param name="icon" value="special://skin/extras/icons/livetv.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,906,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
+            <param name="onclick" value="SetFocus(9002)" />
+            <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="707" />
+            <param name="groupid" value="807" />
+            <param name="buttonid" value="907" />
+            <param name="label" value="Live Radio" />
+            <param name="icon" value="special://skin/extras/icons/liveradio.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,907,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
+            <param name="onclick" value="SetFocus(9002)" />
+            <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="708" />
+            <param name="groupid" value="808" />
+            <param name="buttonid" value="908" />
+            <param name="label" value="News" />
+            <param name="icon" value="special://skin/extras/icons/news.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,908,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
+            <param name="onclick" value="ActivateWindow(1134)" />
+            <param name="onclick2" value="SetProperty(StopIconBounce,True,Home)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="animate-bounce-icon" value="true" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="709" />
+            <param name="groupid" value="809" />
+            <param name="buttonid" value="909" />
+            <param name="label" value="Quit" />
+            <param name="icon" value="special://skin/extras/icons/power.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,909,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
+            <param name="onclick" value="ActivateWindow(shutdownmenu)" />
+        </include>
+
+        <!-- MASTER MODE -->
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="798" />
+            <param name="groupid" value="898" />
+            <param name="buttonid" value="998" />
+            <param name="label" value="Programs" />
+            <param name="icon" value="special://skin/extras/icons/addons.png" />
+            <param name="onfocus" value="ClearProperty(SubMenuType,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
+            <param name="onclick" value="noop" />
+            <param name="mastermode-programs" value="true" />
+            <param name="visible" value="Skin.HasSetting(TVPLUS.MASTERMODE)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="799" />
+            <param name="groupid" value="899" />
+            <param name="buttonid" value="999" />
+            <param name="label" value="Settings" />
+            <param name="icon" value="special://skin/extras/icons/settings.png" />
+            <param name="onfocus" value="ClearProperty(SubMenuType,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
+            <param name="onclick" value="noop" />
+            <param name="mastermode-settings" value="true" />
+            <param name="visible" value="Skin.HasSetting(TVPLUS.MASTERMODE)" />
+        </include>
+    </include>
+
+    <include name="Home_Menu_Adult">
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="703" />
+            <param name="groupid" value="803" />
+            <param name="buttonid" value="903" />
+            <param name="width" value="550" />
+            <param name="label" value="Favourites" />
+            <param name="icon" value="special://skin/extras/icons/favourites.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,903,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
+            <param name="onclick" value="ActivateWindow(favourites)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="705" />
+            <param name="groupid" value="805" />
+            <param name="buttonid" value="905" />
+            <param name="width" value="550" />
+            <param name="label" value="Wicked XXX" />
+            <param name="icon" value="special://skin/extras/icons/wickedxxx.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
+            <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
+            <param name="onclick-target" value="addons://sources/video/" />
+            <param name="set-onclick-target" value="true" />
+            <param name="reddot" value="true" />
+            <param name="animate-bounce-tile" value="true" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="707" />
+            <param name="groupid" value="807" />
+            <param name="buttonid" value="907" />
+            <param name="width" value="550" />
+            <param name="label" value="Quit" />
+            <param name="icon" value="special://skin/extras/icons/power.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,907,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
+            <param name="onclick" value="System.Logoff" />
+        </include>
+    </include>
     <!-- SubMenu -->
     <include name="Home_SubMenu">
         <control type="group">
@@ -197,307 +241,311 @@
                     <effect type="slide" end="0,266" start="0" time="0" />
                     <effect type="fade" start="100" end="0" time="200" />
                 </animation>
-                <!-- Support SubMenu -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
-                    <param name="imageid" value="711" />
-                    <param name="groupid" value="811" />
-                    <param name="buttonid" value="911" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Guides" />
-                    <param name="icon" value="special://skin/extras/icons/guides.png" />
-                    <param name="onclick" value="noop" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
-                    <param name="imageid" value="712" />
-                    <param name="groupid" value="812" />
-                    <param name="buttonid" value="912" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Wicked U" />
-                    <param name="icon" value="special://skin/extras/icons/xactu.png" />
-                    <param name="onclick" value="noop" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
-                    <param name="imageid" value="713" />
-                    <param name="groupid" value="813" />
-                    <param name="buttonid" value="913" />
-                    <param name="width" value="473" />
-                    <param name="label" value="User Maintenance" />
-                    <param name="icon" value="special://skin/extras/icons/usermaintenance.png" />
-                    <param name="onclick" value="noop" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
-                </include>
-
-                <!-- Videos SubMenu -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
-                    <param name="imageid" value="721" />
-                    <param name="groupid" value="821" />
-                    <param name="buttonid" value="921" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Youtube" />
-                    <param name="icon" value="special://skin/extras/icons/youtube.png" />
-                    <param name="onclick" value="ActivateWindow(Videos,plugin://plugin.video.youtube,return)" />
-                    <param name="onclick-target" value="plugin://plugin.video.youtube" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),902)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
-                    <param name="imageid" value="722" />
-                    <param name="groupid" value="822" />
-                    <param name="buttonid" value="922" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Video Files" />
-                    <param name="icon" value="special://skin/extras/icons/video-addons.png" />
-                    <param name="onclick" value="ActivateWindow(Videos,sources://video/,Return)" />
-                    <param name="onclick-target" value="sources://video/" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),902)" />
-                </include>
-
-                <!-- Music SubMenu -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
-                    <param name="imageid" value="731" />
-                    <param name="groupid" value="831" />
-                    <param name="buttonid" value="931" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Pulse Music" />
-                    <param name="icon" value="special://skin/extras/icons/pulsemusic.png" />
-                    <param name="onclick" value="ActivateWindow(Videos,&quot;plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/&quot;,return)" />
-                    <param name="onclick-target" value="plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
-                    <param name="imageid" value="732" />
-                    <param name="groupid" value="832" />
-                    <param name="buttonid" value="932" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Music Addons" />
-                    <param name="icon" value="special://skin/extras/icons/songs.png" />
-                    <param name="onclick" value="ActivateWindow(Music,Addons,return)" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
-                    <param name="imageid" value="733" />
-                    <param name="groupid" value="833" />
-                    <param name="buttonid" value="933" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Music Files" />
-                    <param name="icon" value="special://skin/extras/icons/song.png" />
-                    <param name="onclick" value="ActivateWindow(Music,Files,return)" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
-                </include>
-
-                <!-- Pictures SubMenu -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
-                    <param name="imageid" value="741" />
-                    <param name="groupid" value="841" />
-                    <param name="buttonid" value="941" />
-                    <param name="width" value="473" />
-                    <param name="label" value="The Big Picture" />
-                    <param name="icon" value="special://skin/extras/icons/thebigpicture.png" />
-                    <param name="onclick" value="RunScript(script.image.bigpictures)" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
-                    <param name="imageid" value="742" />
-                    <param name="groupid" value="842" />
-                    <param name="buttonid" value="942" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Picture Addons" />
-                    <param name="icon" value="special://skin/extras/icons/pictures.png" />
-                    <param name="onclick" value="ActivateWindow(Pictures,Addons,return)" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
-                    <param name="imageid" value="743" />
-                    <param name="groupid" value="843" />
-                    <param name="buttonid" value="943" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Picture Files" />
-                    <param name="icon" value="special://skin/extras/icons/filebox.png" />
-                    <param name="onclick" value="ActivateWindow(Pictures,Files,return)" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
-                </include>
-
-                <!-- TVPLUS Submenu -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
-                    <param name="imageid" value="751" />
-                    <param name="groupid" value="851" />
-                    <param name="buttonid" value="951" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Favourites" />
-                    <param name="icon" value="special://skin/extras/icons/favourites.png" />
-                    <param name="onclick" value="ActivateWindow(favourites)" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
-                    <param name="imageid" value="752" />
-                    <param name="groupid" value="852" />
-                    <param name="buttonid" value="952" />
-                    <param name="width" value="473" />
-                    <param name="label" value="TV Plus [Start Here]" />
-                    <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
-                    <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
-                    <param name="onclick2" value="SetProperty(StopTileBounce,True,Home)" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="onclick-target" value="addons://sources/video/" />
-                    <param name="reddot" value="true" />
-                    <param name="animate-bounce-tile" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
-                </include>
-                <!-- FIX ME -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
-                    <param name="imageid" value="753" />
-                    <param name="groupid" value="853" />
-                    <param name="buttonid" value="953" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Wicked Mix" />
-                    <param name="icon" value="special://skin/extras/icons/wickedmix.png" />
-                    <param name="onclick" value="noop" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
-                    <param name="imageid" value="754" />
-                    <param name="groupid" value="854" />
-                    <param name="buttonid" value="954" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Wicked XXX" />
-                    <param name="icon" value="special://skin/extras/icons/wickedxxx-main.png" />
-                    <param name="onclick" value="noop" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="wickedxxx" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
-                </include>
-
-                <!-- Live TV SubMenu -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
-                    <param name="imageid" value="761" />
-                    <param name="groupid" value="861" />
-                    <param name="buttonid" value="961" />
-                    <param name="width" value="473" />
-                    <param name="label" value="TV Plus Live" />
-                    <param name="icon" value="special://skin/extras/icons/tvplus-live.png" />
-                    <param name="onclick" value="StartAndroidActivity(&quot;com.filmon.android.tvpluslivetv&quot;)" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
-                </include>
-                <!-- FIX ME -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
-                    <param name="imageid" value="762" />
-                    <param name="groupid" value="862" />
-                    <param name="buttonid" value="962" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Mobdro" />
-                    <param name="icon" value="special://skin/extras/icons/mobdro.png" />
-                    <param name="onclick" value="StartAndroidActivity(&quot;com.mobdro.android&quot;)" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
-                    <param name="imageid" value="763" />
-                    <param name="groupid" value="863" />
-                    <param name="buttonid" value="963" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Wicked IPTV" />
-                    <param name="icon" value="special://skin/extras/icons/wicked-iptv.png" />
-                    <param name="onclick" value="ActivateWindow(TVChannels)" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
-                </include>
-
-                <!-- Live Radio -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
-                    <param name="imageid" value="771" />
-                    <param name="groupid" value="871" />
-                    <param name="buttonid" value="971" />
-                    <param name="width" value="473" />
-                    <param name="label" value="TuneIn" />
-                    <param name="icon" value="special://skin/extras/icons/tunein.png" />
-                    <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.tuneinradio&quot;,return)" />
-                    <param name="onclick-target" value="plugin://plugin.audio.tuneinradio" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
-                </include>
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
-                    <param name="imageid" value="772" />
-                    <param name="groupid" value="872" />
-                    <param name="buttonid" value="972" />
-                    <param name="width" value="473" />
-                    <param name="label" value="Radio.Net" />
-                    <param name="icon" value="special://skin/extras/icons/radionet.png" />
-                    <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.radio_de&quot;,return)" />
-                    <param name="onclick-target" value="plugin://plugin.audio.radio_de" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
-                </include>
-                <!-- FIX ME -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
-                    <param name="imageid" value="773" />
-                    <param name="groupid" value="873" />
-                    <param name="buttonid" value="973" />
-                    <param name="width" value="473" />
-                    <param name="label" value="i Heart" />
-                    <param name="icon" value="special://skin/extras/icons/iheart.png" />
-                    <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.iheart/&quot;,return)" />
-                    <param name="onclick-target" value="plugin://plugin.audio.iheart/" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
-                </include>
-                <!-- FIX ME -->
-                <include content="Home_Menu_Button">
-                    <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
-                    <param name="imageid" value="774" />
-                    <param name="groupid" value="874" />
-                    <param name="buttonid" value="974" />
-                    <param name="width" value="473" />
-                    <param name="label" value="MixCloud" />
-                    <param name="icon" value="special://skin/extras/icons/mixcloud.png" />
-                    <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.mixcloud/&quot;,return)" />
-                    <param name="onclick-target" value="plugin://plugin.audio.mixcloud/" />
-                    <param name="set-onclick-target" value="true" />
-                    <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
-                </include>
-
-                <!-- News SubMenu -->
-                <!-- NO CONTENT CURRENTLY -->
-
-                <!-- QUIT SUBMENU ??? -->
-                <!-- FIX ME -->
-
+                
+                <include condition="!StringCompare(System.ProfileName,WICKED XXX)">Home_Submenu_Standard</include>
             </control>
         </control>
+    </include>
+
+    <include name="Home_Submenu_Standard">
+        <!-- Support SubMenu -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
+            <param name="imageid" value="711" />
+            <param name="groupid" value="811" />
+            <param name="buttonid" value="911" />
+            <param name="width" value="473" />
+            <param name="label" value="Guides" />
+            <param name="icon" value="special://skin/extras/icons/guides.png" />
+            <param name="onclick" value="noop" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
+            <param name="imageid" value="712" />
+            <param name="groupid" value="812" />
+            <param name="buttonid" value="912" />
+            <param name="width" value="473" />
+            <param name="label" value="Wicked U" />
+            <param name="icon" value="special://skin/extras/icons/xactu.png" />
+            <param name="onclick" value="noop" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
+            <param name="imageid" value="713" />
+            <param name="groupid" value="813" />
+            <param name="buttonid" value="913" />
+            <param name="width" value="473" />
+            <param name="label" value="User Maintenance" />
+            <param name="icon" value="special://skin/extras/icons/usermaintenance.png" />
+            <param name="onclick" value="noop" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
+        </include>
+
+        <!-- Videos SubMenu -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
+            <param name="imageid" value="721" />
+            <param name="groupid" value="821" />
+            <param name="buttonid" value="921" />
+            <param name="width" value="473" />
+            <param name="label" value="Youtube" />
+            <param name="icon" value="special://skin/extras/icons/youtube.png" />
+            <param name="onclick" value="ActivateWindow(Videos,plugin://plugin.video.youtube,return)" />
+            <param name="onclick-target" value="plugin://plugin.video.youtube" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),902)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
+            <param name="imageid" value="722" />
+            <param name="groupid" value="822" />
+            <param name="buttonid" value="922" />
+            <param name="width" value="473" />
+            <param name="label" value="Video Files" />
+            <param name="icon" value="special://skin/extras/icons/video-addons.png" />
+            <param name="onclick" value="ActivateWindow(Videos,sources://video/,Return)" />
+            <param name="onclick-target" value="sources://video/" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),902)" />
+        </include>
+
+        <!-- Music SubMenu -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
+            <param name="imageid" value="731" />
+            <param name="groupid" value="831" />
+            <param name="buttonid" value="931" />
+            <param name="width" value="473" />
+            <param name="label" value="Pulse Music" />
+            <param name="icon" value="special://skin/extras/icons/pulsemusic.png" />
+            <param name="onclick" value="ActivateWindow(Videos,&quot;plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/&quot;,return)" />
+            <param name="onclick-target" value="plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
+            <param name="imageid" value="732" />
+            <param name="groupid" value="832" />
+            <param name="buttonid" value="932" />
+            <param name="width" value="473" />
+            <param name="label" value="Music Addons" />
+            <param name="icon" value="special://skin/extras/icons/songs.png" />
+            <param name="onclick" value="ActivateWindow(Music,Addons,return)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
+            <param name="imageid" value="733" />
+            <param name="groupid" value="833" />
+            <param name="buttonid" value="933" />
+            <param name="width" value="473" />
+            <param name="label" value="Music Files" />
+            <param name="icon" value="special://skin/extras/icons/song.png" />
+            <param name="onclick" value="ActivateWindow(Music,Files,return)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
+        </include>
+
+        <!-- Pictures SubMenu -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
+            <param name="imageid" value="741" />
+            <param name="groupid" value="841" />
+            <param name="buttonid" value="941" />
+            <param name="width" value="473" />
+            <param name="label" value="The Big Picture" />
+            <param name="icon" value="special://skin/extras/icons/thebigpicture.png" />
+            <param name="onclick" value="RunScript(script.image.bigpictures)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
+            <param name="imageid" value="742" />
+            <param name="groupid" value="842" />
+            <param name="buttonid" value="942" />
+            <param name="width" value="473" />
+            <param name="label" value="Picture Addons" />
+            <param name="icon" value="special://skin/extras/icons/pictures.png" />
+            <param name="onclick" value="ActivateWindow(Pictures,Addons,return)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
+            <param name="imageid" value="743" />
+            <param name="groupid" value="843" />
+            <param name="buttonid" value="943" />
+            <param name="width" value="473" />
+            <param name="label" value="Picture Files" />
+            <param name="icon" value="special://skin/extras/icons/filebox.png" />
+            <param name="onclick" value="ActivateWindow(Pictures,Files,return)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
+        </include>
+
+        <!-- TVPLUS Submenu -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
+            <param name="imageid" value="751" />
+            <param name="groupid" value="851" />
+            <param name="buttonid" value="951" />
+            <param name="width" value="473" />
+            <param name="label" value="Favourites" />
+            <param name="icon" value="special://skin/extras/icons/favourites.png" />
+            <param name="onclick" value="ActivateWindow(favourites)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
+            <param name="imageid" value="752" />
+            <param name="groupid" value="852" />
+            <param name="buttonid" value="952" />
+            <param name="width" value="473" />
+            <param name="label" value="TV Plus [Start Here]" />
+            <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+            <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
+            <param name="onclick2" value="SetProperty(StopTileBounce,True,Home)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="onclick-target" value="addons://sources/video/" />
+            <param name="reddot" value="true" />
+            <param name="animate-bounce-tile" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
+        </include>
+        <!-- FIX ME -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
+            <param name="imageid" value="753" />
+            <param name="groupid" value="853" />
+            <param name="buttonid" value="953" />
+            <param name="width" value="473" />
+            <param name="label" value="Wicked Mix" />
+            <param name="icon" value="special://skin/extras/icons/wickedmix.png" />
+            <param name="onclick" value="noop" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
+            <param name="imageid" value="754" />
+            <param name="groupid" value="854" />
+            <param name="buttonid" value="954" />
+            <param name="width" value="473" />
+            <param name="label" value="Wicked XXX" />
+            <param name="icon" value="special://skin/extras/icons/wickedxxx-main.png" />
+            <param name="onclick" value="noop" />
+            <param name="set-onclick-target" value="true" />
+            <param name="wickedxxx" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
+        </include>
+
+        <!-- Live TV SubMenu -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
+            <param name="imageid" value="761" />
+            <param name="groupid" value="861" />
+            <param name="buttonid" value="961" />
+            <param name="width" value="473" />
+            <param name="label" value="TV Plus Live" />
+            <param name="icon" value="special://skin/extras/icons/tvplus-live.png" />
+            <param name="onclick" value="StartAndroidActivity(&quot;com.filmon.android.tvpluslivetv&quot;)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
+        </include>
+        <!-- FIX ME -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
+            <param name="imageid" value="762" />
+            <param name="groupid" value="862" />
+            <param name="buttonid" value="962" />
+            <param name="width" value="473" />
+            <param name="label" value="Mobdro" />
+            <param name="icon" value="special://skin/extras/icons/mobdro.png" />
+            <param name="onclick" value="StartAndroidActivity(&quot;com.mobdro.android&quot;)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
+            <param name="imageid" value="763" />
+            <param name="groupid" value="863" />
+            <param name="buttonid" value="963" />
+            <param name="width" value="473" />
+            <param name="label" value="Wicked IPTV" />
+            <param name="icon" value="special://skin/extras/icons/wicked-iptv.png" />
+            <param name="onclick" value="ActivateWindow(TVChannels)" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
+        </include>
+
+        <!-- Live Radio -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
+            <param name="imageid" value="771" />
+            <param name="groupid" value="871" />
+            <param name="buttonid" value="971" />
+            <param name="width" value="473" />
+            <param name="label" value="TuneIn" />
+            <param name="icon" value="special://skin/extras/icons/tunein.png" />
+            <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.tuneinradio&quot;,return)" />
+            <param name="onclick-target" value="plugin://plugin.audio.tuneinradio" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
+            <param name="imageid" value="772" />
+            <param name="groupid" value="872" />
+            <param name="buttonid" value="972" />
+            <param name="width" value="473" />
+            <param name="label" value="Radio.Net" />
+            <param name="icon" value="special://skin/extras/icons/radionet.png" />
+            <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.radio_de&quot;,return)" />
+            <param name="onclick-target" value="plugin://plugin.audio.radio_de" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
+        </include>
+        <!-- FIX ME -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
+            <param name="imageid" value="773" />
+            <param name="groupid" value="873" />
+            <param name="buttonid" value="973" />
+            <param name="width" value="473" />
+            <param name="label" value="i Heart" />
+            <param name="icon" value="special://skin/extras/icons/iheart.png" />
+            <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.iheart/&quot;,return)" />
+            <param name="onclick-target" value="plugin://plugin.audio.iheart/" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
+        </include>
+        <!-- FIX ME -->
+        <include content="Home_Menu_Button">
+            <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
+            <param name="imageid" value="774" />
+            <param name="groupid" value="874" />
+            <param name="buttonid" value="974" />
+            <param name="width" value="473" />
+            <param name="label" value="MixCloud" />
+            <param name="icon" value="special://skin/extras/icons/mixcloud.png" />
+            <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.mixcloud/&quot;,return)" />
+            <param name="onclick-target" value="plugin://plugin.audio.mixcloud/" />
+            <param name="set-onclick-target" value="true" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
+        </include>
+
+        <!-- News SubMenu -->
+        <!-- NO CONTENT CURRENTLY -->
+
+        <!-- QUIT SUBMENU ??? -->
+        <!-- FIX ME -->
     </include>
 
     <!-- Button Include -->
@@ -717,15 +765,11 @@
     <include name="Home_RSS">
         <control type="group">
             <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <visible>Window.IsVisible(weather) | Window.IsVisible(home)</visible>
             <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
             <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
             <visible>!Player.HasMedia</visible>
-            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
-            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
-            <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2)">Conditional</animation>
-            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
             <control type="image">
                 <posx>16</posx>
                 <bottom>16</bottom>
