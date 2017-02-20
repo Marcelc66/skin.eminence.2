@@ -483,7 +483,7 @@
                     <param name="buttonid" value="974" />
                     <param name="width" value="473" />
                     <param name="label" value="MixCloud" />
-                    <param name="icon" value="special://skin/extras/icons/iheart.png" />
+                    <param name="icon" value="special://skin/extras/icons/mixcloud.png" />
                     <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.mixcloud/&quot;,return)" />
                     <param name="onclick-target" value="plugin://plugin.audio.mixcloud/" />
                     <param name="set-onclick-target" value="true" />

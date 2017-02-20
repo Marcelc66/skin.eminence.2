@@ -54,6 +54,8 @@
                         <ondown>14</ondown>
                         <label>12311</label>
                         <width>120</width>
+                        <align>center</align>
+                        <aligny>top</aligny>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '2' -->
@@ -61,6 +63,8 @@
                         <ondown>15</ondown>
                         <label>12312</label>
                         <width>120</width>
+                        <align>center</align>
+                        <aligny>top</aligny>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '3' -->
@@ -68,7 +72,38 @@
                         <ondown>16</ondown>
                         <label>12313</label>
                         <width>120</width>
+                        <align>center</align>
+                        <aligny>top</aligny>
                         <include>Defs_KeyboardButton</include>
+                    </control>
+                </control>
+                <control type="grouplist">
+                    <left>0</left>
+                    <top>95</top>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onup>noop</onup>
+                    <orientation>horizontal</orientation>
+                    <!-- '1' -->
+                    <control type="label">
+                        <label> --- </label>
+                        <width>120</width>
+                        <font>Font-LineLabel</font>
+                        <align>center</align>
+                    </control>
+                    <!-- '2' -->
+                    <control type="label">
+                        <label>A B C</label>
+                        <width>120</width>
+                        <font>Font-LineLabel</font>
+                        <align>center</align>
+                    </control>
+                    <!-- '3' -->
+                    <control type="label">
+                        <label>D E F</label>
+                        <width>120</width>
+                        <font>Font-LineLabel</font>
+                        <align>center</align>
                     </control>
                 </control>
                 <control type="grouplist" id="2000">
@@ -83,6 +118,8 @@
                         <ondown>17</ondown>
                         <label>12314</label>
                         <width>120</width>
+                        <align>center</align>
+                        <aligny>top</aligny>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '5' -->
@@ -91,6 +128,8 @@
                         <ondown>18</ondown>
                         <label>12315</label>
                         <width>120</width>
+                        <align>center</align>
+                        <aligny>top</aligny>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '6' -->
@@ -99,7 +138,38 @@
                         <ondown>19</ondown>
                         <label>12316</label>
                         <width>120</width>
+                        <align>center</align>
+                        <aligny>top</aligny>
                         <include>Defs_KeyboardButton</include>
+                    </control>
+                </control>
+                <control type="grouplist">
+                    <left>0</left>
+                    <top>175</top>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onup>noop</onup>
+                    <orientation>horizontal</orientation>
+                    <!-- '1' -->
+                    <control type="label">
+                        <label>G H I</label>
+                        <width>120</width>
+                        <font>Font-LineLabel</font>
+                        <align>center</align>
+                    </control>
+                    <!-- '2' -->
+                    <control type="label">
+                        <label>J K L</label>
+                        <width>120</width>
+                        <font>Font-LineLabel</font>
+                        <align>center</align>
+                    </control>
+                    <!-- '3' -->
+                    <control type="label">
+                        <label>M N O</label>
+                        <width>120</width>
+                        <font>Font-LineLabel</font>
+                        <align>center</align>
                     </control>
                 </control>
                 <control type="grouplist" id="3000">
@@ -114,6 +184,8 @@
                         <ondown>20</ondown>
                         <label>12317</label>
                         <width>120</width>
+                        <align>center</align>
+                        <aligny>top</aligny>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '8' -->
@@ -122,6 +194,8 @@
                         <ondown>10</ondown>
                         <label>12318</label>
                         <width>120</width>
+                        <align>center</align>
+                        <aligny>top</aligny>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '9' -->
@@ -130,7 +204,38 @@
                         <ondown>22</ondown>
                         <label>12319</label>
                         <width>120</width>
+                        <align>center</align>
+                        <aligny>top</aligny>
                         <include>Defs_KeyboardButton</include>
+                    </control>
+                </control>
+                <control type="grouplist">
+                    <left>0</left>
+                    <top>255</top>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onup>noop</onup>
+                    <orientation>horizontal</orientation>
+                    <!-- '1' -->
+                    <control type="label">
+                        <label>P Q R S</label>
+                        <width>120</width>
+                        <font>Font-LineLabel</font>
+                        <align>center</align>
+                    </control>
+                    <!-- '2' -->
+                    <control type="label">
+                        <label>T U V</label>
+                        <width>120</width>
+                        <font>Font-LineLabel</font>
+                        <align>center</align>
+                    </control>
+                    <!-- '3' -->
+                    <control type="label">
+                        <label>W X Y Z</label>
+                        <width>120</width>
+                        <font>Font-LineLabel</font>
+                        <align>center</align>
                     </control>
                 </control>
                 <control type="grouplist" id="4000">
@@ -145,6 +250,7 @@
                         <onup>17</onup>
                         <label>&lt;</label>
                         <width>120</width>
+                        <align>center</align>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '0' -->
@@ -153,6 +259,7 @@
                         <ondown>23</ondown>
                         <label>12310</label>
                         <width>120</width>
+                        <align>center</align>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- Next -->
@@ -161,6 +268,7 @@
                         <ondown>21</ondown>
                         <label>&gt;</label>
                         <width>120</width>
+                        <align>center</align>
                         <include>Defs_KeyboardButton</include>
                     </control>
                 </control>
@@ -178,12 +286,14 @@
                         <onup>20</onup>
                         <width>250</width>
                         <width>120</width>
+                        <align>center</align>
                         <include>Defs_KeyboardButton</include>
                     </control>
 
                     <control type="button" id="21">
                         <onup>22</onup>
                         <width>120</width>
+                        <align>center</align>
                         <include>Defs_KeyboardButton</include>
                         <label>20177</label>
                     </control>
