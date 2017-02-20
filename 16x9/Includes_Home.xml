@@ -459,7 +459,6 @@
             <param name="set-onclick-target" value="true" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
         </include>
-        <!-- FIX ME -->
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
             <param name="imageid" value="762" />
@@ -512,7 +511,6 @@
             <param name="set-onclick-target" value="true" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
         </include>
-        <!-- FIX ME -->
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
             <param name="imageid" value="773" />
@@ -526,7 +524,6 @@
             <param name="set-onclick-target" value="true" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
         </include>
-        <!-- FIX ME -->
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
             <param name="imageid" value="774" />
@@ -544,8 +541,9 @@
         <!-- News SubMenu -->
         <!-- NO CONTENT CURRENTLY -->
 
-        <!-- QUIT SUBMENU ??? -->
-        <!-- FIX ME -->
+        <!-- Quit SubMenu -->
+        <!-- NO CONTENT -->
+
     </include>
 
     <!-- Button Include -->
@@ -872,7 +870,7 @@
                 <fadetime>600</fadetime>
                 <randomize>true</randomize>
                 <timeperimage>5000</timeperimage>
-                <imagepath background="true">$VAR[Image_Background]</imagepath>
+                <imagepath background="true">special://skin/tvpmc/bg/-masterhomepage.jpg</imagepath>
                 <aspectratio>scale</aspectratio>
             </control>
             <control type="multiimage">
