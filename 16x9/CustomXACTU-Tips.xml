@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1138" type="dialog">
-    <defaultcontrol always="true">8001</defaultcontrol>
+    <defaultcontrol always="true">8000</defaultcontrol>
     <controls>
         <control type="group">
             <include>Animation_SlideIn</include>
@@ -8,90 +8,104 @@
             <centerleft>50%</centerleft>
             <width>favdialogw</width>
             <bottom>80</bottom>
-            <height>514</height>
+            <height>532</height>
             <include>Dialog_Background</include>
-            <include name="Dialog_Top_IconHeader">
-                <param name="label" value="X ACT University - Tips and Tricks" />
-                <param name="icon" value="special://skin/tvpmc/XACTU/Tips.png" />
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="X ACT University" />
+                <param name="icon" value="special://skin/extras/icons/xactu.png" />
             </include>
-            <control type="image">
-                <left>side</left>
-                <bottom>side</bottom>
-                <width>414</width>
-                <height>414</height>
-                <texture colordiffuse="PosterBorder">common/white.png</texture>
-            </control>
-            <control type="image">
-                <left>side</left>
-                <bottom>side</bottom>
-                <width>414</width>
-                <height>414</height>
-                <aspectratio>keep</aspectratio>
-                <texture background="true" fallback="special://skin/tvpmc/XACTU/Tips.png">$INFO[Container(8001).ListItem.Icon]</texture>
-            </control>
-            <control type="panel" id="8001">
-                <onup>8001</onup>
-                <ondown>8001</ondown>
-                <right>side</right>
-                <left>444</left>
+            <control type="group">
+                <left>bigpad</left>
                 <top>80</top>
-                <bottom>side</bottom>
+                <width>432</width>
+                <height>432</height>
+                <include>Object_FlatBackground</include>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true" fallback="DefaultAddon.png">$INFO[Container(8000).ListItem.Icon]</texture>
+                </control>
+            </control>
+            <control type="group">
+                <right>bigpad</right>
+                <top>80</top>
+                <bottom>bigpad</bottom>
+                <width>favitemw</width>
+                <include>Object_FlatBackground</include>
+                <visible>Control.IsVisible(8000)</visible>
+            </control>
+            <control type="panel" id="8000">
+                <onup>8000</onup>
+                <ondown>8000</ondown>
+                <right>bigpad</right>
+                <width>favitemw</width>
+                <top>80</top>
+                <bottom>bigpad</bottom>
                 <scrolltime>200</scrolltime>
                 <orientation>vertical</orientation>
-                <itemlayout width="favitemw" height="69">
-                    <control type="image">
-                        <width>100%</width>
-                        <height>69</height>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
-                    </control>
+                <itemlayout width="favitemw" height="72">
                     <control type="label">
-                        <left>side</left>
-                        <right>side</right>
-                        <height>69</height>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <height>72</height>
                         <textcolor>ListLabel</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
-                        <left>side</left>
-                        <right>side</right>
-                        <height>69</height>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <height>72</height>
                         <align>right</align>
                         <textcolor>ListLabel</textcolor>
                         <font>Font-ListInfo-Small</font>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label2]</label>
-                        <visible>false</visible>
                     </control>
                 </itemlayout>
-                <focusedlayout width="favitemw" height="69">
+                <focusedlayout width="favitemw" height="72">
                     <control type="image">
                         <width>100%</width>
-                        <height>69</height>
+                        <height>72</height>
                         <texture border="5">common/metal-border-button.png</texture>
                     </control>
                     <control type="label">
-                        <left>side</left>
-                        <right>side</right>
-                        <height>69</height>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <height>72</height>
                         <textcolor>Selected</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
-                        <left>side</left>
-                        <right>side</right>
-                        <height>69</height>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <height>72</height>
                         <align>right</align>
                         <textcolor>Selected</textcolor>
                         <font>Font-ListInfo-Small</font>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label2]</label>
-                        <visible>false</visible>
                     </control>
                 </focusedlayout>
+                <content>
+                    <!-- <item id="1">
+                        <label>Setting up your TV PLUS</label>
+                        <onclick>ActivateWindow(1136)</onclick>
+                        <icon>special://skin/tvpmc/XACTU/Setup.png</icon>
+                    </item>
+                    <item id="2">
+                        <label>How to use TV PLUS</label>
+                        <onclick>ActivateWindow(1137)</onclick>
+                        <icon>special://skin/tvpmc/XACTU/Learn.png</icon>
+                    </item>
+                    <item id="3">
+                        <label>Tips and Tricks</label>
+                        <onclick>ActivateWindow(1138)</onclick>
+                        <icon>special://skin/tvpmc/XACTU/Tips.png</icon>
+                    </item> -->
+                </content>
             </control>
 
         </control>

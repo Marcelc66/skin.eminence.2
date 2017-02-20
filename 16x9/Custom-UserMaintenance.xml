@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1161" type="dialog">
+    <defaultcontrol always="true">8001</defaultcontrol>
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>1370</width>
+            <bottom>80</bottom>
+            <height>728</height>
+            <include>Dialog_Background</include>
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="User Maintenance" />
+                <param name="icon" value="special://skin/extras/icons/usermaintenance.png" />
+            </include>
+            <control type="group">
+                <left>bigpad</left>
+                <height>196</height>
+                <bottom>20</bottom>
+                <right>20</right>
+                <include>Object_FlatBackground</include>
+                <control type="textbox">
+                    <left>20</left>
+                    <right>20</right>
+                    <top>20</top>
+                    <bottom>20</bottom>
+                    <label>$INFO[Container(8001).ListItem.Label2]</label>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>Font-ListInfo-Small</font>
+                </control>
+            </control>
+            <control type="panel" id="8001">
+                <onup>8000</onup>
+                <ondown>8000</ondown>
+                <width>1350</width>
+                <left>20</left>
+                <top>80</top>
+                <height>432</height>
+                <scrolltime>200</scrolltime>
+                <orientation>vertical</orientation>
+                <itemlayout width="450" height="216">
+                    <control type="group">
+                        <left>0</left>
+                        <right>20</right>
+                        <bottom>20</bottom>
+                        <control type="image">
+                            <texture colordiffuse="ObjectBackground">common/white.png</texture>
+                        </control>
+                        <control type="label">
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                            <left>20</left>
+                            <right>20</right>
+                            <bottom>10</bottom>
+                            <height>40</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                        </control>
+                        <control type="image">
+                            <width>128</width>
+                            <height>128</height>
+                            <top>10</top>
+                            <centerleft>50%</centerleft>
+                            <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="450" height="216">
+                     <control type="group">
+                        <left>0</left>
+                        <right>20</right>
+                        <bottom>20</bottom>
+                        <control type="image">
+                            <texture border="5">common/metal-border-button.png</texture>
+                        </control>
+                        <control type="label">
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                            <left>20</left>
+                            <right>20</right>
+                            <bottom>10</bottom>
+                            <height>40</height>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                        </control>
+                        <control type="image">
+                            <width>128</width>
+                            <height>128</height>
+                            <top>10</top>
+                            <centerleft>50%</centerleft>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1">
+                        <label>Delete Old Updates</label>
+                        <label2>[B]IMPORTANT[/B][CR][CR]It is advised to clear your viewing history and delete old updates at least once a month. This can be done more regularly if needed</label2>
+                        <onclick>PlayMedia(&quot;plugin://plugin.program.TotalRevolution/?url=url&amp;mode=remove_packages&amp;name=Delete+Packages+Folder&amp;fanart=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fplugin.program.TotalRevolution%2Ffanart.jpg&amp;video=&amp;description=&quot;)</onclick>
+                        <icon>special://skin/extras/icons/usermaintenance.png</icon>
+                    </item>
+                    <item id="2">
+                        <label>Clear Viewing History</label>
+                        <label2>[B]IMPORTANT[/B][CR][CR]It is advised to clear your viewing history and delete old updates at least once a month. This can be done more regularly if needed</label2>
+                        <onclick>PlayMedia(&quot;plugin://plugin.program.TotalRevolution/?url=none&amp;mode=remove_textures&amp;name=Clear+My+Cached+Artwork&amp;fanart=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fplugin.program.TotalRevolution%2Ffanart.jpg&amp;video=&amp;description=&quot;)</onclick>
+                        <icon>special://skin/extras/icons/usermaintenance.png</icon>
+                    </item>
+                    <item id="3">
+                        <label>Clear ADULT viewing history</label>
+                        <label2>[B]IMPORTANT[/B][CR][CR]It is advised to clear your viewing history and delete old updates at least once a month. This can be done more regularly if needed</label2>
+                        <onclick>PlayMedia(&quot;plugin://plugin.program.TotalRevolutionAdult/?url=none&amp;mode=remove_textures&amp;name=Clear+My+Cached+Artwork&amp;fanart=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fplugin.program.TotalRevolutionAdult%2Ffanart.jpg&amp;video=&amp;description=&quot;)</onclick>
+                        <icon>special://skin/extras/icons/usermaintenance.png</icon>
+                    </item>
+                    <item id="4">
+                        <label>USERS GUIDES</label>
+                        <label2>Note these guides are only for the ULTRA-BOXX Configuration & TVPMC software, please refer to the manufacturers guide for complete device instructions!</label2>
+                        <onclick>StartAndroidActivity(&quot;the.pdfviewer3&quot;)</onclick>
+                        <icon>special://skin/extras/icons/usermaintenance.png</icon>
+                    </item>
+                    <item id="5">
+                        <label>TV PLUS WiFi TEST</label> 
+                        <label2>Below -60db & channel 8 or above will cause buffering/streaming issues</label2>
+                        <onclick>StartAndroidActivity(&quot;cz.webprovider.wifianalyzer&quot;)</onclick>
+                        <icon>special://skin/extras/icons/usermaintenance.png</icon>
+                    </item>
+                    <item id="6">
+                        <label>GET WICKED</label>
+                        <label2></label2>
+                        <onclick>StartAndroidActivity(&quot;com.tvplusmedia.getwicked&quot;)</onclick>
+                        <icon>special://skin/extras/icons/usermaintenance.png</icon>
+                    </item>
+                </content>
+            </control>
+
+        </control>
+    </controls>
+
+</window>

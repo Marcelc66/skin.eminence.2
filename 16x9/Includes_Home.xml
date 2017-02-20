@@ -269,8 +269,7 @@
             <param name="width" value="473" />
             <param name="label" value="Wicked U" />
             <param name="icon" value="special://skin/extras/icons/xactu.png" />
-            <param name="onclick" value="noop" />
-            <param name="set-onclick-target" value="true" />
+            <param name="onclick" value="ActivateWindow(1135)" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
         </include>
         <include content="Home_Menu_Button">
@@ -281,8 +280,7 @@
             <param name="width" value="473" />
             <param name="label" value="User Maintenance" />
             <param name="icon" value="special://skin/extras/icons/usermaintenance.png" />
-            <param name="onclick" value="noop" />
-            <param name="set-onclick-target" value="true" />
+            <param name="onclick" value="ActivateWindow(1161)" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
         </include>
 
