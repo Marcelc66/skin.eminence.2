@@ -426,7 +426,7 @@
             <param name="width" value="473" />
             <param name="label" value="Wicked Mix" />
             <param name="icon" value="special://skin/extras/icons/wickedmix.png" />
-            <param name="onclick" value="noop" />
+            <param name="onclick" value="ActivateWindow(1173)" />
             <param name="set-onclick-target" value="true" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
         </include>

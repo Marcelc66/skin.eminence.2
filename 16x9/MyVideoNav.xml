@@ -23,6 +23,7 @@
                 <param name="label" value="$VAR[Label_SortLine]$VAR[Label_IconLine]" />
             </include>
             <include>Viewtype_Viewtypes</include>
+            
         </control>
 
 

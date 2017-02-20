@@ -144,6 +144,7 @@
         <value condition="Window.IsVisible(home) + Integer.IsGreater(Container(9000).NumItems,0) + String.IsEqual(Skin.String(home.fallbackwidget.target),pictures) + !String.IsEmpty(Container(9001).ListItem.Icon) + String.IsEmpty(Container(9000).ListItem.Property(widget))">$INFO[Container(9001).ListItem.FileNameAndPath]</value>
         <value condition="Window.IsVisible(home) + String.IsEmpty(Skin.String(background.fallback))">special://skin/tvpmc/bg/-masterhomepage.jpg</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
+        <value condition="Window.IsVisible(1173)">special://skin/tvpmc/bg/wickedmix.jpg</value>
 
         <value condition="Skin.HasSetting(background.hidefanart) + String.IsEmpty(Skin.String(background.fallback))">common/black.png</value>
         <value condition="Skin.HasSetting(background.hidefanart) + !String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>

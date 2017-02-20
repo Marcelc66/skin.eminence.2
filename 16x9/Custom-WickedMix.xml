@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1173" type="window">
+    <defaultcontrol always="true">8000</defaultcontrol>
+    <onload>SetProperty(WickedMixContent,addons://sources/video/,Home)</onload>
+    <controls>
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_RSS</include>
+        <include>Furniture_TopBar</include>
+
+        <!-- Main group -->
+        <control type="group">
+            <include>Defs_ViewBackground</include>
+            <include content="Object_Headline">
+                <param name="label" value="Categories" />
+            </include>
+            <control type="group">
+                <left>bigpad</left>
+                <width>478</width>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <include>Object_Background</include>
+                <control type="grouplist" id="8000">
+                    <onright>9000</onright>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <control type="togglebutton" id="8001">
+                        <label>Video</label>
+                        <onclick>SetFocus(9001)</onclick>
+                        <onright>SetFocus(9001)</onright>
+                        <font>Font-Button</font>
+                        <height>72</height>
+                        <width>478</width>
+                        <textcolor>Selected</textcolor>
+                        <onfocus>SetProperty(WickedMixContent,addons://sources/video/,Home)</onfocus>
+                        <usealttexture>ControlGroup(8000).HasFocus(8001)</usealttexture>
+                        <aligny>center</aligny>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                    <control type="togglebutton" id="8002">
+                        <label>Music</label>
+                        <onclick>SetFocus(9002)</onclick>
+                        <onright>SetFocus(9002)</onright>
+                        <font>Font-Button</font>
+                        <height>72</height>
+                        <width>478</width>
+                        <aligny>center</aligny>
+                        <textcolor>Selected</textcolor>
+                        <onfocus>SetProperty(WickedMixContent,addons://sources/audio/,Home)</onfocus>
+                        <usealttexture>ControlGroup(8000).HasFocus(8002)</usealttexture>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                    <control type="togglebutton" id="8003">
+                        <label>Pictures</label>
+                        <onclick>SetFocus(9003)</onclick>
+                        <onright>SetFocus(9003)</onright>
+                        <font>Font-Button</font>
+                        <height>72</height>
+                        <width>478</width>
+                        <aligny>center</aligny>
+                        <onfocus>SetProperty(WickedMixContent,addons://sources/image/,Home)</onfocus>
+                        <textcolor>Selected</textcolor>
+                        <usealttexture>ControlGroup(8000).HasFocus(8003)</usealttexture>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- <include>Animation_SlideIn</include> -->
+                <visible allowhiddenfocus="true">ControlGroup(8000).HasFocus(8001)</visible>
+                <control type="group">
+                    <width>1254</width>
+                    <right>bigpad</right>
+                    <top>bigpad</top>
+                    <height>posterh</height>
+                    <include>Object_Background</include>
+                </control>
+                <include content="View_WickedMix">
+                    <param name="id" value="9001" />
+                    <param name="content" value="addons://sources/video/" />
+                    <param name="content-type" value="videos" />
+                </include>
+            </control>
+            <control type="group">
+                <!-- <include>Animation_SlideIn</include> -->
+                <visible allowhiddenfocus="true">ControlGroup(8000).HasFocus(8002)</visible>
+                <control type="group">
+                    <width>1254</width>
+                    <right>bigpad</right>
+                    <top>bigpad</top>
+                    <height>posterh</height>
+                    <include>Object_Background</include>
+                </control>
+                <include content="View_WickedMix">
+                    <param name="id" value="9002" />
+                    <param name="content" value="addons://sources/audio/" />
+                    <param name="content-type" value="music" />
+                </include>
+            </control>
+            <control type="group">
+                <!-- <include>Animation_SlideIn</include> -->
+                <visible allowhiddenfocus="true">ControlGroup(8000).HasFocus(8003)</visible>
+                <control type="group">
+                    <width>1254</width>
+                    <right>bigpad</right>
+                    <top>bigpad</top>
+                    <height>posterh</height>
+                    <include>Object_Background</include>
+                </control>
+                <include content="View_WickedMix">
+                    <param name="id" value="9003" />
+                    <param name="content" value="addons://sources/image/" />
+                    <param name="content-type" value="pictures" />
+                </include>
+            </control>
+        </control>        
+    </controls>
+
+</window>

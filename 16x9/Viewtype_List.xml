@@ -978,4 +978,120 @@
         <views>50,57,553,59,552</views>
     </include>
 
+
+    <!-- Wicked Mix -->
+    <include name="View_WickedMix">
+        <control type="panel" id="$PARAM[id]">
+            <top>30</top>
+            <right>30</right>
+            <width>1230</width>
+            <height>690</height>
+            <onleft>8000</onleft>
+            <pagecontrol>60</pagecontrol>
+            <preloaditems>2</preloaditems>
+            <orientation>vertical</orientation>
+            <scrolltime tween="quadratic">400</scrolltime>
+            <visible>String.IsEqual(Window(Home).Property(WickedMixContent),$PARAM[content])</visible>
+            <itemlayout height="345" width="246">
+                <control type="group">
+                    <left>iconpadw</left>
+                    <right>iconpadw</right>
+                    <bottom>5</bottom>
+                    <top>5</top>
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <top>pad</top>
+                        <bottom>100</bottom>
+                        <control type="textbox">
+                            <label>$INFO[ListItem.Label]</label>
+                            <font>Font-OSD</font>
+                            <align>center</align>
+                            <height>64</height>
+                            <bottom>-80</bottom>
+                            <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                        </control>
+                        <control type="image">
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                            <aspectratio aligny="center">keep</aspectratio>
+                            <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster]</texture>
+                            <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <top>pad</top>
+                        <bottom>pad</bottom>
+                        <control type="image">
+
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$VAR[Image_Poster]</texture>
+                            <visible>![String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))]</visible>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <right>15</right>
+                        <top>15</top>
+                        <height>32</height>
+                        <width>32</width>
+                        <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                        <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                    </control>
+                </control>
+            </itemlayout>
+            <focusedlayout height="345" width="246">
+                <control type="group">
+                    <left>iconpadw</left>
+                    <right>iconpadw</right>
+                    <bottom>5</bottom>
+                    <top>5</top>
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <top>pad</top>
+                        <bottom>100</bottom>
+                        <control type="textbox">
+                            <label>$INFO[ListItem.Label]</label>
+                            <font>Font-OSD</font>
+                            <align>center</align>
+                            <height>64</height>
+                            <bottom>-80</bottom>
+                            <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                        </control>
+                        <control type="image">
+                            <left>-10</left>
+                            <right>-10</right>
+                            <top>-10</top>
+                            <bottom>-10</bottom>
+                            <bordersize>10</bordersize>
+                            <bordertexture border="5">common/metal-border-button.png</bordertexture>
+                            <aspectratio aligny="center">keep</aspectratio>
+                            <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster]</texture>
+                            <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                        </control>
+
+                    </control>
+                    <control type="image">
+                        <bordersize>10</bordersize>
+                        <bordertexture border="5">common/metal-border-button.png</bordertexture>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$VAR[Image_Poster]</texture>
+                        <visible>![String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))]</visible>
+                    </control>
+                    <control type="image">
+                        <right>15</right>
+                        <top>15</top>
+                        <height>32</height>
+                        <width>32</width>
+                        <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                        <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                    </control>
+                </control>
+            </focusedlayout>
+            <content target="$PARAM[content-type]">$PARAM[content]</content>
+        </control>
+    </include>
+
 </includes>

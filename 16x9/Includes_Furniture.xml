@@ -684,6 +684,7 @@
         <value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
         <value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
         <value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[19017]</value>
+        <value condition="Window.IsVisible(1173)">Wicked Mix</value>
         <value condition="String.IsEqual(Container.FolderPath,videodb://tvshows/titles/)">$LOCALIZE[20343]</value>
         <value condition="String.IsEqual(Container.FolderPath,videodb://movies/titles/)">$LOCALIZE[20342]</value>
         <value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.TvShowTitle) + String.Contains(Container.FolderPath,videodb://tvshows/titles/)">[CAPITALIZE]$INFO[ListItem.TvShowTitle][/CAPITALIZE]</value>
@@ -736,6 +737,7 @@
         <value condition="Player.Muted">$LOCALIZE[31013]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31070]</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]">$VAR[Label_PlayerStatus]</value>
+        <value condition="Window.IsVisible(1173)">Wicked</value>
         <value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
         <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">$LOCALIZE[5]</value>
@@ -765,6 +767,7 @@
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(episodes)">special://skin/extras/icons/tv.png</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(livetv)">special://skin/extras/icons/livetv.png</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo">special://skin/extras/icons/video-addons.png</value>
+        <value condition="Window.IsVisible(1173)">special://skin/extras/icons/wickedmix.png</value>
         <value condition="Window.IsVisible(weather)">special://skin/extras/icons/sun.png</value>
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">special://skin/extras/icons/settings.png</value>
         <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">special://skin/extras/icons/settings.png</value>
