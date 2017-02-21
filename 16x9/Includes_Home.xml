@@ -265,8 +265,8 @@
             <param name="groupid" value="811" />
             <param name="buttonid" value="911" />
             <param name="width" value="473" />
-            <param name="label" value="Guides" />
-            <param name="icon" value="special://skin/extras/icons/guides.png" />
+            <param name="label" value=" Guides" />
+            <param name="icon" value="special://skin/extras/icons/guide.png" />
             <param name="onclick" value="noop" />
             <param name="set-onclick-target" value="true" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
@@ -277,7 +277,7 @@
             <param name="groupid" value="812" />
             <param name="buttonid" value="912" />
             <param name="width" value="473" />
-            <param name="label" value="Wicked U" />
+            <param name="label" value="  Wicked U" />
             <param name="icon" value="special://skin/extras/icons/xactu.png" />
             <param name="onclick" value="ActivateWindow(1135)" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
@@ -288,7 +288,7 @@
             <param name="groupid" value="813" />
             <param name="buttonid" value="913" />
             <param name="width" value="473" />
-            <param name="label" value="User Maintenance" />
+            <param name="label" value="  User Maintenance" />
             <param name="icon" value="special://skin/extras/icons/usermaintenance.png" />
             <param name="onclick" value="ActivateWindow(1161)" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
@@ -301,7 +301,7 @@
             <param name="groupid" value="821" />
             <param name="buttonid" value="921" />
             <param name="width" value="473" />
-            <param name="label" value="Youtube" />
+            <param name="label" value="  Youtube" />
             <param name="icon" value="special://skin/extras/icons/youtube.png" />
             <param name="onclick" value="ActivateWindow(Videos,plugin://plugin.video.youtube,return)" />
             <param name="onclick-target" value="plugin://plugin.video.youtube" />
@@ -314,7 +314,7 @@
             <param name="groupid" value="822" />
             <param name="buttonid" value="922" />
             <param name="width" value="473" />
-            <param name="label" value="Video Files" />
+            <param name="label" value="  Video Files" />
             <param name="icon" value="special://skin/extras/icons/video-addons.png" />
             <param name="onclick" value="ActivateWindow(Videos,sources://video/,Return)" />
             <param name="onclick-target" value="sources://video/" />
@@ -329,7 +329,7 @@
             <param name="groupid" value="831" />
             <param name="buttonid" value="931" />
             <param name="width" value="473" />
-            <param name="label" value="Pulse Music" />
+            <param name="label" value="  Pulse Music" />
             <param name="icon" value="special://skin/extras/icons/pulsemusic.png" />
             <param name="onclick" value="ActivateWindow(Videos,&quot;plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/" />
@@ -342,7 +342,7 @@
             <param name="groupid" value="832" />
             <param name="buttonid" value="932" />
             <param name="width" value="473" />
-            <param name="label" value="Music Addons" />
+            <param name="label" value="  Music Addons" />
             <param name="icon" value="special://skin/extras/icons/songs.png" />
             <param name="onclick" value="ActivateWindow(Music,Addons,return)" />
             <param name="set-onclick-target" value="true" />
@@ -354,7 +354,7 @@
             <param name="groupid" value="833" />
             <param name="buttonid" value="933" />
             <param name="width" value="473" />
-            <param name="label" value="Music Files" />
+            <param name="label" value="  Music Files" />
             <param name="icon" value="special://skin/extras/icons/song.png" />
             <param name="onclick" value="ActivateWindow(Music,Files,return)" />
             <param name="set-onclick-target" value="true" />
@@ -368,7 +368,7 @@
             <param name="groupid" value="841" />
             <param name="buttonid" value="941" />
             <param name="width" value="473" />
-            <param name="label" value="The Big Picture" />
+            <param name="label" value="  The Big Picture" />
             <param name="icon" value="special://skin/extras/icons/thebigpicture.png" />
             <param name="onclick" value="RunScript(script.image.bigpictures)" />
             <param name="set-onclick-target" value="true" />
@@ -380,7 +380,7 @@
             <param name="groupid" value="842" />
             <param name="buttonid" value="942" />
             <param name="width" value="473" />
-            <param name="label" value="Picture Addons" />
+            <param name="label" value="  Picture Addons" />
             <param name="icon" value="special://skin/extras/icons/pictures.png" />
             <param name="onclick" value="ActivateWindow(Pictures,Addons,return)" />
             <param name="set-onclick-target" value="true" />
@@ -392,7 +392,7 @@
             <param name="groupid" value="843" />
             <param name="buttonid" value="943" />
             <param name="width" value="473" />
-            <param name="label" value="Picture Files" />
+            <param name="label" value="  Picture Files" />
             <param name="icon" value="special://skin/extras/icons/filebox.png" />
             <param name="onclick" value="ActivateWindow(Pictures,Files,return)" />
             <param name="set-onclick-target" value="true" />
@@ -406,7 +406,7 @@
             <param name="groupid" value="851" />
             <param name="buttonid" value="951" />
             <param name="width" value="473" />
-            <param name="label" value="Favourites" />
+            <param name="label" value="  Favourites" />
             <param name="icon" value="special://skin/extras/icons/favourites.png" />
             <param name="onclick" value="ActivateWindow(favourites)" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
@@ -417,7 +417,7 @@
             <param name="groupid" value="852" />
             <param name="buttonid" value="952" />
             <param name="width" value="473" />
-            <param name="label" value="TV Plus [Start Here]" />
+            <param name="label" value="  TV Plus [Start Here]" />
             <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
             <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
             <param name="onclick2" value="SetProperty(StopTileBounce,True,Home)" />
@@ -435,7 +435,7 @@
             <param name="groupid" value="853" />
             <param name="buttonid" value="953" />
             <param name="width" value="473" />
-            <param name="label" value="Wicked Mix" />
+            <param name="label" value="  Wicked Mix" />
             <param name="icon" value="special://skin/extras/icons/wickedmix.png" />
             <param name="onclick" value="ActivateWindow(1173)" />
             <param name="set-onclick-target" value="true" />
@@ -447,7 +447,7 @@
             <param name="groupid" value="854" />
             <param name="buttonid" value="954" />
             <param name="width" value="473" />
-            <param name="label" value="Wicked XXX" />
+            <param name="label" value="  Wicked XXX" />
             <param name="icon" value="special://skin/extras/icons/wickedxxx-main.png" />
             <param name="onclick" value="noop" />
             <param name="set-onclick-target" value="true" />
@@ -462,7 +462,7 @@
             <param name="groupid" value="861" />
             <param name="buttonid" value="961" />
             <param name="width" value="473" />
-            <param name="label" value="TV Plus Live" />
+            <param name="label" value="  TV Plus Live" />
             <param name="icon" value="special://skin/extras/icons/tvplus-live.png" />
             <param name="onclick" value="StartAndroidActivity(&quot;com.filmon.android.tvpluslivetv&quot;)" />
             <param name="set-onclick-target" value="true" />
@@ -474,7 +474,7 @@
             <param name="groupid" value="862" />
             <param name="buttonid" value="962" />
             <param name="width" value="473" />
-            <param name="label" value="Mobdro" />
+            <param name="label" value="  Mobdro" />
             <param name="icon" value="special://skin/extras/icons/mobdro.png" />
             <param name="onclick" value="StartAndroidActivity(&quot;com.mobdro.android&quot;)" />
             <param name="set-onclick-target" value="true" />
@@ -486,7 +486,7 @@
             <param name="groupid" value="863" />
             <param name="buttonid" value="963" />
             <param name="width" value="473" />
-            <param name="label" value="Wicked IPTV" />
+            <param name="label" value="  Wicked IPTV" />
             <param name="icon" value="special://skin/extras/icons/wicked-iptv.png" />
             <param name="onclick" value="ActivateWindow(TVChannels)" />
             <param name="set-onclick-target" value="true" />
@@ -500,7 +500,7 @@
             <param name="groupid" value="871" />
             <param name="buttonid" value="971" />
             <param name="width" value="473" />
-            <param name="label" value="TuneIn" />
+            <param name="label" value="  TuneIn" />
             <param name="icon" value="special://skin/extras/icons/tunein.png" />
             <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.tuneinradio&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.audio.tuneinradio" />
@@ -513,7 +513,7 @@
             <param name="groupid" value="872" />
             <param name="buttonid" value="972" />
             <param name="width" value="473" />
-            <param name="label" value="Radio.Net" />
+            <param name="label" value="  Radio.Net" />
             <param name="icon" value="special://skin/extras/icons/radionet.png" />
             <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.radio_de&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.audio.radio_de" />
@@ -526,7 +526,7 @@
             <param name="groupid" value="873" />
             <param name="buttonid" value="973" />
             <param name="width" value="473" />
-            <param name="label" value="i Heart" />
+            <param name="label" value="  i Heart" />
             <param name="icon" value="special://skin/extras/icons/iheart.png" />
             <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.iheart/&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.audio.iheart/" />
@@ -539,7 +539,7 @@
             <param name="groupid" value="874" />
             <param name="buttonid" value="974" />
             <param name="width" value="473" />
-            <param name="label" value="MixCloud" />
+            <param name="label" value="  MixCloud" />
             <param name="icon" value="special://skin/extras/icons/mixcloud.png" />
             <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.mixcloud/&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.audio.mixcloud/" />

@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<controls>
-        <control type="multiimage">
-            <posy>42</posy>
-            <posx>62</posx>
-            <width>64</width>
-            <height>64</height>
-            <aspectratio>keep</aspectratio>
-            <imagepath>$VAR[Defs_SpinnerTexture]</imagepath>
-            <timeperimage>75</timeperimage>
-            <fadetime>0</fadetime>
-            <colordiffuse>HomeBarFG</colordiffuse>
+        <control type="image">
+            <left>-2</left>
+            <top>-17</top>
+            <width>192</width>
+            <height>192</height>  
+            <aspectratio align="center" aligny="center">keep</aspectratio>
+            <texture colordiffuse="LineLabel">special://skin/extras/icons/getwicked.png</texture>
+        </control>
+        <!-- <control type="image">
+            <posx>24</posx>
+            <posy>6</posy>
+            <width>140</width>
+            <height>140</height>  
+            <texture>progress/loading-back.png</texture>
+            <aspectratio align="center" aligny="center">keep</aspectratio>
+        </control> -->
+        <control type="image">
+            <posx>24</posx>
+            <posy>6</posy>
+            <width>140</width>
+            <height>140</height>  
+            <texture>progress/loading-spinner.png</texture>
+            <animation effect="rotate" center="auto" start="0" end="360" time="1200" loop="true" condition="Window.IsVisible(DialogBusy.xml)">Conditional</animation>
+            <aspectratio align="center" aligny="center">keep</aspectratio>
         </control>
 	</controls>
 </window>
