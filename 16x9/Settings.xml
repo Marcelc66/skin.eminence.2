@@ -108,8 +108,7 @@
                     <item id="2">
                         <description>Skin Settings</description>
                         <label>20077</label>
-                        <!-- <onclick>activatewindow(skinsettings)</onclick> -->
-                        <onclick>noop</onclick>
+                        <onclick>activatewindow(skinsettings)</onclick>
                         <icon>special://skin/extras/icons/paintbrush.png</icon>
                     </item>
 
