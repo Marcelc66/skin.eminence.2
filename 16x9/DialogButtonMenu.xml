@@ -81,7 +81,7 @@
                     </control>
                 </control>
             </control>
-            <control type="group">
+            <!-- <control type="group">
                 <centerleft>50%</centerleft>
                 <bottom>70</bottom>
                 <height>110</height>
@@ -117,7 +117,7 @@
                 <control type="image">
                     <texture>DefaultFolderBack.png</texture>
                 </control>
-            </control>
+            </control> -->
         </control>
     </controls>
 </window>
