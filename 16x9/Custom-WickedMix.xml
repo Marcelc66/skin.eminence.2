@@ -34,7 +34,7 @@
 
                         <!-- <control type="image" id="9999"><height>30</height></control> -->
                         
-                        <include content="View_WickedMix">
+                        <!-- <include content="View_WickedMix">
                             <param name="id" value="9001" />
                             <param name="categories" value="true" />
                         </include>
@@ -46,7 +46,7 @@
                             <include content="Object_Headline">
                                 <param name="label" value="Categories" />
                             </include>
-                        </control>
+                        </control> -->
                         
                         <include content="View_WickedMix">
                             <param name="id" value="9002" />
