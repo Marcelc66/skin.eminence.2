@@ -928,13 +928,19 @@
         <control type="group">
             <width>100%</width>
             <height>100%</height>
-            <include>Animation_FadeIn</include>
+            <animation type="Visible">
+                <effect type="fade" start="0" end="100" time="300" />
+            </animation>
+            <animation type="WindowOpen">
+                <effect type="zoom" start="50" end="100" time="600" delay="2000" tween="back" easing="out" center="auto"/>
+                <effect type="fade" start="0" end="100" time="600" delay="2000" />
+            </animation>
             <include>Animation_FadeOut</include>
             <include>Home_Parallax_Animation</include>
             <control type="multiimage">
                 <width>100%</width>
                 <height>100%</height>
-                <fadetime>600</fadetime>
+                <fadetime>0</fadetime>
                 <randomize>true</randomize>
                 <timeperimage>99999999999999999</timeperimage>
                 <imagepath background="true">special://skin/tvpmc/bg/boxoverlay/</imagepath>

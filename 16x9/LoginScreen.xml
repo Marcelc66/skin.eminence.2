@@ -25,7 +25,7 @@
                     <align>center</align>
                     <top>-16</top>
                     <height>64</height>
-                    <label>Select a Profile</label>
+                    <label>Make A Viewing Choice</label>
                     <font>Font-Header</font>
                 </control>
                 <control type="list" id="52">
@@ -72,7 +72,7 @@
                                     <height>64</height>
                                     <aligny>center</aligny>
                                     <font>Font-ListInfo-Small-Bold</font>
-                                    <label>$INFO[ListItem.Label2]</label>
+                                    <!-- <label>$INFO[ListItem.Label2]</label> -->
                                 </control>
                             </control>
                         </control>
@@ -120,8 +120,21 @@
                                     <height>64</height>
                                     <aligny>center</aligny>
                                     <font>Font-ListInfo-Small-Bold</font>
-                                    <textcolor>Selected</textcolor>                     
-                                    <label>$INFO[ListItem.Label2]</label>
+                                    <textcolor>Selected</textcolor>
+                                    <label>[CR]TV PLUS MEDIA CENTER[CR]You must be 18+ years of age to enter</label>
+                                    <visible>!String.IsEqual(ListItem.Label,WICKED XXX)</visible>
+                                </control>
+                                <control type="label">
+                                    <centerleft>50%</centerleft>
+                                    <width>100%</width>
+                                    <align>center</align>
+                                    <top>360</top>
+                                    <height>64</height>
+                                    <aligny>center</aligny>
+                                    <font>Font-ListInfo-Small-Bold</font>
+                                    <textcolor>Selected</textcolor>
+                                    <label>[CR]ADULTS ONLY SECTION[CR]You must be 18+ years of age to enter</label>
+                                    <visible>String.IsEqual(ListItem.Label,WICKED XXX)</visible>
                                 </control>
                             </control>
                         </control>
