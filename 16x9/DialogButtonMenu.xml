@@ -81,13 +81,11 @@
                     </control>
                 </control>
             </control>
-
             <control type="group">
                 <centerleft>50%</centerleft>
-                <bottom>90</bottom>
-                <itemgap>20</itemgap>
-                <height>72</height>
-                <width>365</width>
+                <bottom>70</bottom>
+                <height>110</height>
+                <width>110</width>
                 <control type="group">
                     <top>-20</top>
                     <bottom>-20</bottom>
@@ -104,28 +102,20 @@
                         <texture colordiffuse="Background">common/white.png</texture>
                     </control>
                 </control>
-            </control>
-            <control type="grouplist">
-                <ondown>Close</ondown>
-                <onup>Close</onup>
-                <onleft>noop</onleft>
-                <onright>noop</onright>
-                <orientation>horizontal</orientation>
-                <align>center</align>
-                <centerleft>50%</centerleft>
-                <bottom>90</bottom>
-                <itemgap>20</itemgap>
-                <height>72</height>
-                
                 <control type="button" id="9003">
-                    <label>Cancel</label>
+                    <label></label>
                     <align>center</align>
                     <onclick>Close</onclick>
                     <onup>9001</onup>
                     <ondown>9001</ondown>
                     <onleft>9001</onleft>
                     <onright>9001</onright>
+                    <height>100%</height>
+                    <width>100%</width>
                     <include>Defs_OptionButton2</include>
+                </control>
+                <control type="image">
+                    <texture>DefaultFolderBack.png</texture>
                 </control>
             </control>
         </control>

@@ -936,7 +936,7 @@
                 <height>100%</height>
                 <fadetime>600</fadetime>
                 <randomize>true</randomize>
-                <timeperimage>5000</timeperimage>
+                <timeperimage>99999999999999999</timeperimage>
                 <imagepath background="true">special://skin/tvpmc/bg/boxoverlay/</imagepath>
             </control>
         </control>
