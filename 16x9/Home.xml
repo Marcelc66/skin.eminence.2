@@ -22,7 +22,8 @@
     <onunload>SetFocus(905)</onunload>
     <controls>
 
-        <include>Home_Background</include>
+        <include condition="!StringCompare(System.ProfileName,WICKED XXX)">Home_Background</include>
+        <include condition="StringCompare(System.ProfileName,WICKED XXX)">Home_AdultBackground</include>
         <include>Home_RSS</include>
         <include>Home_NowPlaying</include>
         <include>Furniture_TopBar</include>
@@ -37,7 +38,8 @@
             </control>
         </control>
 
-        <include>Home_Foreground</include>
+        <include condition="!StringCompare(System.ProfileName,WICKED XXX)">Home_Foreground</include>
+
         <control type="group">
             <width>100%</width>
             <height>100%</height>

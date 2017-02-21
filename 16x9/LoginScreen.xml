@@ -121,7 +121,7 @@
                                     <aligny>center</aligny>
                                     <font>Font-ListInfo-Small-Bold</font>
                                     <textcolor>Selected</textcolor>
-                                    <label>[CR]TV PLUS MEDIA CENTER[CR]You must be 18+ years of age to enter</label>
+                                    <label>[CR]TV PLUS MEDIA CENTER[CR]</label>
                                     <visible>!String.IsEqual(ListItem.Label,WICKED XXX)</visible>
                                 </control>
                                 <control type="label">

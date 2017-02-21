@@ -163,40 +163,52 @@
 
     <include name="Home_Menu_Adult">
         <include content="Home_Menu_Button">
-            <param name="imageid" value="703" />
-            <param name="groupid" value="803" />
-            <param name="buttonid" value="903" />
-            <param name="width" value="550" />
-            <param name="label" value="Favourites" />
+            <param name="imageid" value="702" />
+            <param name="groupid" value="802" />
+            <param name="buttonid" value="902" />
+            <param name="width" value="454" />
+            <param name="label" value="  Favourites" />
             <param name="icon" value="special://skin/extras/icons/favourites.png" />
-            <param name="onfocus" value="SetProperty(SubMenuType,903,Home)" />
-            <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
+            <param name="onfocus" value="SetProperty(SubMenuType,902,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
             <param name="onclick" value="ActivateWindow(favourites)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="imageid" value="705" />
             <param name="groupid" value="805" />
             <param name="buttonid" value="905" />
-            <param name="width" value="550" />
-            <param name="label" value="Wicked XXX" />
+            <param name="width" value="454" />
+            <param name="label" value="  Wicked XXX" />
             <param name="icon" value="special://skin/extras/icons/wickedxxx.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
-            <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
             <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
             <param name="onclick-target" value="addons://sources/video/" />
             <param name="set-onclick-target" value="true" />
-            <param name="reddot" value="true" />
-            <param name="animate-bounce-tile" value="true" />
+            <param name="reddot" value="false" />
+            <param name="animate-bounce-tile" value="false" />
+            <param name="onclick-double" value="true" />
         </include>
         <include content="Home_Menu_Button">
-            <param name="imageid" value="707" />
-            <param name="groupid" value="807" />
-            <param name="buttonid" value="907" />
-            <param name="width" value="550" />
-            <param name="label" value="Quit" />
+            <param name="imageid" value="706" />
+            <param name="groupid" value="806" />
+            <param name="buttonid" value="906" />
+            <param name="width" value="454" />
+            <param name="label" value="  Bikini Babes" />
+            <param name="icon" value="special://skin/extras/icons/bikinibabes.png" />
+            <param name="onfocus" value="SetProperty(SubMenuType,906,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
+            <param name="onclick" value="PlayMedia(&quot;plugin://plugin.video.filmon.simple/?url=http%3A%2F%2Fwww.filmon.com%2Fgroup%2Fbikini-babe&amp;mode=2&amp;name=Bikini+Down+Under&amp;iconimage=https%3A%2F%2Fstatic.filmon.com%2Fassets%2Fchannels%2F2819%2Fbig_logo.png&amp;description=2819&amp;group=BIKINI+BABE&amp;rand=ALOS2J&quot;)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="708" />
+            <param name="groupid" value="808" />
+            <param name="buttonid" value="908" />
+            <param name="width" value="454" />
+            <param name="label" value="  Quit" />
             <param name="icon" value="special://skin/extras/icons/power.png" />
-            <param name="onfocus" value="SetProperty(SubMenuType,907,Home)" />
-            <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
+            <param name="onfocus" value="SetProperty(SubMenuType,908,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
             <param name="onclick" value="System.Logoff" />
         </include>
     </include>
@@ -409,6 +421,7 @@
             <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
             <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
             <param name="onclick2" value="SetProperty(StopTileBounce,True,Home)" />
+            <param name="onclick-double" value="true" />
             <param name="set-onclick-target" value="true" />
             <param name="onclick-target" value="addons://sources/video/" />
             <param name="reddot" value="true" />
@@ -551,6 +564,7 @@
         <param name="onclick" default="noop" />
         <param name="onclick2" default="noop" />
         <param name="onclick3" default="noop" />
+        <param name="onclick-double" default="false" />
         <param name="set-onclick-target" default="false" />
         <param name="wickedxxx" default="false" />
         <param name="mastermode-settings" default="false" />
@@ -607,6 +621,8 @@
                 <onclick>$PARAM[onclick]</onclick>
                 <onclick>$PARAM[onclick2]</onclick>
                 <onclick>$PARAM[onclick3]</onclick>
+                <onclick condition="$PARAM[onclick-double] + IsEmpty(Window(home).Property(DoubleOpenAddons))">$PARAM[onclick]</onclick>
+                <onclick condition="$PARAM[onclick-double] + IsEmpty(Window(home).Property(DoubleOpenAddons))">SetProperty(DoubleOpenAddons,1,home)</onclick>
                 <onfocus>$PARAM[onfocus]</onfocus>
                 <onfocus>$PARAM[onfocus2]</onfocus>
                 <onunfocus>SetProperty(ButtonSwitch,1,Home)</onunfocus>
@@ -842,6 +858,17 @@
         <value>common/null.png</value>
     </variable>
 
+    <variable name="Home_AdultBackgroundImage">
+        
+        <!-- Support -->
+        <value condition="Control.HasFocus(902)">special://skin/tvpmc/bg/xxxfavs.jpg</value>
+        <value condition="Control.HasFocus(905)">special://skin/tvpmc/bg/xxxmain.jpg</value>
+        <value condition="Control.HasFocus(906)">special://skin/tvpmc/bg/xxxbikinibabe.jpg</value>
+        <value condition="Control.HasFocus(908)">special://skin/tvpmc/bg/xxxquit.jpg</value>
+        <value>special://skin/tvpmc/bg/xxxmain.jpg</value>
+    </variable>
+
+
     <variable name="Home_TVStatic">
         <value condition="!Integer.IsEqual(Window(Home).Property(ButtonSwitch,1))">noop</value>
         <value>home/tvstatic/</value>
@@ -915,6 +942,43 @@
             </control>
         </control>
 
+        <control type="image" description="Transition Fade">
+            <width>100%</width>
+            <height>100%</height>
+            <texture background="true" colordiffuse="Background">common/white.png</texture>
+            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+        </control>
+    </include>
+
+    <include name="Home_AdultBackground">
+        <control type="videowindow">
+            <width>100%</width>
+            <height>100%</height>
+            <visible>Skin.HasSetting(background.showvideo) + Player.HasVideo</visible>
+        </control>
+        <control type="multiimage">
+            <width>100%</width>
+            <height>100%</height>
+            <fadetime>600</fadetime>
+            <randomize>true</randomize>
+            <timeperimage>5000</timeperimage>
+            <imagepath background="true">$VAR[Home_AdultBackgroundImage]</imagepath>
+            <aspectratio>scale</aspectratio>
+        </control>
+        <control type="group">
+            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
+            <visible>Control.HasFocus(905)</visible>
+            <animation effect="fade" start="0" end="100" time="600" delay="0">VisibleChange</animation>
+            <control type="multiimage">
+                <centerleft>1020</centerleft>
+                <top>118</top>
+                <width>383</width>
+                <height>299</height>
+                <imagepath>home/redmoonanimated/</imagepath>
+                <timeperimage>75</timeperimage>
+            </control>
+        </control>
         <control type="image" description="Transition Fade">
             <width>100%</width>
             <height>100%</height>
