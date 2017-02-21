@@ -16,8 +16,6 @@
             <align>center</align>
             <onleft>noop</onleft>
             <onright>noop</onright>
-            <onup condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</onup>
-            <ondown condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</ondown>
             <onback>SetFocus(905)</onback>
             <animation type="Visible">
                 <effect type="slide" start="0,266" end="0" time="150" delay="150" />
@@ -945,6 +943,7 @@
                 <fadetime>0</fadetime>
                 <randomize>true</randomize>
                 <timeperimage>99999999999999999</timeperimage>
+                <animation effect="fade" time="200" start="100" end="0" condition="String.IsEqual(Window(Home).Property(SubmenuFocus),True)">Conditional</animation>
                 <imagepath background="true">special://skin/tvpmc/bg/boxoverlay/</imagepath>
             </control>
         </control>
