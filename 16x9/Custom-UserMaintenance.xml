@@ -9,7 +9,7 @@
             <centerleft>50%</centerleft>
             <width>1370</width>
             <bottom>80</bottom>
-            <height>728</height>
+            <height>778</height>
             <include>Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
                 <param name="label" value="User Maintenance" />
@@ -18,7 +18,7 @@
             <control type="group">
                 <left>bigpad</left>
                 <height>196</height>
-                <bottom>20</bottom>
+                <bottom>70</bottom>
                 <right>20</right>
                 <include>Object_FlatBackground</include>
                 <control type="textbox">
@@ -31,6 +31,14 @@
                     <aligny>top</aligny>
                     <font>Font-ListInfo-Small</font>
                 </control>
+            </control>
+            <control type="image">
+                <left>bigpad</left>
+                <height>32</height>
+                <bottom>20</bottom>
+                <right>20</right>
+                <aspectratio aligny="bottom">stretch</aspectratio>
+                <texture>special://skin/tvpmc/bg/supportlabels/forsupport.png</texture>
             </control>
             <control type="panel" id="8001">
                 <onup>8000</onup>
