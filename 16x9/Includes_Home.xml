@@ -223,7 +223,7 @@
                 <ondown>SetFocus(905)</ondown>
                 <left>0</left>
                 <right>0</right>
-                <bottom>300</bottom>
+                <bottom>420</bottom>
                 <top>0</top>
             </control>
             <control type="grouplist" id="9002">
