@@ -211,6 +211,32 @@
             <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
             <param name="onclick" value="System.Logoff" />
         </include>
+
+        <!-- MASTER MODE -->
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="798" />
+            <param name="groupid" value="898" />
+            <param name="buttonid" value="998" />
+            <param name="label" value="Programs" />
+            <param name="icon" value="special://skin/extras/icons/addons.png" />
+            <param name="onfocus" value="ClearProperty(SubMenuType,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
+            <param name="onclick" value="noop" />
+            <param name="mastermode-programs" value="true" />
+            <param name="visible" value="Skin.HasSetting(TVPLUS.MASTERMODE)" />
+        </include>
+        <include content="Home_Menu_Button">
+            <param name="imageid" value="799" />
+            <param name="groupid" value="899" />
+            <param name="buttonid" value="999" />
+            <param name="label" value="Settings" />
+            <param name="icon" value="special://skin/extras/icons/settings.png" />
+            <param name="onfocus" value="ClearProperty(SubMenuType,Home)" />
+            <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
+            <param name="onclick" value="noop" />
+            <param name="mastermode-settings" value="true" />
+            <param name="visible" value="Skin.HasSetting(TVPLUS.MASTERMODE)" />
+        </include>
     </include>
     <!-- SubMenu -->
     <include name="Home_SubMenu">
