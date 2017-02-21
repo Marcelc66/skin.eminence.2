@@ -965,17 +965,17 @@
         <!-- <include>Viewtype_List</include> -->
         <include>Viewtype_SquareList</include>
         <include>Viewtype_PlainList</include>
-        <!-- <include>Viewtype_MediaInfo</include> -->
+        <include>Viewtype_MediaInfo</include>
         <include>Viewtype_MediaInfo2</include>
-        <include>Viewtype_InfoList2</include>
+        <!-- <include>Viewtype_InfoList2</include> -->
         <!-- <include>Viewtype_Icon</include> -->
         <include>Viewtype_IconExtra</include>
     </include>
 
     <include name="Viewtype_ViewNumbers">
         <!-- <views>50,51,57,553,59,552</views> -->
-        <!-- <views>50,51,57,59,552</views> -->
-        <views>50,57,553,59,552</views>
+        <views>50,51,57,59,552</views>
+        <!-- <views>50,57,553,59,552</views> -->
     </include>
 
 

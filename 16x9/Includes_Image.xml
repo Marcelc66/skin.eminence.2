@@ -31,7 +31,7 @@
     </variable>
 
     <variable name="Image_Thumb">
-        <value condition="[Container.Content(episodes) | Window.IsVisible(MyPics.xml) | Container.Content(videos)] + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+        <value condition="[Container.Content(episodes) | Window.IsVisible(MyPics.xml) | Container.Content(videos)] + !String.IsEmpty(ListItem.Art(thumb)) + [!String.IsEqual(ListItem.Art(thumb),ListItem.Art(tvshow.poster))]">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.FanArt)) + !Control.IsVisible(58) + !Control.IsVisible(553) + !Control.IsVisible(56)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
         <value>$INFO[ListItem.Icon]</value>
