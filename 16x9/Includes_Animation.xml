@@ -36,7 +36,7 @@
         <animation effect="slide" tween="cubic" easing="out" time="600" start="-1920" end="0" delay="300">Visible</animation>
         <animation effect="slide" tween="cubic" easing="out" time="600" end="-1920" start="0">Hidden</animation>
         <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
-        <animation effect="fade" start="100" end="0" time="200" condition="[Window.IsActive(MyVideoNav.xml) | Window.IsActive(MyMusicNav.xml) | Window.IsActive(MyPrograms.xml) | Window.IsActive(MyPics.xml)] + !Integer.IsGreater(Container.NumItems,0)">Conditional</animation>
+        <!-- <animation effect="fade" start="100" end="0" time="200" condition="[Window.IsActive(MyVideoNav.xml) | Window.IsActive(MyMusicNav.xml) | Window.IsActive(MyPrograms.xml) | Window.IsActive(MyPics.xml)] + !Integer.IsGreater(Container.NumItems,0)">Conditional</animation> -->
         <visible>![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(script-script.extendedinfo-DialogInfo.xml) | Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]</visible>
     </include>
     <include name="Animation_Info">

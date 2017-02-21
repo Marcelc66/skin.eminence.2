@@ -44,7 +44,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
                 <param name="id" value="50" />
-                <param name="condition" value="![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos) | Container.Content(files) | String.IsEqual(Container.FolderPath,addons://sources/video) | String.IsEqual(Container.FolderPath,addons://sources/music) | String.IsEqual(Container.FolderPath,addons://sources/executable) | Container.Content(images) | Container.Content(programs) | Container.Content(albums)]" />
+                <param name="condition" value="![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos) | Container.Content(files) | String.IsEqual(Container.FolderPath,addons://sources/video) | String.IsEqual(Container.FolderPath,addons://sources/music) | String.IsEqual(Container.FolderPath,addons://sources/image) | String.IsEqual(Container.FolderPath,addons://sources/executable) | Container.Content(images) | Container.Content(programs) | Container.Content(albums)]" />
             </include>
             <control type="group">
                 <width>listinfow</width>
@@ -193,7 +193,7 @@
                         <param name="iconitemw" value="iconextraitemw" />
                         <param name="iconpadw" value="iconextrapadw" />
                         <param name="iconpanelpadw" value="iconextrapanelpadw" />
-                        <param name="condition" value="String.IsEqual(Container.FolderPath,addons://sources/video) | String.IsEqual(Container.FolderPath,addons://sources/music) | String.IsEqual(Container.FolderPath,addons://sources/executable) | Container.Content(albums)" />
+                        <param name="condition" value="String.IsEqual(Container.FolderPath,addons://sources/video) | String.IsEqual(Container.FolderPath,addons://sources/music) | String.IsEqual(Container.FolderPath,addons://sources/executable) | String.IsEqual(Container.FolderPath,addons://sources/image) | Container.Content(images) | Container.Content(albums)" />
                     </include>
                 </control>
                 <include>Object_ExtraInfo</include>
