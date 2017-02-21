@@ -15,6 +15,14 @@
                 <param name="label" value="$LOCALIZE[1036]" />
                 <param name="icon" value="special://skin/extras/icons/favourites.png" />
             </include>
+            <control type="image">
+                <left>bigpad</left>
+                <height>60</height>
+                <top>10</top>
+                <right>20</right>
+                <aspectratio aligny="bottom" align="right">keep</aspectratio>
+                <texture>special://skin/tvpmc/bg/supportlabels/wickedsmarttv.png</texture>
+            </control>
             <control type="group">
                 <left>bigpad</left>
                 <top>80</top>

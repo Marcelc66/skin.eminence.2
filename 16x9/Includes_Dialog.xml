@@ -170,7 +170,7 @@
 
         <include content="Dialog_Top_IconHeader">
             <param name="label" value="$INFO[Control.GetLabel(1)]" />
-            <param name="icon" value="special://skin/extras/icons/kodi.png" />
+            <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
         </include>
         <control type="label" id="1"><visible>false</visible><font>-</font></control>
 

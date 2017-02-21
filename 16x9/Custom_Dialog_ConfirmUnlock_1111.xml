@@ -17,7 +17,7 @@
 
             <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[31232]" />
-                <param name="icon" value="special://skin/extras/icons/kodi.png" />
+                <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
             </include>
 
             <!-- Details -->
