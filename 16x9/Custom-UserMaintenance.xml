@@ -15,6 +15,14 @@
                 <param name="label" value="User Maintenance" />
                 <param name="icon" value="special://skin/extras/icons/usermaintenance.png" />
             </include>
+            <control type="image">
+                <left>bigpad</left>
+                <height>60</height>
+                <top>10</top>
+                <right>20</right>
+                <aspectratio aligny="bottom" align="right">keep</aspectratio>
+                <texture>special://skin/tvpmc/bg/supportlabels/wickedsmarttv.png</texture>
+            </control>
             <control type="group">
                 <left>bigpad</left>
                 <height>196</height>
@@ -108,25 +116,25 @@
                     <item id="1">
                         <label>Auto Clean TVPMC</label>
                         <label2>[B]IMPORTANT[/B][CR][CR]It is advised to clear your viewing history and delete old updates at least once a month. This can be done more regularly if needed</label2>
-                        <onclick>PlayMedia(&quot;plugin://plugin.program.echowizard/?url=url&amp;mode=31&amp;name=%5BCOLOR+white%5DAuto+Clean+Device%5B%2FCOLOR%5D&amp;iconimage=%2FUsers%2FMCPro%2FLibrary%2FApplication+Support%2FKodi%2Faddons%2Fplugin.program.echowizard%2Ficon.png&amp;fanart=%2FUsers%2FMCPro%2FLibrary%2FApplication+Support%2FKodi%2Faddons%2Fplugin.program.echowizard%2Ffanart.jpg&amp;description=&quot;)</onclick>
+                        <onclick>PlayMedia(&quot;plugin://plugin.program.echowizard/?url=url&amp;mode=31&amp;name=%5BCOLOR+white%5DAuto+Clean+Device%5B%2FCOLOR%5D&quot;)</onclick>
                         <icon>special://skin/extras/icons/clearhistory.png</icon>
                     </item>
                     <item id="2">
                         <label>Purge OLD Updates</label>
                         <label2>[B]IMPORTANT[/B][CR][CR]It is advised to clear your viewing history and delete old updates at least once a month. This can be done more regularly if needed</label2>
-                        <onclick>PlayMedia(&quot;plugin://plugin.program.echowizard/?url=url&amp;mode=3&amp;name=%5BCOLOR+white%5DPurge+Packages%5B%2FCOLOR%5D&amp;iconimage=%2FUsers%2FMCPro%2FLibrary%2FApplication+Support%2FKodi%2Faddons%2Fplugin.program.echowizard%2Ficon.png&amp;fanart=%2FUsers%2FMCPro%2FLibrary%2FApplication+Support%2FKodi%2Faddons%2Fplugin.program.echowizard%2Ffanart.jpg&amp;description=&quot;)</onclick>
+                        <onclick>PlayMedia(&quot;plugin://plugin.program.echowizard/?url=url&amp;mode=3&amp;name=%5BCOLOR+white%5DPurge+Packages%5B%2FCOLOR%5D&quot;)</onclick>
                         <icon>special://skin/extras/icons/deleteoldupdates.png</icon>
                     </item>
                     <item id="3">
                         <label>Delete TVPMC Thumbnails</label>
                         <label2>[B]IMPORTANT[/B][CR][CR]It is advised to clear your viewing history and delete old updates at least once a month. This can be done more regularly if needed</label2>
-                        <onclick>PlayMedia(&quot;plugin://plugin.program.echowizard/?url=url&amp;mode=2&amp;name=%5BCOLOR+white%5DDelete+Thumbnails%5B%2FCOLOR%5D&amp;iconimage=%2FUsers%2FMCPro%2FLibrary%2FApplication+Support%2FKodi%2Faddons%2Fplugin.program.echowizard%2Ficon.png&amp;fanart=%2FUsers%2FMCPro%2FLibrary%2FApplication+Support%2FKodi%2Faddons%2Fplugin.program.echowizard%2Ffanart.jpg&amp;description=&quot;)</onclick>
+                        <onclick>PlayMedia(&quot;plugin://plugin.program.echowizard/?url=url&amp;mode=2&amp;name=%5BCOLOR+white%5DDelete+Thumbnails%5B%2FCOLOR%5D&quot;)</onclick>
                         <icon>special://skin/extras/icons/usermaintenance.png</icon>
                     </item>
                     <item id="4">
                         <label>Clear ADULT viewing history</label>
                         <label2>[B]IMPORTANT[/B][CR][CR]It is advised to clear your viewing history and delete old updates at least once a month. This can be done more regularly if needed</label2>
-                        <onclick>PlayMedia(&quot;plugin://plugin.program.TotalRevolutionAdult/?url=none&amp;mode=remove_textures&amp;name=Clear+My+Cached+Artwork&amp;fanart=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fplugin.program.TotalRevolutionAdult%2Ffanart.jpg&amp;video=&amp;description=&quot;)</onclick>
+                        <onclick>PlayMedia(&quot;plugin://plugin.program.echowizard-wickedxxx/?url=url&amp;mode=2&amp;name=%5BCOLOR+white%5DDelete+Thumbnails%5B%2FCOLOR%5D&quot;)</onclick>
                         <icon>special://skin/extras/icons/clearhistory.png</icon>
                     </item>
                     <item id="5">
