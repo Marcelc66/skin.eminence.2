@@ -3,7 +3,10 @@
 	<defaultcontrol always="true">14</defaultcontrol>
     <onunload>ClearProperty(osdinfo,home)</onunload>
 	<controls>
-        <include>Window_OSD</include>
+        <control type="group">
+            <visible>!String.Contains(Player.FileName,tvpmcintro)</visible>
+            <include>Window_OSD</include>
+        </control>
 	</controls>
 
 </window>

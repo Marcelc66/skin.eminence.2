@@ -982,22 +982,22 @@
     <!-- Wicked Mix -->
     <include name="View_WickedMix">
         <control type="panel" id="$PARAM[id]">
+            <left>15</left>
+            <right>0</right>
             <top>30</top>
-            <right>30</right>
-            <width>1230</width>
-            <height>690</height>
-            <onleft>8000</onleft>
+            <height>375</height>
+            <onleft>noop</onleft>
+            <onright>noop</onright>
             <pagecontrol>60</pagecontrol>
             <preloaditems>2</preloaditems>
-            <orientation>vertical</orientation>
+            <orientation>horizontal</orientation>
             <scrolltime tween="quadratic">400</scrolltime>
-            <visible>String.IsEqual(Window(Home).Property(WickedMixContent),$PARAM[content])</visible>
-            <itemlayout height="345" width="246">
+            <itemlayout height="375" width="246">
                 <control type="group">
                     <left>iconpadw</left>
                     <right>iconpadw</right>
                     <bottom>5</bottom>
-                    <top>5</top>
+                    <top>35</top>
                     <control type="group">
                         <left>pad</left>
                         <right>pad</right>
@@ -1009,44 +1009,24 @@
                             <align>center</align>
                             <height>64</height>
                             <bottom>-80</bottom>
-                            <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                        </control>
+                        <control type="image">
+                            <texture colordiffuse="Background">common/white.png</texture>
                         </control>
                         <control type="image">
                             <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                             <aspectratio aligny="center">keep</aspectratio>
                             <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster]</texture>
-                            <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
                         </control>
-                    </control>
-                    <control type="group">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <top>pad</top>
-                        <bottom>pad</bottom>
-                        <control type="image">
-
-                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
-                            <aspectratio>scale</aspectratio>
-                            <texture background="true">$VAR[Image_Poster]</texture>
-                            <visible>![String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))]</visible>
-                        </control>
-                    </control>
-                    <control type="image">
-                        <right>15</right>
-                        <top>15</top>
-                        <height>32</height>
-                        <width>32</width>
-                        <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                        <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                     </control>
                 </control>
             </itemlayout>
-            <focusedlayout height="345" width="246">
+            <focusedlayout height="375" width="246">
                 <control type="group">
                     <left>iconpadw</left>
                     <right>iconpadw</right>
                     <bottom>5</bottom>
-                    <top>5</top>
+                    <top>35</top>
                     <control type="group">
                         <left>pad</left>
                         <right>pad</right>
@@ -1058,7 +1038,6 @@
                             <align>center</align>
                             <height>64</height>
                             <bottom>-80</bottom>
-                            <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
                         </control>
                         <control type="image">
                             <left>-10</left>
@@ -1069,29 +1048,39 @@
                             <bordertexture border="5">common/metal-border-button.png</bordertexture>
                             <aspectratio aligny="center">keep</aspectratio>
                             <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster]</texture>
-                            <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
                         </control>
-
-                    </control>
-                    <control type="image">
-                        <bordersize>10</bordersize>
-                        <bordertexture border="5">common/metal-border-button.png</bordertexture>
-                        <aspectratio>scale</aspectratio>
-                        <texture background="true">$VAR[Image_Poster]</texture>
-                        <visible>![String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))]</visible>
-                    </control>
-                    <control type="image">
-                        <right>15</right>
-                        <top>15</top>
-                        <height>32</height>
-                        <width>32</width>
-                        <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                        <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                     </control>
                 </control>
             </focusedlayout>
-            <content target="$PARAM[content-type]">$PARAM[content]</content>
+            <include condition="!$PARAM[categories]" content="View_WickedMix_Content">
+                <param name="content" value="$PARAM[content]"/>
+                <param name="content-type" value="$PARAM[content-type]"/>
+            </include>
+            <include condition="$PARAM[categories]">View_WickedMix_Categories</include>
+            
         </control>
     </include>
 
+    <include name="View_WickedMix_Content"><content target="$PARAM[content-type]">$PARAM[content]</content></include>
+
+    <include name="View_WickedMix_Categories">
+        <content>
+            <item>
+                <label>Video Addons</label>
+                <onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
+                <icon>special://skin/extras/icons/video-addons.png</icon>
+            </item>
+            <item>
+                <label>Music Addons</label>
+                <onclick>ActivateWindow(music,addons://sources/audio/,return)</onclick>
+                <icon>special://skin/extras/icons/songs.png</icon>
+            </item>
+            <item>
+                <label>Picture Addons</label>
+                <onclick>ActivateWindow(pictures,addons://sources/images/,return)</onclick>
+                <icon>special://skin/extras/icons/pictures.png</icon>
+            </item>
+        </content>
+    </include>
+    
 </includes>

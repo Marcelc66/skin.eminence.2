@@ -38,5 +38,19 @@
         </control>
 
         <include>Home_Foreground</include>
+        <control type="group">
+            <width>100%</width>
+            <height>100%</height>
+            <visible>String.Contains(Player.FileName,tvpmcintro)</visible>
+            <control type="image">
+                <width>100%</width>
+                <height>100%</height>
+                <texture>common/black.png</texture>
+            </control>
+            <control type="videowindow">
+                <width>100%</width>
+                <height>100%</height>
+            </control>
+        </control>
     </controls>
 </window>

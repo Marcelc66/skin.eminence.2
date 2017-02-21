@@ -11,6 +11,7 @@
             <height>32</height>
             <texture>cursor/click.png</texture>
             <colordiffuse>bf999999</colordiffuse>
+            <visible>!String.Contains(Player.FileName,tvpmcintro)</visible>
         </control>
 
         <control type="image" id="2">
@@ -19,6 +20,7 @@
             <height>32</height>
             <texture>cursor/click.png</texture>
             <colordiffuse>bf999999</colordiffuse>
+            <visible>!String.Contains(Player.FileName,tvpmcintro)</visible>
         </control>
 
         <control type="image" id="3">
@@ -27,6 +29,7 @@
             <height>32</height>
             <texture>cursor/click.png</texture>
             <colordiffuse>bf999999</colordiffuse>
+            <visible>!String.Contains(Player.FileName,tvpmcintro)</visible>
         </control>
 
         <control type="image" id="4">
@@ -35,6 +38,7 @@
             <height>32</height>
             <texture>cursor/click.png</texture>
             <colordiffuse>bf999999</colordiffuse>
+            <visible>!String.Contains(Player.FileName,tvpmcintro)</visible>
         </control>
 
     </controls>
