@@ -612,7 +612,7 @@
                 <onfocus>$PARAM[onfocus]</onfocus>
                 <onfocus>$PARAM[onfocus2]</onfocus>
                 <onunfocus>SetProperty(ButtonSwitch,1,Home)</onunfocus>
-                <onunfocus>AlarmClock(ButtonSwitchOff,SetProperty(ButtonSwitch,0,Home),00:01,silent)</onunfocus>
+                <onunfocus>AlarmClock(ButtonSwitchOff,SetProperty(ButtonSwitch,0,Home),00:00,silent)</onunfocus>
                 <font />
                 <label />
                 <visible>$PARAM[visible]</visible>
@@ -840,6 +840,8 @@
 
         <!-- Quit -->
         <value condition="Control.HasFocus(909)">special://skin/tvpmc/bg/quit1.jpg</value>
+
+        <value>common/null.png</value>
     </variable>
 
     <variable name="Home_TVStatic">
@@ -908,9 +910,9 @@
                 <top>272</top>
                 <bottom>538</bottom>
                 <imagepath>$VAR[Home_TVStatic]</imagepath>
-                <timeperimage>50</timeperimage>
+                <timeperimage>35</timeperimage>
                 <aspectratio>stretch</aspectratio>
-                <animation effect="fade" start="100" end="0" delay="0" time="100">Hidden</animation>
+                <animation effect="fade" start="100" end="0" delay="550" time="100">Hidden</animation>
                 <visible>Integer.IsEqual(Window(Home).Property(ButtonSwitch),1)</visible>
             </control>
         </control>
