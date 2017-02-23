@@ -38,7 +38,7 @@
             <param name="icon" value="special://skin/extras/icons/support.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,901,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,901,Home)" />
-            <param name="onclick3" value="SetProperty(ViewPositioning,901,Home)" />
+            <param name="onclick3" value="SetProperty(SubMenuType,901,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -50,7 +50,7 @@
             <param name="icon" value="special://skin/extras/icons/video-addons.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,902,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
-            <param name="onclick3" value="SetProperty(ViewPositioning,902,Home)" />
+            <param name="onclick3" value="SetProperty(SubMenuType,902,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -62,7 +62,7 @@
             <param name="icon" value="special://skin/extras/icons/songs.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,903,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
-            <param name="onclick3" value="SetProperty(ViewPositioning,903,Home)" />
+            <param name="onclick3" value="SetProperty(SubMenuType,903,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -74,7 +74,7 @@
             <param name="icon" value="special://skin/extras/icons/pictures.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,904,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
-            <param name="onclick3" value="SetProperty(ViewPositioning,904,Home)" />
+            <param name="onclick3" value="SetProperty(SubMenuType,904,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -87,7 +87,7 @@
             <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
-            <param name="onclick3" value="SetProperty(ViewPositioning,905,Home)" />
+            <param name="onclick3" value="SetProperty(SubMenuType,905,Home)" />
             <param name="onclick" value="SetFocus(952)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
             <param name="reddot" value="true" />
@@ -101,7 +101,7 @@
             <param name="icon" value="special://skin/extras/icons/livetv.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,906,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
-            <param name="onclick3" value="SetProperty(ViewPositioning,906,Home)" />
+            <param name="onclick3" value="SetProperty(SubMenuType,906,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -113,7 +113,7 @@
             <param name="icon" value="special://skin/extras/icons/liveradio.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,907,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
-            <param name="onclick3" value="SetProperty(ViewPositioning,907,Home)" />
+            <param name="onclick3" value="SetProperty(SubMenuType,907,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -125,7 +125,7 @@
             <param name="icon" value="special://skin/extras/icons/news.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,908,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
-            <param name="onclick3" value="SetProperty(ViewPositioning,908,Home)" />
+            <param name="onclick3" value="SetProperty(SubMenuType,908,Home)" />
             <param name="onclick" value="ActivateWindow(1134)" />
             <param name="onclick2" value="SetProperty(StopIconBounce,True,Home)" />
             <param name="set-onclick-target" value="true" />
@@ -139,7 +139,7 @@
             <param name="icon" value="special://skin/extras/icons/power.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,909,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
-            <param name="onclick3" value="SetProperty(ViewPositioning,909,Home)" />
+            <param name="onclick3" value="SetProperty(SubMenuType,909,Home)" />
             <param name="onclick" value="ActivateWindow(shutdownmenu)" />
         </include>
 
