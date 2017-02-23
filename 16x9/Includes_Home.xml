@@ -514,8 +514,8 @@
             <param name="width" value="473" />
             <param name="label" value="  Wicked IPTV" />
             <param name="icon" value="special://skin/extras/icons/wicked-iptv.png" />
-            <param name="onclick" value="ActivateWindow(TVChannels)" />
-            <param name="set-onclick-target" value="true" />
+            <param name="onclick" value="RunScript(script.skin.helper.service,action=dialogok,header=WICKED IPTV is currently under development,message=Please make sure you are registered at TVPLUSMEDIA.com to be advised when this service will be available.)" />
+            <param name="set-onclick-target" value="false" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
         </include>
 
