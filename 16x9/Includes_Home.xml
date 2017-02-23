@@ -394,9 +394,9 @@
             <param name="groupid" value="841" />
             <param name="buttonid" value="941" />
             <param name="width" value="473" />
-            <param name="label" value="  The Big Picture" />
-            <param name="icon" value="special://skin/extras/icons/thebigpicture.png" />
-            <param name="onclick" value="RunScript(script.image.bigpictures)" />
+            <param name="label" value="  500px" />
+            <param name="icon" value="special://skin/extras/icons/500px.png" />
+            <param name="onclick" value="ActivateWindow(pictures,plugin://plugin.image.500px)" />
             <param name="set-onclick-target" value="true" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
         </include>
@@ -851,7 +851,7 @@
 
         <!-- Pictures -->
         <value condition="Control.HasFocus(904)">special://skin/tvpmc/bg/pictures.jpg</value>
-        <value condition="Control.HasFocus(941)">special://skin/tvpmc/bg/bigpicture.jpg</value>
+        <value condition="Control.HasFocus(941)">special://skin/tvpmc/bg/500px.jpg</value>
         <value condition="Control.HasFocus(942)">special://skin/tvpmc/bg/pictures.jpg</value>
         <value condition="Control.HasFocus(943)">special://skin/tvpmc/bg/myfiles.jpg</value>
         
@@ -1022,8 +1022,8 @@
                 <effect type="fade" start="0" end="100" time="300" />
             </animation>
             <animation type="WindowOpen" reversible="false">
-                <effect type="zoom" start="50" end="100" time="600" delay="2000" tween="back" easing="out" center="auto"/>
-                <effect type="fade" start="0" end="100" time="600" delay="2000" />
+                <effect type="zoom" start="50" end="100" time="1200" delay="2000" tween="back" easing="out" center="auto"/>
+                <effect type="fade" start="0" end="100" time="1200" delay="2000" />
             </animation>
             <include>Animation_FadeOut</include>
             <include>Home_Parallax_Animation</include>

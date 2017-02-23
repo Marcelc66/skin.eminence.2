@@ -18,4 +18,11 @@
     <onload condition="Skin.HasSetting(TVPLUS.Welcome.Accepted)">ReplaceWindow(home)</onload>
     <onload condition="!Skin.HasSetting(TVPLUS.Welcome.Accepted)">ReplaceWindow(1133)</onload>
     <onload condition="!Window.Previous(LoginScreen.xml)">PlayMedia(special://skin/tvpmc/videos/tvpmcintro.mp4)</onload>
+    <controls>
+        <control type="image" description="blackout">
+            <width>100%</width>
+            <height>100%</height>
+            <texture>common/black.png</texture>
+        </control>
+    </controls>
 </window>
