@@ -652,7 +652,7 @@
                 <onfocus>$PARAM[onfocus]</onfocus>
                 <onfocus>$PARAM[onfocus2]</onfocus>
                 <onunfocus>SetProperty(ButtonSwitch,1,Home)</onunfocus>
-                <onunfocus>AlarmClock(ButtonSwitchOff,SetProperty(ButtonSwitch,0,Home),00:00,silent)</onunfocus>
+                <onfocus>AlarmClock(ButtonSwitchOff,SetProperty(ButtonSwitch,0,Home),00:00,silent)</onfocus>
                 <font />
                 <label />
                 <visible>$PARAM[visible]</visible>
@@ -932,7 +932,7 @@
                 <imagepath>home/tvanimated/</imagepath>
                 <aspectratio>stretch</aspectratio>
                 <animation effect="fade" start="100" end="0" delay="250" time="150">Hidden</animation>
-                <visible>String.IsEqual(Control.GetLabel(999),common/null.png) | Control.HasFocus(905)</visible>
+                <visible>[String.IsEqual(Control.GetLabel(999),common/null.png) | Control.HasFocus(905)] | [!ControlGroup(9000).HasFocus() + !ControlGroup(9002).HasFocus()]</visible>
             </control>
             <control type="image">
                 <width>100%</width>
@@ -940,7 +940,7 @@
                 <texture>special://skin/tvpmc/bg/wickedoverlay.png</texture>
                 <aspectratio>stretch</aspectratio>
                 <animation effect="fade" start="100" end="0" delay="250" time="150">Hidden</animation>
-                <visible>String.IsEqual(Control.GetLabel(999),common/null.png) | Control.HasFocus(905)</visible>
+                <visible>[String.IsEqual(Control.GetLabel(999),common/null.png) | Control.HasFocus(905)] | [!ControlGroup(9000).HasFocus() + !ControlGroup(9002).HasFocus()]</visible>
             </control>
 
             <control type="multiimage" id="999">
@@ -964,6 +964,7 @@
                 <timeperimage>35</timeperimage>
                 <aspectratio>stretch</aspectratio>
                 <animation effect="fade" start="100" end="0" delay="550" time="100">Hidden</animation>
+                <animation effect="fade" start="100" end="0" delay="550" time="100" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9002).HasFocus()">Conditional</animation>
                 <visible>Integer.IsEqual(Window(Home).Property(ButtonSwitch),1)</visible>
             </control>
         </control>
