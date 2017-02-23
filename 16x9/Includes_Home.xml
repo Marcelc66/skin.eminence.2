@@ -880,7 +880,7 @@
         <value condition="Control.HasFocus(951)">special://skin/tvpmc/bg/favourites.jpg</value>
         <value condition="Control.HasFocus(952)">special://skin/tvpmc/bg/tvplus.jpg</value>
         <value condition="Control.HasFocus(953)">special://skin/tvpmc/bg/wickedmix.jpg</value>
-        <value condition="Control.HasFocus(954)">special://skin/tvpmc/bg/xxxaddons.jpg</value>
+        <value condition="Control.HasFocus(954)">special://skin/tvpmc/bg/xxxmain.jpg</value>
 
         <!-- Live TV -->
         <value condition="Control.HasFocus(906)">special://skin/tvpmc/bg/livetv.jpg</value>
@@ -1013,7 +1013,7 @@
             <imagepath background="true">$VAR[Home_AdultBackgroundImage]</imagepath>
             <aspectratio>scale</aspectratio>
         </control>
-        <control type="group">
+        <!-- <control type="group">
             <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
             <visible>Control.HasFocus(905)</visible>
             <animation effect="fade" start="0" end="100" time="600" delay="0">VisibleChange</animation>
@@ -1025,7 +1025,7 @@
                 <imagepath>home/redmoonanimated/</imagepath>
                 <timeperimage>75</timeperimage>
             </control>
-        </control>
+        </control> -->
         <control type="image" description="Transition Fade">
             <width>100%</width>
             <height>100%</height>

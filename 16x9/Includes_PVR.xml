@@ -743,11 +743,7 @@
                 <control type="image">
                     <aspectratio>scale</aspectratio>
                     <fadetime>200</fadetime>
-                    <texture background="true">$VAR[Image_PVRThumb]</texture>
-                    <visible>!Player.HasVideo | Skin.HasSetting(background.showvideo)</visible>
-                </control>
-                <control type="videowindow">
-                    <visible>Player.HasVideo + !Skin.HasSetting(background.showvideo)</visible>
+                    <texture background="true">special://skin/tvpmc/bg/wickediptv.jpg</texture>
                 </control>
             </control>
             <control type="group">
@@ -762,48 +758,36 @@
                     <right>pad</right>
                     <top>pad</top>
                     <bottom>pad</bottom>
-                    <control type="label">
-                        <top>pad</top>
+                    <control type="image">
+                        <top>5</top>
                         <left>pad</left>
+                        <width>64</width>
+                        <height>64</height>
+                        <texture colordiffuse="ListLabel">common/infobubble.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>-79</top>
+                        <left>94</left>
                         <right>pad</right>
                         <height>36</height>
-                        <font>Font-InfoBox-Title</font>
-                        <label>$VAR[Label_IsRecording]$INFO[ListItem.Title]</label>
+                        <font>Font-ListInfo-Bold</font>
+                        <label>WICKED IPTV</label>
                     </control>
                     <control type="label">
-                        <left>pad</left>
+                        <top>-15</top>
+                        <left>94</left>
                         <right>pad</right>
-                        <height>24</height>
-                        <textcolor>$VAR[HighlightColor2]</textcolor>
+                        <height>32</height>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
-                        <visible>!String.IsEmpty(ListItem.Genre)</visible>
+                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]Important information[/COLOR][/UPPERCASE]</label>
                     </control>
                     <control type="textbox">
                         <left>pad</left>
                         <right>pad</right>
-                        <height>120</height>
-                        <font>Font-ListInfo</font>
+                        <height>170</height>
+                        <font>Font-ListInfo-Small</font>
                         <align>left</align>
-                        <label>$VAR[Label_Plot]</label>
-                        <visible>!String.IsEmpty(ListItem.Genre)</visible>
-                    </control>
-                    <control type="textbox">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>154</height>
-                        <font>Font-ListInfo</font>
-                        <align>left</align>
-                        <label>$VAR[Label_Plot]</label>
-                        <visible>String.IsEmpty(ListItem.Genre)</visible>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>20</height>
-                        <align>right</align>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,  -  ,]</label>
+                        <label>WICKED IPTV is currently under development. Please make sure you are registered at TVPLUSMEDIA.com to be advised when this service will be available.</label>
                     </control>
                 </control>
             </control>
