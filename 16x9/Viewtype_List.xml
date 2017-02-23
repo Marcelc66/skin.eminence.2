@@ -1061,7 +1061,7 @@
         </control>
     </include>
 
-    <include name="View_WickedMix_Content"><content target="$PARAM[content-type]">$PARAM[content]</content></include>
+    <include name="View_WickedMix_Content"><content sortby="lastused" sortorder="descending" target="$PARAM[content-type]">$PARAM[content]</content></include>
 
     <include name="View_WickedMix_Categories">
         <content>
