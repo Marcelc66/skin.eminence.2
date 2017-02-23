@@ -59,7 +59,7 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>Font-RSS</font>
-                        <label>[B][COLOR=$VAR[HighlightColor2]]Are you sure you want to Quit?[/COLOR] Click [COLOR=$VAR[HighlightColor2]]QUIT[/COLOR] to confirm. [COLOR=$VAR[HighlightColor2]]IMPORTANT:[/COLOR] Users should ALWAYS use QUIT to properly shutdown TVPMC.[/B] [I](Improper shutdown may lead to TVPMC software corruption and is NOT covered by any warranty!)[/I]</label>
+                        <label>[B][COLOR=$VAR[HighlightColor2]]Are you sure you want to Quit?[/COLOR] Click [COLOR=$VAR[HighlightColor2]]QUIT[/COLOR] to confirm.[CR][COLOR=$VAR[HighlightColor2]]IMPORTANT:[/COLOR] Users should ALWAYS use QUIT to properly shutdown TVPMC.[/B][CR][I](Improper shutdown will cause software corruption and is NOT covered by any warranty!)[/I]</label>
                     </control>
                     <control type="button" id="9001">
                         <top>10</top>

@@ -38,6 +38,7 @@
             <param name="icon" value="special://skin/extras/icons/support.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,901,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,901,Home)" />
+            <param name="onclick3" value="SetProperty(ViewPositioning,901,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -49,6 +50,7 @@
             <param name="icon" value="special://skin/extras/icons/video-addons.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,902,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,902,Home)" />
+            <param name="onclick3" value="SetProperty(ViewPositioning,902,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -60,6 +62,7 @@
             <param name="icon" value="special://skin/extras/icons/songs.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,903,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,903,Home)" />
+            <param name="onclick3" value="SetProperty(ViewPositioning,903,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -71,6 +74,7 @@
             <param name="icon" value="special://skin/extras/icons/pictures.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,904,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
+            <param name="onclick3" value="SetProperty(ViewPositioning,904,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -83,6 +87,7 @@
             <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
+            <param name="onclick3" value="SetProperty(ViewPositioning,905,Home)" />
             <param name="onclick" value="SetFocus(952)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
             <param name="reddot" value="true" />
@@ -96,6 +101,7 @@
             <param name="icon" value="special://skin/extras/icons/livetv.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,906,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
+            <param name="onclick3" value="SetProperty(ViewPositioning,906,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -107,6 +113,7 @@
             <param name="icon" value="special://skin/extras/icons/liveradio.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,907,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
+            <param name="onclick3" value="SetProperty(ViewPositioning,907,Home)" />
             <param name="onclick" value="SetFocus(9002)" />
             <param name="onclick2" value="SetProperty(SubmenuFocus,True,Home)" />
         </include>
@@ -118,6 +125,7 @@
             <param name="icon" value="special://skin/extras/icons/news.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,908,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
+            <param name="onclick3" value="SetProperty(ViewPositioning,908,Home)" />
             <param name="onclick" value="ActivateWindow(1134)" />
             <param name="onclick2" value="SetProperty(StopIconBounce,True,Home)" />
             <param name="set-onclick-target" value="true" />
@@ -131,6 +139,7 @@
             <param name="icon" value="special://skin/extras/icons/power.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,909,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,909,Home)" />
+            <param name="onclick3" value="SetProperty(ViewPositioning,909,Home)" />
             <param name="onclick" value="ActivateWindow(shutdownmenu)" />
         </include>
 
@@ -249,8 +258,19 @@
                 <ondown>SetFocus(905)</ondown>
                 <left>0</left>
                 <right>0</right>
-                <bottom>420</bottom>
+                <bottom>290</bottom>
                 <top>0</top>
+            </control>
+            <control type="button" id="9201" description="ClearFocus">
+                <onfocus>ClearProperty(SubmenuFocus)</onfocus>
+                <onleft>SetFocus(905)</onleft>
+                <onright>SetFocus(905)</onright>
+                <onup>SetFocus(905)</onup>
+                <ondown>SetFocus(905)</ondown>
+                <left>0</left>
+                <right>0</right>
+                <bottom>0</bottom>
+                <height>60</height>
             </control>
             <control type="grouplist" id="9002">
                 <onup>9000</onup>
@@ -514,7 +534,7 @@
             <param name="width" value="473" />
             <param name="label" value="  Wicked IPTV" />
             <param name="icon" value="special://skin/extras/icons/wicked-iptv.png" />
-            <param name="onclick" value="RunScript(script.skin.helper.service,action=dialogok,header=WICKED IPTV is currently under development,message=Please make sure you are registered at TVPLUSMEDIA.com to be advised when this service will be available.)" />
+            <param name="onclick" value="ActivateWindow(TVChannels)" />
             <param name="set-onclick-target" value="false" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
         </include>
@@ -644,9 +664,9 @@
                 <onclick condition="$PARAM[mastermode-settings] | $PARAM[mastermode-programs]">Skin.SetNumeric(MASTERPASS)</onclick>
                 <onclick condition="$PARAM[mastermode-settings]">ActivateWindow(1176)</onclick>
                 <onclick condition="$PARAM[mastermode-programs]">ActivateWindow(1177)</onclick>
+                <onclick>$PARAM[onclick3]</onclick>
                 <onclick>$PARAM[onclick]</onclick>
                 <onclick>$PARAM[onclick2]</onclick>
-                <onclick>$PARAM[onclick3]</onclick>
                 <onclick condition="$PARAM[onclick-double] + IsEmpty(Window(home).Property(DoubleOpenAddons))">$PARAM[onclick]</onclick>
                 <onclick condition="$PARAM[onclick-double] + IsEmpty(Window(home).Property(DoubleOpenAddons))">SetProperty(DoubleOpenAddons,1,home)</onclick>
                 <onfocus>$PARAM[onfocus]</onfocus>
@@ -860,7 +880,7 @@
         <value condition="Control.HasFocus(951)">special://skin/tvpmc/bg/favourites.jpg</value>
         <value condition="Control.HasFocus(952)">special://skin/tvpmc/bg/tvplus.jpg</value>
         <value condition="Control.HasFocus(953)">special://skin/tvpmc/bg/wickedmix.jpg</value>
-        <value condition="Control.HasFocus(954)">special://skin/tvpmc/bg/wickedxxx.jpg</value>
+        <value condition="Control.HasFocus(954)">special://skin/tvpmc/bg/xxxaddons.jpg</value>
 
         <!-- Live TV -->
         <value condition="Control.HasFocus(906)">special://skin/tvpmc/bg/livetv.jpg</value>
@@ -888,10 +908,10 @@
         
         <!-- Support -->
         <value condition="Control.HasFocus(902)">special://skin/tvpmc/bg/xxxfavs.jpg</value>
-        <value condition="Control.HasFocus(905)">special://skin/tvpmc/bg/xxxmain.jpg</value>
+        <value condition="Control.HasFocus(905)">special://skin/tvpmc/bg/xxxaddons.jpg</value>
         <value condition="Control.HasFocus(906)">special://skin/tvpmc/bg/xxxbikinibabe.jpg</value>
         <value condition="Control.HasFocus(908)">special://skin/tvpmc/bg/xxxquit.jpg</value>
-        <value>special://skin/tvpmc/bg/xxxmain.jpg</value>
+        <value>special://skin/tvpmc/bg/xxxaddons.jpg</value>
     </variable>
 
 

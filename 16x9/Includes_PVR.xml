@@ -7,7 +7,6 @@
         <param name="label" default="537" />
         <definition>
             <control type="group">
-                <include>Animation_Common</include>
                 <visible>Control.IsVisible($PARAM[id])</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
@@ -228,7 +227,6 @@
         <param name="include" default="PVR_SmallList_Progress" />
         <definition>
             <control type="group">
-                <include>Animation_Common</include>
                 <visible>Control.IsVisible($PARAM[id])</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
@@ -286,7 +284,7 @@
                                 </control>
                                 <control type="label">
                                     <left>200</left>
-                                    <width>370</width>
+                                    <right>30</right>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
@@ -295,7 +293,7 @@
                                     <font>Font-Button</font>
                                     <label>$INFO[ListItem.ChannelName]</label>
                                 </control>
-                                <control type="label">
+                                <!-- <control type="label">
                                     <left>580</left>
                                     <right>120</right>
                                     <top>pad</top>
@@ -305,8 +303,8 @@
                                     <selectedcolor>ListLabel</selectedcolor>
                                     <font>Font-ListInfo</font>
                                     <label>$VAR[Label_IsRecording]$INFO[ListItem.Title]</label>
-                                </control>
-                                <include>$PARAM[include]_Item</include>
+                                </control> -->
+                                <!-- <include>$PARAM[include]_Item</include> -->
                             </control>
                         </itemlayout>
 
@@ -350,7 +348,7 @@
                                 </control>
                                 <control type="label">
                                     <left>200</left>
-                                    <width>370</width>
+                                    <right>30</right>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
@@ -359,7 +357,7 @@
                                     <font>Font-Button</font>
                                     <label>$INFO[ListItem.ChannelName]</label>
                                 </control>
-                                <control type="label">
+                                <!-- <control type="label">
                                     <left>580</left>
                                     <right>120</right>
                                     <top>pad</top>
@@ -369,8 +367,8 @@
                                     <selectedcolor>Selected</selectedcolor>
                                     <font>Font-ListInfo</font>
                                     <label>$VAR[Label_IsRecording]$INFO[ListItem.Title]</label>
-                                </control>
-                                <include>$PARAM[include]_Focus</include>
+                                </control> -->
+                                <!-- <include>$PARAM[include]_Focus</include> -->
                             </control>
                         </focusedlayout>
                     </control>
@@ -390,7 +388,6 @@
         <param name="include" default="PVR_SmallList_Progress" />
         <definition>
             <control type="group">
-                <include>Animation_Common</include>
                 <visible>Control.IsVisible($PARAM[id])</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
@@ -615,7 +612,6 @@
     <!-- PVR SIPLE LIST -->
     <include name="PVR_SimpleList">
         <control type="group">
-            <include>Animation_Common</include>
             <visible>Control.IsVisible(50)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
