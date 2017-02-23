@@ -964,7 +964,7 @@
                 <timeperimage>35</timeperimage>
                 <aspectratio>stretch</aspectratio>
                 <animation effect="fade" start="100" end="0" delay="550" time="100">Hidden</animation>
-                <animation effect="fade" start="100" end="0" delay="550" time="100" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9002).HasFocus()">Conditional</animation>
+                <animation effect="fade" start="100" end="0" delay="550" time="100" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9002).HasFocus()" reversible="false">Conditional</animation>
                 <visible>Integer.IsEqual(Window(Home).Property(ButtonSwitch),1)</visible>
             </control>
         </control>
