@@ -58,6 +58,7 @@
                 </control>
                 <!-- Auto Update -->
                 <control type="button" id="5">
+                    <label>5</label>
                     <include>Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(5)</visible>
                 </control>
