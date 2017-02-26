@@ -51,7 +51,7 @@
                         <width>64</width>
                         <height>100%</height>
                         <aspectratio aligny="center">keep</aspectratio>
-                        <texture colordiffuse="ListLabel">common/infobubble.png</texture>
+                        <texture colordiffuse="ListLabel">special://skin/extras/icons/caution.png</texture>
                     </control>
                     <control type="textbox">
                         <width>980</width>

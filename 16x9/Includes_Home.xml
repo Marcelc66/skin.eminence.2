@@ -313,8 +313,7 @@
             <param name="width" value="473" />
             <param name="label" value=" Guides" />
             <param name="icon" value="special://skin/extras/icons/guide.png" />
-            <param name="onclick" value="noop" />
-            <param name="set-onclick-target" value="true" />
+            <param name="onclick" value="StartAndroidActivity(&quot;the.pdfviewer3&quot;)" />
             <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),901)" />
         </include>
         <include content="Home_Menu_Button">
