@@ -59,11 +59,11 @@
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>Font-RSS</font>
-                        <label>[B][COLOR=$VAR[HighlightColor2]]Are you sure you want to Quit?[/COLOR]   Click [COLOR=$VAR[HighlightColor2]]QUIT[/COLOR] to confirm.[CR][COLOR=$VAR[HighlightColor2]]IMPORTANT  [/COLOR] Users should ALWAYS use QUIT to properly shutdown TVPMC.[/B][CR][I](Improper shutdown will cause software corruption and is NOT covered by any warranty!)[/I]</label>
+                        <label>ALWAYS use [B]QUIT[/B] to properly shutdown TVPMC!  [B]Click [COLOR=$VAR[HighlightColor]]QUIT[/COLOR] to confirm.[/B][CR][B][COLOR=$VAR[HighlightColor]]IMPORTANT[/COLOR][/B][CR]Improper shutdown may damage your system and is NOT covered by any warranty!</label>
                     </control>
                     <control type="button" id="9001">
                         <top>10</top>
-                        <label>Quit (Press OK to confirm)</label>
+                        <label>Quit (Click OK to confirm)</label>
                         <align>center</align>
                         <onclick>Close</onclick>
                         <onclick>XBMC.Quit()</onclick>

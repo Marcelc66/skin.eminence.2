@@ -84,7 +84,7 @@
             <param name="buttonid" value="905" />
             <param name="width" value="384" />
             <param name="label" value="Tv Plus" />
-            <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+            <param name="icon" value="special://skin/extras/icons/wickedtile.png" />
             <param name="onfocus" value="SetProperty(SubMenuType,905,Home)" />
             <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
             <param name="onclick3" value="SetProperty(SubMenuType,905,Home)" />
@@ -464,7 +464,7 @@
             <param name="buttonid" value="952" />
             <param name="width" value="473" />
             <param name="label" value="  TV Plus [Start Here]" />
-            <param name="icon" value="special://skin/extras/icons/wickedicon.png" />
+            <param name="icon" value="special://skin/extras/icons/wickedtile.png" />
             <param name="onclick" value="ActivateWindow(Videos,addons://sources/video/,return)" />
             <param name="onclick2" value="SetProperty(StopTileBounce,True,Home)" />
             <param name="onclick-double" value="true" />

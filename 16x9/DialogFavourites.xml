@@ -61,7 +61,7 @@
                 <align>left</align>
                 <font>Font-RSS</font>
                 <aligny>center</aligny>
-                <label>To create a favourite, highlight the item in red and click the menu button on your remote. Favourites are added in the list except in the case that your Add-On has its own favourite section.</label>
+                <label>To create your own favorites, highlight any item in red such as a title or a section and click the menu button on your remote. To modify this list, highlight any favorite and click the menu button.</label>
             </control>
 
             <!-- Favourites List -->

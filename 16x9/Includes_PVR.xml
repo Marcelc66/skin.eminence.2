@@ -787,7 +787,7 @@
                         <height>170</height>
                         <font>Font-ListInfo-Small</font>
                         <align>left</align>
-                        <label>WICKED IPTV is currently under development. Please make sure you are registered at TVPLUSMEDIA.com to be advised when this service will be available.</label>
+                        <label>[CR][B]WICKED IPTV[/B] is currently under development.[CR][CR][COLOR=$VAR[HighlightColor2]][B]NOTE: [/B][/COLOR]You must be registered at [B]TVPLUSMEDIA.com[/B] to be advised when this service becomes available.</label>
                     </control>
                 </control>
             </control>
