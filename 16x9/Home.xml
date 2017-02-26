@@ -11,10 +11,9 @@
     <onload>ClearProperty(SubmenuFocus,Home)</onload>
     <onload>ClearProperty(extinfo,home)</onload>
     <onload>SetProperty(HubReturn,Home)</onload>
+    <onload>AlarmClock(ButtonSwitchOff,SetProperty(ButtonSwitch,0,Home),00:00,silent)</onload>
     <onunload>SetProperty(HubReturn,Home)</onunload>
     <onload condition="!Skin.HasSetting(header.tilefollowsnode)">Skin.SetBool(header.tilefollowsnode)</onload>
-    <onload condition="!String.IsEmpty(Skin.String(home.headericon))">SetProperty(Header.Icon,$INFO[Skin.String(home.headericon)])</onload>
-    <onload condition="!String.IsEmpty(Skin.String(home.headertext))">SetProperty(Header.Label,$INFO[Skin.String(home.headertext)])</onload>
     <onunload>SetProperty(Header.Label,$INFO[Container(9000).ListItem.Label],home)</onunload>
     <onunload>SetProperty(Header.Icon,$INFO[Container(9000).ListItem.Icon],home)</onunload>
     <onunload condition="!String.IsEmpty(Container(9000).ListItem.Property(TileColor))">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
