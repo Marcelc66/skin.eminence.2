@@ -4,7 +4,7 @@ import os.path
 
 dialog      = xbmcgui.Dialog()
 
-VERIFY = '/system/priv-app/networktest/networktest.apk'
+VERIFY = '/system/priv-app/NetworkTest/NetworkTest.apk'
 ALTVERIFY = '~/verify'
 
 if os.path.isfile(VERIFY) or os.path.isfile(ALTVERIFY):
