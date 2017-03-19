@@ -15,5 +15,5 @@ if os.path.isfile(VERIFY):
         xbmc.executebuiltin('ReplaceWindow(1133)')
     
 else:
-    dialog.ok('TVPlus Media Center Verification','TVPMC Verification Failed![CR]CONTACT XXXXXXX for support')
+    dialog.ok('TVPMC Verification','TVPMC Verification Failed!')
     xbmc.executebuiltin('Quit')
