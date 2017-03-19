@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1156">
-    <defaultcontrol always="true">9001</defaultcontrol>
+    <defaultcontrol always="true">9000</defaultcontrol>
     <backgroundcolor>Background</backgroundcolor>
     <zorder>10</zorder>
+    <onunload condition="!Skin.HasSetting(Verification)">Quit()</onunload>
     <controls>
         <control type="image">
-            <texture></texture> 
+            <width>100%</width>
+            <height>100%</height>
+            <texture>special://skin/tvpmc/bg/disclaimers/verification.jpg</texture> 
         </control>    
+        <control type="button" id="9000">
+            <centerleft>65%</centerleft>
+            <centerbottom>17%</centerbottom>
+            <height>64</height>
+            <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/underline.png</texturefocus>
+            <textoffsety>20</textoffsety>
+            <font>Font-Disclaimer-Button</font>
+            <textcolor>SideArrow</textcolor>
+            <focusedcolor>Selected</focusedcolor>
+            <align>center</align>
+            <width>300</width>
+            <label>QUIT</label>
+            <onleft>noop</onleft>
+            <onright>noop</onright>
+            <onback>SetProperty(PASSWORD,1,home)</onback>
+            <onback>Skin.Reset(VERIFY)</onback>
+            <onback>Skin.SetNumeric(VERIFY)</onback>
+            <onback>ReplaceWindow(1189)</onback>
+            <onclick>Quit()</onclick>
+        </control>
     </controls>
 </window>

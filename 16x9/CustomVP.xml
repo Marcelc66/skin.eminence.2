@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1189">
+    <allowoverlay>no</allowoverlay>
+    <onload>Close</onload>
+    <onload condition="stringcompare(Skin.String(VERIFY),$NUMBER[162117])">Skin.SetBool(Verification)</onload>
+    <onload condition="stringcompare(Skin.String(VERIFY),$NUMBER[162117])">AlarmClock(go,ReplaceWindow(Home),00:01,silent)</onload>
+    <controls></controls>
+</window>

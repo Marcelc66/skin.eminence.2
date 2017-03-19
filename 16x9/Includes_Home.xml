@@ -470,6 +470,7 @@
             <param name="set-onclick-target" value="true" />
             <param name="onclick-target" value="addons://sources/video/" />
             <param name="reddot" value="true" />
+            <param name="disclaimer" value="true" />
             <param name="animate-bounce-tile" value="true" />
             <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),905)" />
         </include>
@@ -615,6 +616,7 @@
         <param name="mastermode-settings" default="false" />
         <param name="mastermode-programs" default="false" />
         <param name="reddot" default="false" />
+        <param name="disclaimer" default="false" />
         <param name="animate-bounce-tile" default="false" />
         <param name="animate-bounce-icon" default="false" />
         <definition>
@@ -664,10 +666,11 @@
                 <onclick condition="$PARAM[mastermode-settings]">ActivateWindow(1176)</onclick>
                 <onclick condition="$PARAM[mastermode-programs]">ActivateWindow(1177)</onclick>
                 <onclick>$PARAM[onclick3]</onclick>
-                <onclick>$PARAM[onclick]</onclick>
+                <onclick condition="!$PARAM[disclaimer] | String.IsEqual(Window(Home).Property(WarningDisclaimer),1)">$PARAM[onclick]</onclick>
                 <onclick>$PARAM[onclick2]</onclick>
-                <onclick condition="$PARAM[onclick-double] + IsEmpty(Window(home).Property(DoubleOpenAddons))">$PARAM[onclick]</onclick>
-                <onclick condition="$PARAM[onclick-double] + IsEmpty(Window(home).Property(DoubleOpenAddons))">SetProperty(DoubleOpenAddons,1,home)</onclick>
+                <onclick condition="$PARAM[onclick-double] + IsEmpty(Window(home).Property(DoubleOpenAddons)) + [!$PARAM[disclaimer] | String.IsEqual(Window(Home).Property(WarningDisclaimer),1)]">$PARAM[onclick]</onclick>
+                <onclick condition="$PARAM[onclick-double] + IsEmpty(Window(home).Property(DoubleOpenAddons)) + [!$PARAM[disclaimer] | String.IsEqual(Window(Home).Property(WarningDisclaimer),1)]">SetProperty(DoubleOpenAddons,1,home)</onclick>
+                <onclick condition="$PARAM[disclaimer] + !String.IsEqual(Window(Home).Property(WarningDisclaimer),1)">ActivateWindow(1157)</onclick>
                 <onfocus>$PARAM[onfocus]</onfocus>
                 <onfocus>$PARAM[onfocus2]</onfocus>
                 <onunfocus>SetProperty(ButtonSwitch,1,Home)</onunfocus>
