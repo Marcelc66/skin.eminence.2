@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1157">
-    <defaultcontrol always="true">9000</defaultcontrol>
+    <defaultcontrol always="true">9001</defaultcontrol>
     <backgroundcolor>Background</backgroundcolor>
     <zorder>10</zorder>
     <controls>
@@ -12,14 +12,9 @@
         <control type="button" id="9000">
             <centerleft>55%</centerleft>
             <centerbottom>17%</centerbottom>
-            <height>64</height>
-            <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/underline.png</texturefocus>
-            <textoffsety>20</textoffsety>
-            <font>Font-Disclaimer-Button</font>
-            <textcolor>SideArrow</textcolor>
-            <focusedcolor>Selected</focusedcolor>
-            <align>center</align>
             <width>300</width>
+            <align>center</align>
+            <include>Defs_OptionButton2</include>
             <label>DECLINE</label>
             <onleft>9001</onleft>
             <onright>9001</onright>
@@ -28,20 +23,16 @@
         <control type="button" id="9001">
             <centerleft>75%</centerleft>
             <centerbottom>17%</centerbottom>
-            <height>64</height>
-            <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/underline.png</texturefocus>
-            <textoffsety>20</textoffsety>
-            <font>Font-Disclaimer-Button</font>
-            <textcolor>SideArrow</textcolor>
-            <focusedcolor>Selected</focusedcolor>
-            <align>center</align>
             <width>300</width>
+            <align>center</align>
+            <include>Defs_OptionButton2</include>
             <label>ACCEPT</label>
             <onleft>9000</onleft>
             <onright>9000</onright>
-            <onclick>ReplaceWindow(Videos,addons://sources/video/,return)</onclick>
-            <onclick condition="!String.IsEqual(Window(Home).Property(DoubleOpenAddons),1)">ReplaceWindow(Videos,addons://sources/video/,return)</onclick>
-            <onclick>SetProperty(DoubleOpenAddons,1,home)</onclick>
+            <onclick>Close</onclick>
+            <onclick>SetProperty(SubMenuType,905,Home)</onclick>
+            <onclick>SetFocus(952)</onclick>
+            <onclick>SetProperty(SubmenuFocus,True,Home)</onclick>
             <onclick>SetProperty(WarningDisclaimer,1,home)</onclick>
         </control>
     </controls>

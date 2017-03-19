@@ -13,14 +13,9 @@
         <control type="button" id="9000">
             <centerleft>65%</centerleft>
             <centerbottom>17%</centerbottom>
-            <height>64</height>
-            <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/underline.png</texturefocus>
-            <textoffsety>20</textoffsety>
-            <font>Font-Disclaimer-Button</font>
-            <textcolor>SideArrow</textcolor>
-            <focusedcolor>Selected</focusedcolor>
-            <align>center</align>
             <width>300</width>
+            <align>center</align>
+            <include>Defs_OptionButton2</include>
             <label>QUIT</label>
             <onleft>noop</onleft>
             <onright>noop</onright>
