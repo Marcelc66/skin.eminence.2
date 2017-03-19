@@ -20,7 +20,7 @@
     <onunload>ClearProperty(SubMenuType)</onunload>
     <onunload>ClearProperty(FocusPosition)</onunload>
     <onunload>SetFocus(905)</onunload>
-    <onload condition="!Skin.HasSetting(Verification)">RunScript(special://skin/extras/verify.py)</onload>
+    <onload condition="!Skin.HasSetting(Verification)">ReplaceWindow(Startup)</onload>
     <controls>
 
         <include condition="!StringCompare(System.ProfileName,WICKED XXX)">Home_Background</include>

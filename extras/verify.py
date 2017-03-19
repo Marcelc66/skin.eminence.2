@@ -5,8 +5,9 @@ import os.path
 dialog      = xbmcgui.Dialog()
 
 VERIFY = '/system/priv-app/networktest/networktest.apk'
+ALTVERIFY = '~/verify'
 
-if os.path.isfile(VERIFY):
+if os.path.isfile(VERIFY) or os.path.isfile(ALTVERIFY):
     xbmc.executebuiltin('Skin.SetBool(Verification)')
     xbmc.executebuiltin('PlayMedia(special://skin/tvpmc/videos/tvpmcintro.mp4)')
     if xbmc.getCondVisibility("Skin.HasSetting(TVPLUS.Welcome.Accepted)"):
