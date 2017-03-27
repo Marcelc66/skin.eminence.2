@@ -115,47 +115,48 @@
                 <content>
                     <item id="1">
                         <label>Auto Clean TVPMC</label>
-                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]It is advised to Auto Clean your device once per month. Auto Clean will clear the cache, purge old update packages and delete viewed history thumbnails. Adult viewing history must be done separately if required.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE:[/COLOR][/B] Users should immediately [B]QUIT TVPMC[/B] after completing an Auto Clean.</label2>
+                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]It is advised to Auto Clean your device once per month. Auto Clean will clear the cache, purge old update packages and delete viewed history thumbnails.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE:[/COLOR][/B] Users should immediately [B]QUIT TVPMC[/B] after completing an Auto Clean.</label2>
                         <onclick>Close</onclick>
                         <onclick>RunScript(special://skin/extras/clean.py)</onclick>
                         <icon>special://skin/extras/icons/clearhistory.png</icon>
                     </item>
                     <item id="2">
-                        <label>Clear Adult Viewing History</label>
-                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]As Required, click to clear any Adult Viewing History. The Adult Viewing History is maintained separately from regular viewing history[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE:[/COLOR][/B] Users should immediately [B]QUIT TVPMC[/B] after completing clear Adult History.</label2>
-                        <onclick>Close</onclick>
-                        <onclick>PlayMedia(&quot;plugin://plugin.program.echowizard-wickedxxx/?url=url&amp;mode=2&amp;name=%5BCOLOR+white%5DDelete+Thumbnails%5B%2FCOLOR%5D&quot;)</onclick>
-                        <icon>special://skin/extras/icons/clearhistory.png</icon>
-                    </item>
-                    <item id="3">
-                        <label>Launch the Screen Saver</label>
-                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]Protect your TV or Monitor by launching the TVPMC Screen Saver. [CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE:[/COLOR][/B] By default the screensaver is set to launch automatically after 3 minutes of inactivity.</label2>
-                        <onclick>Close</onclick>
-                        <onclick>ActivateScreensaver</onclick>
-                        <icon>special://skin/extras/icons/screensaver.png</icon>
-                    </item>
-
-                    <!-- ROW 2 -->
-                    <item id="3">
                         <label>Internet Bandwidth Speed Test</label>
                         <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]Use this speed test only as a point of reference! Many factors affect speed such as other TV services, multiple users on your network and or gaming consoles. It is HIGHLY recommended to use a wired ETHERNET connection whenever possible. Always test Wi-Fi Strength as a separate issue.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE: [/COLOR][/B]Internet and Wi-Fi issues are entirely the users' responsibility, please refer any such issues to your specific Internet provider and or the internet equipment manufacturer!</label2>
                         <onclick>Close</onclick>
                         <onclick>ActivateWindow(10001,&quot;plugin://plugin.program.echowizard/?description&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fcom.tvplusmedia.tvpmc%2ffiles%2f.tvpmc%2faddons%2fplugin.program.echowizard%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fcom.tvplusmedia.tvpmc%2ffiles%2f.tvpmc%2faddons%2fplugin.program.echowizard%2ficon.png&amp;mode=16&amp;name=%5bCOLOR%20ghostwhite%5d%5bB%5dSPEED%20TEST%5b%2fB%5d%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fechocoder.com%2f&quot;,return)</onclick>
                         <icon>special://skin/extras/icons/speedtest.png</icon>
                     </item>
-                    <item id="5">
+                    <item id="3">
                         <label>Wi-Fi Signal Strength Test</label> 
                         <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]It is HIGHLY recommended to use a wired ETHERNET connection whenever possible. Wired connections are generally faster and more reliable. If you use Wi-Fi ensure you have a strong signal to avoid buffering, caching issues and or streaming errors.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE: [/COLOR][/B]Internet and Wi-Fi issues are entirely the users' responsibility, please refer any such issues to your specific Internet provider and or the Wi-Fi router manufacturer!</label2>
                         <onclick>Close</onclick>
                         <onclick>StartAndroidActivity(&quot;cz.webprovider.wifianalyzer&quot;)</onclick>
                         <icon>special://skin/extras/icons/wifitest.png</icon>
                     </item>
-                    <item id="6">
+
+                    <!-- ROW 2 -->
+                    <item id="4">
+                        <label>Launch the Screen Saver</label>
+                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]Protect your TV or Monitor by launching the TVPMC Screen Saver. [CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE:[/COLOR][/B] By default the screensaver is set to launch automatically after 3 minutes of inactivity.</label2>
+                        <onclick>Close</onclick>
+                        <onclick>ActivateScreensaver</onclick>
+                        <icon>special://skin/extras/icons/screensaver.png</icon>
+                    </item>
+                    
+                    <item id="5">
                         <label>GET-WICKED</label>
                         <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]Get Wicked is an exclusive service that allows all registered users to update to the latest software revision. Authorized Devices and Users must be registered at TVPLUSMEDIA.com[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE: [/COLOR][/B]GET WICKED should only be used upon receipt of an official notice and specific instructions from TVPLUSMEDIA.com. Using GET WICKED without such notice could render your device inoperable which is NOT covered under any Warranty.</label2>
                         <onclick>Close</onclick>
                         <onclick>StartAndroidActivity(&quot;com.tvplusmedia.getwicked&quot;)</onclick>
                         <icon>special://skin/extras/icons/getwicked-big.png</icon>
+                    </item>
+
+                    <item id="6">
+                        <label>GO BACK</label>
+                        <label2>Go Back to the main menu</label2>
+                        <onclick>Close</onclick>
+                        <icon>DefaultFolderBack.png</icon>
                     </item>
                 </content>
             </control>

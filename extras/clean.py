@@ -34,7 +34,7 @@ def deletefile(file):
     except Exception as e:
         print(e)
 
-confirm = dialog.yesno('Auto Clean TVPMC Cache', 'Are you sure you want to auto-clean your device?', 'TVPMC will quit once auto-clean is completed.', 'Click OK to confirm.', 'CANCEL', 'OK')
+confirm = dialog.yesno('Auto-Clean TVPMC Cache', 'Are you sure you want to auto-clean your device?', 'TVPMC will quit once auto-clean is completed.', 'Click OK to confirm.', 'CANCEL', 'OK')
 
 if confirm:
     i = 0
@@ -69,7 +69,7 @@ if confirm:
         i = 2
     progress.close()
     if i == 2:
-        dialog.ok('Complete','Auto-Clean complete!','Press OK to Quit')
+        dialog.ok('Auto-Clean Complete!','Users should quit TVPMC after launching an Auto Clean.','Press OK to Quit.')
         xbmc.executebuiltin('Quit()')
 else:
     pass
