@@ -291,11 +291,11 @@
                 <align>center</align>
                 <onleft>noop</onleft>
                 <onright>noop</onright>
-                <animation type="Conditional" reversible="false" condition="[ControlGroup(9002).HasFocus() | String.IsEqual(Window(Home).Property(SubmenuFocus),True)]">
+                <animation type="Conditional" reversible="false" condition="[ControlGroup(9002).HasFocus() | !String.IsEmpty(Window(Home).Property(SubmenuFocus))]">
                     <effect type="slide" start="0,266" end="0" time="150" />
                     <effect type="fade" start="0" end="100" time="0" />
                 </animation>
-                <animation type="Conditional" reversible="false" condition="![ControlGroup(9002).HasFocus() | String.IsEqual(Window(Home).Property(SubmenuFocus),True)]">
+                <animation type="Conditional" reversible="false" condition="![ControlGroup(9002).HasFocus() | !String.IsEmpty(Window(Home).Property(SubmenuFocus))]">
                     <effect type="slide" end="0,266" start="0" time="0" />
                     <effect type="fade" start="100" end="0" time="200" />
                 </animation>
@@ -316,7 +316,7 @@
             <param name="label" value=" Guides" />
             <param name="icon" value="special://skin/extras/icons/guide.png" />
             <param name="onclick" value="StartAndroidActivity(&quot;the.pdfviewer3&quot;)" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),901)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
@@ -327,7 +327,7 @@
             <param name="label" value="  Wicked U" />
             <param name="icon" value="special://skin/extras/icons/xactu.png" />
             <param name="onclick" value="ActivateWindow(1135)" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),901)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
@@ -338,7 +338,7 @@
             <param name="label" value="  User Maintenance" />
             <param name="icon" value="special://skin/extras/icons/usermaintenance.png" />
             <param name="onclick" value="ActivateWindow(1161)" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),901)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
         </include>
 
         <!-- Videos SubMenu -->
@@ -353,7 +353,7 @@
             <param name="onclick" value="ActivateWindow(Videos,plugin://plugin.video.youtube,return)" />
             <param name="onclick-target" value="plugin://plugin.video.youtube" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),902)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),902)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
@@ -366,7 +366,7 @@
             <param name="onclick" value="ActivateWindow(Videos,sources://video/,Return)" />
             <param name="onclick-target" value="sources://video/" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),902)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),902)" />
         </include>
 
         <!-- Music SubMenu -->
@@ -381,7 +381,7 @@
             <param name="onclick" value="ActivateWindow(Videos,&quot;plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.video.youtube/channel/UCOWr-HQtyOM_cBFI4WZOy5g/" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),903)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
@@ -393,7 +393,7 @@
             <param name="icon" value="special://skin/extras/icons/songs.png" />
             <param name="onclick" value="ActivateWindow(Music,Addons,return)" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),903)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
@@ -405,7 +405,7 @@
             <param name="icon" value="special://skin/extras/icons/song.png" />
             <param name="onclick" value="ActivateWindow(Music,Files,return)" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),903)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),903)" />
         </include>
 
         <!-- Pictures SubMenu -->
@@ -419,7 +419,7 @@
             <param name="icon" value="special://skin/extras/icons/500px.png" />
             <param name="onclick" value="ActivateWindow(pictures,plugin://plugin.image.500px)" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),904)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
@@ -431,7 +431,7 @@
             <param name="icon" value="special://skin/extras/icons/pictures.png" />
             <param name="onclick" value="ActivateWindow(Pictures,Addons,return)" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),904)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
@@ -443,7 +443,7 @@
             <param name="icon" value="special://skin/extras/icons/filebox.png" />
             <param name="onclick" value="ActivateWindow(Pictures,Files,return)" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),904)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),904)" />
         </include>
 
         <!-- TVPLUS Submenu -->
@@ -456,7 +456,7 @@
             <param name="label" value="  Favourites" />
             <param name="icon" value="special://skin/extras/icons/favourites.png" />
             <param name="onclick" value="ActivateWindow(favourites)" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),905)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
@@ -473,7 +473,7 @@
             <param name="onclick-target" value="addons://sources/video/" />
             <param name="reddot" value="true" />
             <param name="animate-bounce-tile" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),905)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
         </include>
         <!-- FIX ME -->
         <include content="Home_Menu_Button">
@@ -486,7 +486,7 @@
             <param name="icon" value="special://skin/extras/icons/wickedmix.png" />
             <param name="onclick" value="ActivateWindow(1173)" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),905)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
@@ -499,7 +499,7 @@
             <param name="onclick" value="noop" />
             <param name="set-onclick-target" value="true" />
             <param name="wickedxxx" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),905)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),905)" />
         </include>
 
         <!-- Live TV SubMenu -->
@@ -513,7 +513,7 @@
             <param name="icon" value="special://skin/extras/icons/filmon.png" />
             <param name="onclick" value="StartAndroidActivity(&quot;com.barrydrillercom.android&quot;)" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),906)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,905,Home)" />
@@ -525,7 +525,7 @@
             <param name="icon" value="special://skin/extras/icons/mobdro.png" />
             <param name="onclick" value="StartAndroidActivity(&quot;com.mobdro.android&quot;)" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),906)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,907,Home)" />
@@ -537,7 +537,7 @@
             <param name="icon" value="special://skin/extras/icons/wicked-iptv.png" />
             <param name="onclick" value="ActivateWindow(TVChannels)" />
             <param name="set-onclick-target" value="false" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),906)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),906)" />
         </include>
 
         <!-- Live Radio -->
@@ -552,7 +552,7 @@
             <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.tuneinradio&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.audio.tuneinradio" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),907)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,904,Home)" />
@@ -565,7 +565,7 @@
             <param name="onclick" value="ActivateWindow(Music,&quot;plugin://plugin.audio.radio_de&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.audio.radio_de" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),907)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,906,Home)" />
@@ -578,7 +578,7 @@
             <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.iheart/&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.audio.iheart/" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),907)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
         </include>
         <include content="Home_Menu_Button">
             <param name="onfocus2" value="SetProperty(ViewPositioning,908,Home)" />
@@ -591,7 +591,7 @@
             <param name="onclick" value="ActivateWindow(10502,&quot;plugin://plugin.audio.mixcloud/&quot;,return)" />
             <param name="onclick-target" value="plugin://plugin.audio.mixcloud/" />
             <param name="set-onclick-target" value="true" />
-            <param name="visible" value="String.IsEqual(Window(Home).Property(SubMenuType),907)" />
+            <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),907)" />
         </include>
 
         <!-- News SubMenu -->
