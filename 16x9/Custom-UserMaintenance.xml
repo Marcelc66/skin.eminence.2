@@ -115,9 +115,9 @@
                 <content>
                     <item id="1">
                         <label>Auto Clean TVPMC</label>
-                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]It is advised to Auto Clean your device once per month. Auto Clean will clear the cache, purge old update packages and delete viewed history thumbnails. Adult viewing hustory must be done separately if required.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE:[/COLOR][/B] Users should immediately [B]QUIT TVPMC[/B] after completing an Auto Clean.</label2>
+                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]It is advised to Auto Clean your device once per month. Auto Clean will clear the cache, purge old update packages and delete viewed history thumbnails. Adult viewing history must be done separately if required.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE:[/COLOR][/B] Users should immediately [B]QUIT TVPMC[/B] after completing an Auto Clean.</label2>
                         <onclick>Close</onclick>
-                        <onclick>PlayMedia(&quot;plugin://plugin.program.echowizard/?url=url&amp;mode=31&amp;name=%5BCOLOR+white%5DAuto+Clean+Device%5B%2FCOLOR%5D&quot;)</onclick>
+                        <onclick>RunScript(special://skin/extras/clean.py)</onclick>
                         <icon>special://skin/extras/icons/clearhistory.png</icon>
                     </item>
                     <item id="2">
@@ -151,7 +151,7 @@
                         <icon>special://skin/extras/icons/wifitest.png</icon>
                     </item>
                     <item id="6">
-                        <label>GET WICKED</label>
+                        <label>GET-WICKED</label>
                         <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]Get Wicked is an exclusive service that allows all registered users to update to the latest software revision. Authorized Devices and Users must be registered at TVPLUSMEDIA.com[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE: [/COLOR][/B]GET WICKED should only be used upon receipt of an official notice and specific instructions from TVPLUSMEDIA.com. Using GET WICKED without such notice could render your device inoperable which is NOT covered under any Warranty.</label2>
                         <onclick>Close</onclick>
                         <onclick>StartAndroidActivity(&quot;com.tvplusmedia.getwicked&quot;)</onclick>
