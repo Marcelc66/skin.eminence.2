@@ -115,8 +115,9 @@
                 <content>
                     <item id="1">
                         <label>Auto Clean TVPMC</label>
-                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]It is advised to Auto Clean your device once per month. Auto Clean will clear the cache, purge old update packages and delete viewed history thumbnails.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE:[/COLOR][/B] Users should immediately [B]QUIT TVPMC[/B] after completing an Auto Clean.</label2>
+                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]It is advised to Auto Clean your device once per month. Auto Clean will clear the cache, purge old update packages and delete viewed history thumbnails.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE:[/COLOR][/B] When you use the Auto Clean function your TVPMC session will be shut down in order to complete the tasks. You may restart at anytime.</label2>
                         <onclick>Close</onclick>
+                        <onclick>Skin.Reset(TVPLUS.Welcome.Accepted)</onclick>
                         <onclick>RunScript(special://skin/extras/clean.py)</onclick>
                         <icon>special://skin/extras/icons/clearhistory.png</icon>
                     </item>
