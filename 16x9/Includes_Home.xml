@@ -316,6 +316,7 @@
             <param name="label" value=" Guides" />
             <param name="icon" value="special://skin/extras/icons/guide.png" />
             <param name="onclick" value="StartAndroidActivity(&quot;the.pdfviewer3&quot;)" />
+            <param name="onclick2" value="StartAndroidActivity(&quot;com.ascal.pdfreader.pdfviewer&quot;)" />
             <param name="visible" value="Integer.IsEqual(Window(Home).Property(SubMenuType),901)" />
         </include>
         <include content="Home_Menu_Button">
