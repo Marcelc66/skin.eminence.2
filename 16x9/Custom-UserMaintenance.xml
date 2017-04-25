@@ -155,7 +155,7 @@
 
                     <item id="6">
                         <label>Add-ons</label>
-                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]Add-ons provide different types of media streaming choices such as Pictures, Music &amp; Video. We caution you that installing certain add-ons is entirely at your risk and may render your device completely inoperable and will NOT be covered under any warranty.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE: [/COLOR][/B]We do not condone or support any type of copyright infringement. Add-ons may contain copyrighted media and as such it is the owner(s) and or user(s) responsibility to operate the device in accordance with the governing laws applicable in your specific region.</label2>
+                        <label2>[B][COLOR=$VAR[HighlightColor2]]IMPORTANT[/COLOR][/B][CR]Add-ons provide different media streaming choices. We caution you that installing certain add-ons is entirely at your risk and may render your device completely inoperable and will NOT be covered under any warranty.[CR][CR][B][COLOR=$VAR[HighlightColor2]]NOTE: [/COLOR][/B]We do not condone or support any type of copyright infringement. Add-ons may contain copyrighted media and as such it is the owner(s) and or user(s) responsibility to operate the device in accordance with the governing laws applicable in your specific region.</label2>
                         <onclick>Close</onclick>
                         <onclick>SetProperty(PASSWORD,1,home)</onclick>
                         <onclick>Skin.Reset(MASTERPASS)</onclick>
